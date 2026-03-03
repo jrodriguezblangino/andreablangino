@@ -200,6 +200,25 @@
         }
     }
 
+    // ----- Formación hero: animate on scroll -----
+    function initFormacionHero() {
+        var section = document.getElementById('formacion');
+        if (!section || !section.classList.contains('formacion-hero')) return;
+
+        var observer = new IntersectionObserver(
+            function (entries) {
+                for (var i = 0; i < entries.length; i++) {
+                    if (entries[i].isIntersecting) {
+                        entries[i].target.classList.add('formacion-visible');
+                        observer.unobserve(entries[i].target);
+                    }
+                }
+            },
+            { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+        );
+        observer.observe(section);
+    }
+
     // ----- Video carousel (Recursos) -----
     var VIDEO_EMBEDS = [
         'https://www.youtube.com/embed/NetMzf0Xle8?start=3',
@@ -261,6 +280,7 @@
         initNavScroll();
         initFaq();
         initCounters();
+        initFormacionHero();
         initVideoCarousel();
     }
 

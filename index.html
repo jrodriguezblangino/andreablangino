@@ -170,27 +170,48 @@
     </section>
 
     <!-- FORMACIÓN ANUAL -->
-    <section id="formacion" class="py-24 md:py-32 bg-primary text-white relative overflow-hidden" aria-labelledby="formacion-heading">
-        <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
-            <div>
-                <span class="inline-block text-accent font-semibold text-xs uppercase tracking-[0.2em] mb-2">Lanzamiento 2026</span>
-                <h2 id="formacion-heading" class="font-serif text-3xl md:text-4xl font-semibold mb-6 leading-tight">
-                    Formación Integral en Biodecodificación Biológica
+    <section id="formacion" class="formacion-hero py-24 md:py-32 text-white relative overflow-hidden" aria-labelledby="formacion-heading">
+        <div class="formacion-hero__bg absolute inset-0 bg-gradient-to-br from-green-900 via-green-800 to-green-700" aria-hidden="true"></div>
+        <div class="formacion-hero__grain absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true"></div>
+        <div class="formacion-hero__glow absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[400px] bg-amber-400/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/4" aria-hidden="true"></div>
+
+        <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-20 xl:gap-24 items-center relative z-10">
+            <div class="formacion-hero__content order-2 md:order-1 max-w-xl md:max-w-2xl md:text-left text-center">
+                <span class="inline-block text-amber-300 font-semibold text-xs uppercase tracking-[0.2em] mb-4">Lanzamiento 2026</span>
+                <h2 id="formacion-heading" class="formacion-hero__title formacion-hero__title--spaced font-serif text-4xl md:text-5xl xl:text-6xl font-semibold mb-6">
+                    Formación <span class="text-amber-300">Integral</span> en<br class="hidden sm:block"> Biodecodificación Biológica
                 </h2>
-                <p class="text-white/90 text-lg leading-relaxed mb-6 font-nav">
+                <p class="text-white/80 text-lg leading-relaxed mb-8 font-nav max-w-2xl md:max-w-none">
                     Un recorrido profundo de transformación personal y profesional. Dirigido a terapeutas, coaches, profesionales de la salud y a quienes buscan respuestas sobre el sentido de la enfermedad y el síntoma.
                 </p>
-                <ul class="space-y-3 mb-8 text-white/90">
-                    <li class="flex items-center gap-3"><i class="fas fa-check text-accent"></i> Fundamentos biológicos: lógica del síntoma, fases y capas embrionarias)</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check text-accent"></i> Programación, transgeneracional y Proyecto Sentido</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check text-accent"></i> Herramientas terapéuticas (PNL, Constelaciones, Hipnosis Ericksoniana)</li>
-                    <li class="flex items-center gap-3"><i class="fas fa-check text-accent"></i> Certificación, prácticas supervisadas y acompañamiento</li>
+                <ul class="space-y-4 mb-12 md:mb-14 text-white/90 text-left md:text-left max-w-xl md:max-w-none mx-auto md:mx-0" role="list">
+                    <li class="flex items-start gap-4">
+                        <span class="formacion-hero__check flex-shrink-0 mt-0.5" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <span>Fundamentos biológicos: lógica del síntoma, fases y capas embrionarias)</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="formacion-hero__check flex-shrink-0 mt-0.5" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <span>Programación, transgeneracional y Proyecto Sentido</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="formacion-hero__check flex-shrink-0 mt-0.5" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <span>Herramientas terapéuticas (PNL, Constelaciones, Hipnosis Ericksoniana)</span>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="formacion-hero__check flex-shrink-0 mt-0.5" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <span>Certificación, prácticas supervisadas y acompañamiento</span>
+                    </li>
                 </ul>
-                <a href="/escuela-de-formacion" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase">Quiero Formarme</a>
+                <div class="flex justify-center md:justify-center">
+                    <a href="/escuela-de-formacion" class="formacion-cta-premium inline-flex items-center justify-center w-full md:w-auto px-10 py-4 bg-gradient-to-r from-amber-400 to-amber-500 text-neutral-dark font-nav text-base font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 no-underline uppercase tracking-wide focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-green-900">Quiero Formarme</a>
+                </div>
             </div>
-            <div class="hidden md:block">
-                <div class="rounded-2xl overflow-hidden shadow-2xl bg-white/10 ring-1 ring-white/20">
-                    <img src="assets/images/talller.jpg" alt="Formación en Biodecodificación — Taller presencial y online" class="w-full h-full object-cover min-h-[320px]" width="800" height="450">
+            <div class="formacion-hero__media order-1 md:order-2 flex justify-center md:justify-end">
+                <div class="formacion-image-wrap w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
+                    <div class="relative aspect-[4/3] md:aspect-[5/4] overflow-hidden">
+                        <img src="assets/images/talller.jpg" alt="Formación en Biodecodificación — Taller presencial y online" class="w-full h-full object-cover transition-transform duration-500 formacion-image" width="800" height="450" loading="lazy">
+                        <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" aria-hidden="true"></div>
+                    </div>
                 </div>
             </div>
         </div>
