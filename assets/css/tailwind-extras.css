@@ -1,0 +1,246 @@
+/**
+ * Complementos para la versión Tailwind: nav-link underline, FAQ accordion, hamburger.
+ * Compatible con assets/js/main.js — CSS puro (sin @apply) para funcionar con Tailwind CDN.
+ */
+
+/* Navbar estilo Bright Moments: logo izquierda, enlaces + CTA derecha, barra fija */
+.nav-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 767px) {
+  .nav-bar-inner {
+    justify-content: flex-start; /* logo a la izquierda; hamburger en absolute a la derecha */
+  }
+}
+.nav-right {
+  margin-left: auto;
+}
+
+/* Evitar scroll horizontal cuando el menú móvil está abierto */
+body.nav-menu-open {
+  overflow: hidden;
+  overflow-x: hidden;
+}
+
+/* Panel del menú móvil: 100vh sin scrollbars (top = 4.5rem) */
+.nav-menu-mobile-panel {
+  height: calc(100vh - 4.5rem);
+  max-height: calc(100vh - 4.5rem);
+  overflow: hidden;
+  overflow-x: hidden;
+}
+.nav-menu-mobile-content {
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100vw;
+}
+
+/* Subrayado animado en links del nav (desktop) */
+.nav-link-tailwind {
+  position: relative;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.025em;
+}
+.nav-link-tailwind::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 2px;
+  background-color: #2D5A1B;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+.nav-link-tailwind:hover::after,
+.nav-link-tailwind:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Panel móvil y hamburger (clases que usa main.js) */
+body.nav-menu-open .nav-menu-mobile {
+  opacity: 1;
+  visibility: visible;
+}
+body.nav-menu-open .nav-hamburger-inner:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+body.nav-menu-open .nav-hamburger-inner:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+body.nav-menu-open .nav-hamburger-inner:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* FAQ: contenido expandible (JS controla aria-expanded y max-height) */
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+.faq-content-inner {
+  padding: 1.25rem 1.25rem 1.25rem;
+  color: #525252;
+  line-height: 1.625;
+  font-size: 15px;
+}
+.faq-trigger {
+  width: 100%;
+  text-align: left;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  color: #1C1C1C;
+  background: #fff;
+  border: none;
+  border-bottom: 2px solid #EBF2E4;
+  border-radius: 0.75rem 0.75rem 0 0;
+  transition: background-color 0.2s, box-shadow 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+.faq-trigger:hover {
+  background-color: rgba(235, 242, 228, 0.4);
+}
+.faq-item .faq-trigger[aria-expanded="true"] {
+  border-bottom-color: #2D5A1B;
+  background-color: rgba(235, 242, 228, 0.5);
+}
+.faq-trigger:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2D5A1B;
+}
+.faq-item .faq-trigger[aria-expanded="true"] .faq-icon {
+  transform: rotate(45deg);
+}
+.faq-icon {
+  color: #2D5A1B;
+  font-size: 1.25rem;
+  font-weight: 300;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+.faq-item {
+  border-radius: 0.75rem;
+  border: 1px solid rgba(45, 90, 27, 0.12);
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(45, 90, 27, 0.06);
+}
+.faq-content {
+  background: linear-gradient(to bottom, rgba(235, 242, 228, 0.35), #fff);
+}
+.nav-menu-link {
+  display: block;
+  padding: 0.875rem 1rem;
+  font-weight: 500;
+  color: #262626;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+.nav-menu-link:hover {
+  background-color: #EBF2E4;
+  color: #2D5A1B;
+}
+.nav-menu-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  padding: 0.875rem 1.5rem;
+  background-color: #2D5A1B;
+  color: #fff;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s;
+  width: fit-content;
+}
+.nav-menu-cta:hover {
+  background-color: #4A7C35;
+  color: #fff;
+}
+.stat-number {
+  font-family: "Gilda Display", serif;
+  color: #C8A96E;
+}
+
+/* Video carousel: un video a la vez, flechas y dots */
+.video-carousel {
+  position: relative;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.video-carousel__viewport {
+  margin-bottom: 1.5rem;
+}
+.video-carousel__slide {
+  width: 100%;
+}
+.video-carousel__controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.video-carousel__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 2px solid #2D5A1B;
+  background: #fff;
+  color: #2D5A1B;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+.video-carousel__btn:hover {
+  background: #2D5A1B;
+  color: #fff;
+}
+.video-carousel__btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2D5A1B;
+}
+.video-carousel__btn:active {
+  transform: scale(0.97);
+}
+.video-carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.video-carousel__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(45, 90, 27, 0.25);
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.video-carousel__dot:hover {
+  background: rgba(45, 90, 27, 0.5);
+}
+.video-carousel__dot[aria-selected="true"] {
+  background: #2D5A1B;
+  transform: scale(1.25);
+}
+.video-carousel__dot:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2D5A1B;
+}
