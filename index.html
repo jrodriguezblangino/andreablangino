@@ -439,41 +439,49 @@
     </section>
 
     <!-- FOOTER -->
-    <footer id="contacto" class="py-24 md:py-28 bg-neutral-dark text-white" aria-label="Contacto y pie de página">
-        <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-4 gap-12 mb-16">
-            <div>
-                <span class="font-serif text-2xl font-semibold text-accent block mb-4">Andrea Blangino</span>
-                <p class="text-white/70 text-sm leading-relaxed">Terapeuta, Coach y Formadora en Biodecodificación Biológica. Reconectando Bio.</p>
+    <footer id="contacto" class="footer py-24 md:py-28 bg-neutral-dark text-white" aria-label="Contacto y pie de página">
+        <div class="max-w-container mx-auto px-5 lg:px-20">
+            <div class="footer__grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-16 items-start">
+                <section class="footer__section footer__section--brand" aria-labelledby="footer-brand-heading">
+                    <h2 id="footer-brand-heading" class="font-serif text-2xl font-semibold text-accent block mb-4">Andrea Blangino</h2>
+                    <p class="text-white/70 text-sm leading-relaxed">Terapeuta, Coach y Formadora en Biodecodificación Biológica. Reconectando Bio.</p>
+                </section>
+                <section class="footer__section" aria-labelledby="footer-nav-heading">
+                    <h3 id="footer-nav-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Navegación</h3>
+                    <ul class="footer__nav-list space-y-3 text-sm text-white/70" role="list">
+                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="/escuela-de-formacion" class="hover:text-white transition-colors">Formación</a></li>
+                        <li><a href="#talleres" class="hover:text-white transition-colors">Talleres</a></li>
+                        <li><a href="#terapias" class="hover:text-white transition-colors">Terapias</a></li>
+                        <li><a href="#sobre-mi" class="hover:text-white transition-colors">Sobre Mí</a></li>
+                    </ul>
+                </section>
+                <section class="footer__section footer__section--social" aria-labelledby="footer-social-heading">
+                    <h3 id="footer-social-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Redes Sociales</h3>
+                    <ul class="footer__social-list flex flex-wrap justify-center gap-4 text-lg" role="list">
+                        <li><a href="https://instagram.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://youtube.com/@andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                        <li><a href="https://facebook.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+                    </ul>
+                </section>
+                <section class="footer__section" aria-labelledby="footer-contact-heading">
+                    <h3 id="footer-contact-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Contacto</h3>
+                    <ul class="footer__contact-list space-y-3 text-sm text-white/70" role="list">
+                        <li class="footer__contact-row flex items-center gap-3">
+                            <i class="far fa-envelope text-accent w-5 flex-shrink-0 text-center" aria-hidden="true"></i>
+                            <span>contacto@andreablangino.com</span>
+                        </li>
+                        <li class="footer__contact-row flex items-center gap-3">
+                            <i class="fab fa-whatsapp text-accent w-5 flex-shrink-0 text-center" aria-hidden="true"></i>
+                            <span>[TEXTO PENDIENTE — Andrea confirma teléfono]</span>
+                        </li>
+                    </ul>
+                </section>
             </div>
-            <div>
-                <h4 class="text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Navegación</h4>
-                <ul class="space-y-3 text-sm text-white/70">
-                    <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
-                    <li><a href="/escuela-de-formacion" class="hover:text-white transition-colors">Formación</a></li>
-                    <li><a href="#talleres" class="hover:text-white transition-colors">Talleres</a></li>
-                    <li><a href="#terapias" class="hover:text-white transition-colors">Terapias</a></li>
-                    <li><a href="#sobre-mi" class="hover:text-white transition-colors">Sobre Mí</a></li>
-                </ul>
+            <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50">
+                <p>&copy; 2025 Andrea Blangino. Todos los derechos reservados.</p>
+                <p><a href="/politica-privacidad" class="hover:text-white/70 transition-colors">Política de privacidad</a></p>
             </div>
-            <div>
-                <h4 class="text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Redes Sociales</h4>
-                <ul class="flex gap-4 text-lg">
-                    <li><a href="https://instagram.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="https://youtube.com/@andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="YouTube"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="https://facebook.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Contacto</h4>
-                <ul class="space-y-3 text-sm text-white/70">
-                    <li><i class="far fa-envelope mr-2 text-accent"></i> contacto@andreablangino.com</li>
-                    <li><i class="fab fa-whatsapp mr-2 text-accent"></i> [TEXTO PENDIENTE — Andrea confirma teléfono]</li>
-                </ul>
-            </div>
-        </div>
-        <div class="max-w-container mx-auto px-5 lg:px-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50">
-            <p>&copy; 2025 Andrea Blangino. Todos los derechos reservados.</p>
-            <p><a href="/politica-privacidad" class="hover:text-white/70 transition-colors">Política de privacidad</a></p>
         </div>
     </footer>
 

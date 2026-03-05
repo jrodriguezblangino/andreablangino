@@ -279,8 +279,9 @@ body.nav-menu-open .nav-hamburger-inner:nth-child(3) {
 .formacion-hero__title {
   letter-spacing: 0.02em;
 }
-.formacion-hero__title--spaced {
-  line-height: 1.35;
+/* Especificidad alta + !important para que no sea pisado por otros CSS (p. ej. main.css o caché) */
+#formacion-heading.formacion-hero__title--spaced {
+  line-height: 1.4 !important;
 }
 
 .formacion-hero__check {
@@ -328,4 +329,53 @@ body.nav-menu-open .nav-hamburger-inner:nth-child(3) {
     opacity: 1;
     transform: none;
   }
+}
+
+/* ========== FOOTER — layout, alignment, spacing ========== */
+.footer__grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .footer__grid {
+    gap: 3rem;
+  }
+}
+
+.footer__section {
+  min-height: 0;
+}
+
+.footer__section--brand {
+  justify-self: start;
+  max-width: 16rem;
+}
+
+.footer__heading {
+  display: block;
+}
+
+.footer__nav-list,
+.footer__section--social .footer__social-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer__section--social .footer__social-list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.footer__contact-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer__contact-list .footer__contact-row {
+  margin-left: 0;
 }
