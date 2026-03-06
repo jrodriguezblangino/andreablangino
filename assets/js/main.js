@@ -85,6 +85,10 @@
         }
 
         document.addEventListener('keydown', handleKeydown);
+
+        window.addEventListener('resize', function () {
+            if (window.innerWidth >= 1024 && isMenuOpen()) closeMenu();
+        });
     }
 
     // ----- Navbar: sombra al hacer scroll -----
