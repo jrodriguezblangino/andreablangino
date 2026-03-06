@@ -3,7 +3,7 @@
  * Compatible con assets/js/main.js — CSS puro (sin @apply) para funcionar con Tailwind CDN.
  */
 
-/* Navbar estilo Bright Moments: logo izquierda, enlaces + CTA derecha, barra fija */
+/* Navbar: logo izquierda, enlaces + CTA derecha; móvil: hamburger/X siempre visible por encima del overlay */
 .nav-bar-inner {
   display: flex;
   align-items: center;
@@ -12,33 +12,83 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
+  z-index: 50;
+  background-color: #F5F3EF;
 }
 @media (max-width: 767px) {
   .nav-bar-inner {
-    justify-content: flex-start; /* logo a la izquierda; hamburger en absolute a la derecha */
+    justify-content: space-between;
   }
 }
 .nav-right {
   margin-left: auto;
 }
 
-/* Evitar scroll horizontal cuando el menú móvil está abierto */
+/* Evitar scroll cuando el menú móvil está abierto */
 body.nav-menu-open {
   overflow: hidden;
   overflow-x: hidden;
 }
 
-/* Panel del menú móvil: 100vh sin scrollbars (top = 4.5rem) */
+/* Panel del menú móvil: full viewport bajo la barra, transición suave */
 .nav-menu-mobile-panel {
-  height: calc(100vh - 4.5rem);
-  max-height: calc(100vh - 4.5rem);
-  overflow: hidden;
-  overflow-x: hidden;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+body.nav-menu-open .nav-menu-mobile-panel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.nav-menu-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 28, 28, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
 .nav-menu-mobile-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #F5F3EF;
+  width: 100%;
+  max-width: 100%;
+  min-height: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
-  max-width: 100vw;
+  padding: 1.5rem 1.5rem 2rem;
+  padding-top: max(1.5rem, 5rem);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .nav-menu-mobile-content {
+    transform: translateY(-8px);
+    transition: transform 0.3s ease;
+  }
+  body.nav-menu-open .nav-menu-mobile-content {
+    transform: translateY(0);
+  }
+}
+
+.nav-menu-mobile-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 /* Subrayado animado en links del nav (desktop) */
@@ -65,20 +115,37 @@ body.nav-menu-open {
   transform: scaleX(1);
 }
 
-/* Panel móvil y hamburger (clases que usa main.js) */
-body.nav-menu-open .nav-menu-mobile {
-  opacity: 1;
-  visibility: visible;
+/* Hamburger ↔ X: mismo botón, misma posición, morph suave */
+.nav-hamburger-bars {
+  position: relative;
+  width: 1.5rem;
+  height: 1.25rem;
 }
+.nav-hamburger-inner {
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: currentColor;
+  transform-origin: center center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-hamburger-inner {
+    transition-duration: 0.1s;
+  }
+}
+/* Estado abierto: X claro en la misma posición que el hamburger */
 body.nav-menu-open .nav-hamburger-inner:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
 }
 body.nav-menu-open .nav-hamburger-inner:nth-child(2) {
   opacity: 0;
   transform: scaleX(0);
 }
 body.nav-menu-open .nav-hamburger-inner:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* FAQ: contenido expandible (JS controla aria-expanded y max-height) */

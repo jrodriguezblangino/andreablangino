@@ -11,7 +11,7 @@
 
     var body = document.body;
     var nav = document.querySelector('.nav-bar');
-    var trigger = document.querySelector('.nav-trigger');
+    var trigger = document.getElementById('nav-trigger') || document.querySelector('.nav-trigger');
     var menu = document.getElementById('nav-menu-mobile');
     var backdrop = menu ? menu.querySelector('.nav-menu-backdrop') : null;
     var menuLinks = menu ? menu.querySelectorAll('.nav-menu-link, .nav-menu-cta') : [];
@@ -30,9 +30,7 @@
         trigger.setAttribute('aria-label', labelOpen);
         menu.setAttribute('aria-hidden', 'false');
         if (menuLinks.length) {
-            setTimeout(function () {
-                menuLinks[0].focus();
-            }, 100);
+            setTimeout(function () { menuLinks[0].focus(); }, 120);
         }
     }
 
