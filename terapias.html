@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terapias Individuales | Andrea Blangino — Biodecodificación Biológica</title>
+  <meta name="description" content="Sesiones individuales de Biodecodificación: online por Zoom o presencial en consultorio. Acompañamiento personalizado para tu proceso de sanación.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2D5A1B',
+            'primary-light': '#4A7C35',
+            'primary-pale': '#EBF2E4',
+            accent: '#C8A96E',
+            'accent-dark': '#B1873A',
+            separator: '#3D4A35',
+            'neutral-dark': '#1C1C1C',
+            'neutral-mid': '#5C5C5C',
+            'neutral-light': '#F5F3EF',
+          },
+          fontFamily: {
+            serif:   ['"Gilda Display"', 'serif'],
+            sans:    ['"Montserrat"', '"Montserrat Fallback"', 'system-ui', 'sans-serif'],
+            body:    ['"Montserrat"', '"Montserrat Fallback"', 'system-ui', 'sans-serif'],
+            nav:     ['"Source Sans Pro"', 'system-ui', 'sans-serif'],
+            display: ['"Gilda Display"', 'serif'],
+          },
+          maxWidth: { 'container': '1200px' },
+        },
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600;700&family=Gilda+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/tailwind-extras.css">
+</head>
+<body class="antialiased font-body text-neutral-dark bg-white overflow-x-hidden">
+
+  <nav id="nav-bar" class="nav-bar z-50 sticky top-0 lg:static bg-neutral-light border-b border-neutral-200/80 transition-shadow duration-300 shadow-sm" role="navigation" aria-label="Navegación principal">
+    <div class="nav-bar-inner max-w-container mx-auto px-4 sm:px-5 lg:px-20 py-3 md:py-4">
+      <a href="/" class="nav-logo flex items-center gap-3 shrink-0 no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded font-nav">
+        <img src="assets/images/logo.svg" alt="" class="nav-logo-img h-9 md:h-40 w-auto object-contain" width="320" height="32" aria-hidden="true">
+        <div class="hidden sm:flex flex-col">
+          <span class="font-nav text-lg md:text-2xl font-semibold text-primary tracking-tight leading-tight">Andrea Blangino</span>
+          <span class="text-[10px] uppercase tracking-[0.15em] text-neutral-mid mx-auto">Terapeuta Holística</span>
+        </div>
+      </a>
+      <div class="nav-right hidden lg:flex items-center gap-6 xl:gap-8">
+        <a href="/#inicio" role="menuitem" class="nav-link-tailwind nav-link font-nav">INICIO</a>
+        <a href="/#formacion" role="menuitem" class="nav-link-tailwind nav-link font-nav">FORMACIÓN</a>
+        <a href="/#talleres" role="menuitem" class="nav-link-tailwind nav-link font-nav">TALLERES</a>
+        <a href="/#terapias" role="menuitem" class="nav-link-tailwind nav-link font-nav">TERAPIAS</a>
+        <a href="/#sobre-mi" role="menuitem" class="nav-link-tailwind nav-link font-nav">SOBRE MÍ</a>
+        <a href="/#contacto" class="nav-cta inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-sm hover:shadow no-underline whitespace-nowrap uppercase">CONTACTO</a>
+      </div>
+      <button type="button" id="nav-trigger" class="nav-trigger lg:hidden flex items-center justify-center w-11 h-11 rounded-lg text-primary hover:bg-primary-pale/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 shrink-0" aria-expanded="false" aria-controls="nav-menu-mobile" aria-label="Abrir menú de navegación">
+        <span class="nav-trigger-icons" aria-hidden="true">
+          <i class="nav-icon-menu fas fa-bars" aria-hidden="true"></i>
+          <i class="nav-icon-close fas fa-times" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div id="nav-menu-mobile" class="nav-menu-mobile fixed inset-0 z-40 flex flex-col lg:hidden nav-menu-mobile-panel" role="dialog" aria-modal="true" aria-label="Menú de navegación" aria-hidden="true">
+      <div class="nav-menu-backdrop" aria-hidden="true"></div>
+      <div class="nav-menu-mobile-content">
+        <nav class="nav-menu-mobile-links" role="menubar" aria-label="Enlaces del menú">
+          <a href="/#inicio" role="menuitem" class="nav-menu-link font-nav">Inicio</a>
+          <a href="/#formacion" role="menuitem" class="nav-menu-link font-nav">Formación</a>
+          <a href="/#talleres" role="menuitem" class="nav-menu-link font-nav">Talleres</a>
+          <a href="/#terapias" role="menuitem" class="nav-menu-link font-nav">Terapias</a>
+          <a href="/#sobre-mi" role="menuitem" class="nav-menu-link font-nav">Sobre Mí</a>
+        </nav>
+        <a href="/#contacto" class="nav-menu-cta font-nav text-[16px] leading-[22px] font-normal uppercase">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="relative overflow-hidden bg-[url('assets/images/home-value-background.jpg')] bg-cover bg-center bg-no-repeat py-24 md:py-32">
+    <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div>
+        <span class="inline-block text-primary font-semibold text-xs uppercase tracking-[0.2em] mb-4">Terapias Individuales</span>
+        <h1 class="font-display text-[48px] font-normal leading-[72px] text-neutral-dark mb-6">Acompañamiento personalizado para tu proceso de sanación</h1>
+        <p class="text-neutral-mid text-lg leading-relaxed mb-8 max-w-md font-nav">Una sesión individual te permite ir al origen de tu síntoma o conflicto y desactivar el programa biológico con acompañamiento profesional. Online por Zoom o en consultorio presencial.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#online" class="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-md hover:shadow-lg no-underline uppercase">Reservar Sesión Online</a>
+          <a href="#presencial" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-primary text-primary font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-pale transition-colors no-underline uppercase">Consulta Presencial <i class="fas fa-arrow-right text-sm"></i></a>
+        </div>
+      </div>
+      <div class="flex justify-center">
+        <div class="w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-primary-pale/50">
+          <img src="assets/images/Andrea-picture.jpg" alt="Andrea Blangino — Terapeuta en Biodecodificación" class="w-full h-full object-cover object-center" width="600" height="750" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="py-24 md:py-32 bg-neutral-light" aria-labelledby="como-funciona-heading">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <h2 id="como-funciona-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">¿Cómo funciona una sesión?</h2>
+      <p class="text-center text-neutral-mid mb-12 max-w-xl mx-auto font-nav text-base">Tres momentos clave en cada encuentro.</p>
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <article class="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-neutral-100">
+          <span class="font-serif text-5xl font-semibold text-primary/20 block mb-4" aria-hidden="true">01</span>
+          <h3 class="font-serif text-xl font-semibold text-neutral-dark mb-3">Primera consulta</h3>
+          <p class="text-neutral-mid text-sm leading-relaxed">Exploramos tu situación, síntoma o conflicto. Escuchamos tu historia y el contexto para identificar el programa biológico en juego.</p>
+        </article>
+        <article class="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-neutral-100">
+          <span class="font-serif text-5xl font-semibold text-primary/20 block mb-4" aria-hidden="true">02</span>
+          <h3 class="font-serif text-xl font-semibold text-neutral-dark mb-3">Identificación</h3>
+          <p class="text-neutral-mid text-sm leading-relaxed">Buscamos el shock biológico y su sentido biológico. Conectamos el síntoma con la capa embrionaria y el conflicto que lo activó.</p>
+        </article>
+        <article class="bg-white rounded-2xl p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-neutral-100">
+          <span class="font-serif text-5xl font-semibold text-primary/20 block mb-4" aria-hidden="true">03</span>
+          <h3 class="font-serif text-xl font-semibold text-neutral-dark mb-3">Desactivación</h3>
+          <p class="text-neutral-mid text-sm leading-relaxed">Trabajamos la resolución y el cierre consciente del programa. Herramientas y acompañamiento para que puedas integrar el cambio.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="online" class="py-24 md:py-32 bg-white" aria-labelledby="online-heading">
+    <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <i class="fas fa-desktop text-primary text-4xl mb-4 block" aria-hidden="true"></i>
+        <h2 id="online-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4">Sesiones Online</h2>
+        <p class="text-neutral-mid leading-relaxed mb-6">Consultas por Zoom desde cualquier lugar. Mismo rigor y profundidad que en presencial, con la comodidad de tu espacio.</p>
+        <ul class="space-y-3 text-neutral-mid font-nav mb-6" role="list">
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Sin desplazamientos, desde tu hogar</li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Zoom con cámara y micrófono</li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Link y recordatorio por email</li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Posibilidad de grabar la sesión</li>
+        </ul>
+        <p class="text-neutral-mid text-sm mb-2"><i class="fas fa-clock text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: Duración sesión — ej. 90 minutos -->90 minutos aprox.</p>
+        <p class="text-neutral-mid text-sm mb-6"><i class="fas fa-tag text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: Precio sesión online -->Consultar precio</p>
+        <a href="/#contacto" class="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-md no-underline uppercase">Reservar Online</a>
+      </div>
+      <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-primary-pale/50 shadow-xl">
+        <img src="assets/images/home-value-background.jpg" alt="" class="w-full h-full object-cover" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="presencial" class="py-24 md:py-32 bg-neutral-light" aria-labelledby="presencial-heading">
+    <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+        <img src="assets/images/Andrea-picture-2.jpg" alt="Consultorio presencial — Andrea Blangino" class="w-full h-full object-cover object-center" loading="lazy">
+      </div>
+      <div class="order-1 md:order-2">
+        <i class="fas fa-door-open text-primary text-4xl mb-4 block" aria-hidden="true"></i>
+        <h2 id="presencial-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4">Consultorio Presencial</h2>
+        <p class="text-neutral-mid leading-relaxed mb-6">Para un acompañamiento personal, cercano y profundo. En un espacio tranquilo donde podés conectar con tu proceso sin distracciones.</p>
+        <ul class="space-y-3 text-neutral-mid font-nav mb-6" role="list">
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Sesión en persona</li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Espacio reservado y confidencial</li>
+          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Misma duración y enfoque que online</li>
+        </ul>
+        <p class="text-neutral-mid text-sm mb-2"><i class="fas fa-map-marker-alt text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: Dirección consultorio -->Consultorio en Córdoba — consultar dirección</p>
+        <p class="text-neutral-mid text-sm mb-6"><i class="fas fa-tag text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: Precio sesión presencial -->Consultar precio</p>
+        <a href="https://wa.me/54911XXXXXXXX" target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase">Consultar Disponibilidad</a>
+        <!-- PLACEHOLDER: replace WhatsApp number -->
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 md:py-32 bg-white" aria-labelledby="que-trabajamos-heading">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <h2 id="que-trabajamos-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">¿Qué trabajamos en sesión?</h2>
+      <p class="text-center text-neutral-mid mb-12 max-w-xl mx-auto font-nav text-base">Áreas que abordamos desde la Biodecodificación Biológica.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <article class="bg-white rounded-2xl p-6 md:p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-neutral-100">
+          <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-primary-pale/80 flex items-center justify-center text-primary">
+            <i class="fas fa-heartbeat text-2xl" aria-hidden="true"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-neutral-dark mb-3">Síntomas físicos</h3>
+          <p class="text-neutral-mid text-sm leading-relaxed">Dolores, molestias, enfermedades agudas o crónicas. Exploramos el sentido biológico y el conflicto asociado.</p>
+        </article>
+        <article class="bg-white rounded-2xl p-6 md:p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-neutral-100">
+          <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-primary-pale/80 flex items-center justify-center text-primary">
+            <i class="fas fa-brain text-2xl" aria-hidden="true"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-neutral-dark mb-3">Conflictos emocionales</h3>
+          <p class="text-neutral-mid text-sm leading-relaxed">Angustia, miedos, bloqueos, patrones repetidos. Conectamos la emoción con la respuesta biológica.</p>
+        </article>
+        <article class="bg-white rounded-2xl p-6 md:p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-neutral-100">
+          <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-primary-pale/80 flex items-center justify-center text-primary">
+            <i class="fas fa-sitemap text-2xl" aria-hidden="true"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-neutral-dark mb-3">Árbol transgeneracional</h3>
+          <p class="text-neutral-mid text-sm leading-relaxed">Lealtades invisibles, duelos no resueltos, programas del clan que se repiten en la familia.</p>
+        </article>
+        <article class="bg-white rounded-2xl p-6 md:p-8 text-center shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-neutral-100">
+          <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-primary-pale/80 flex items-center justify-center text-primary">
+            <i class="fas fa-seedling text-2xl" aria-hidden="true"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-neutral-dark mb-3">Proyecto Sentido</h3>
+          <p class="text-neutral-mid text-sm leading-relaxed">Lo que viviste en el vientre, el parto y la primera infancia como programación que influye en tu vida.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 md:py-32 bg-primary-pale/40" aria-labelledby="testimonios-terapias-heading">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <h2 id="testimonios-terapias-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Experiencias de personas acompañadas</h2>
+      <p class="text-center text-neutral-mid mb-12 max-w-xl mx-auto font-nav text-base">Lo que comparten quienes han hecho sesiones.</p>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
+          <div class="w-14 h-14 rounded-full bg-primary-pale/80 mx-auto mb-4 flex items-center justify-center text-primary text-xl font-serif font-semibold" aria-hidden="true">A</div>
+          <p class="font-serif italic text-neutral-dark mb-4 text-base">La sesión me permitió ver el sentido de un síntoma que arrastraba hace años. Siento alivio y claridad.</p>
+          <p class="font-semibold text-neutral-dark text-sm">M. R.</p>
+          <span class="text-neutral-mid text-xs">Sesión online</span>
+        </article>
+        <article class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
+          <div class="w-14 h-14 rounded-full bg-primary-pale/80 mx-auto mb-4 flex items-center justify-center text-primary text-xl font-serif font-semibold" aria-hidden="true">B</div>
+          <p class="font-serif italic text-neutral-dark mb-4 text-base">Andrea tiene una escucha profunda. En presencial me sentí muy contenida y pude trabajar temas que no me animaba por Zoom.</p>
+          <p class="font-semibold text-neutral-dark text-sm">C. L.</p>
+          <span class="text-neutral-mid text-xs">Sesión presencial</span>
+        </article>
+        <article class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
+          <div class="w-14 h-14 rounded-full bg-primary-pale/80 mx-auto mb-4 flex items-center justify-center text-primary text-xl font-serif font-semibold" aria-hidden="true">C</div>
+          <p class="font-serif italic text-neutral-dark mb-4 text-base">Recomiendo las sesiones a cualquiera que quiera entender qué le dice el cuerpo. En una sesión ya se nota el trabajo.</p>
+          <p class="font-semibold text-neutral-dark text-sm">P. G.</p>
+          <span class="text-neutral-mid text-xs">Sesión online</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 md:py-32 bg-white" aria-labelledby="faq-terapias-heading">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <h2 id="faq-terapias-heading" class="font-serif text-3xl md:text-4xl font-semibold text-primary text-center mb-4 leading-tight">Preguntas sobre las sesiones</h2>
+      <p class="text-neutral-mid text-center mb-14 max-w-xl mx-auto font-nav text-base">Respuestas a dudas frecuentes.</p>
+      <div class="max-w-3xl mx-auto space-y-4">
+        <div class="faq-item">
+          <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-ter-1" id="faq-btn-ter-1">
+            <span>¿Qué es la Biodecodificación Biológica?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div id="faq-ter-1" class="faq-content" role="region" aria-labelledby="faq-btn-ter-1" aria-hidden="true">
+            <div class="faq-content-inner">Es un enfoque que interpreta el síntoma o la enfermedad desde las 5 Leyes Biológicas (Dr. Hamer) y el sentido biológico del conflicto. Permite identificar el shock biológico (DHS) que disparó el programa y trabajar su desactivación de forma consciente.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-ter-2" id="faq-btn-ter-2">
+            <span>¿Necesito diagnóstico médico previo para una sesión?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div id="faq-ter-2" class="faq-content" role="region" aria-labelledby="faq-btn-ter-2" aria-hidden="true">
+            <div class="faq-content-inner">No es obligatorio, pero es recomendable tener seguimiento médico. La biodecodificación no diagnostica ni reemplaza tratamientos; acompaña el proceso desde el sentido biológico y emocional.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-ter-3" id="faq-btn-ter-3">
+            <span>¿Cuántas sesiones se necesitan?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div id="faq-ter-3" class="faq-content" role="region" aria-labelledby="faq-btn-ter-3" aria-hidden="true">
+            <div class="faq-content-inner">Depende del síntoma y del proceso. En una primera sesión de 1:30hs suele trabajarse un conflicto concreto. A veces una sesión basta para un tema puntual; otros procesos requieren seguimiento. Lo vemos en la primera consulta.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-ter-4" id="faq-btn-ter-4">
+            <span>¿Cómo son las sesiones online?</span>
+            <span class="faq-icon">+</span>
+          </button>
+          <div id="faq-ter-4" class="faq-content" role="region" aria-labelledby="faq-btn-ter-4" aria-hidden="true">
+            <div class="faq-content-inner">Por Zoom, con el mismo rigor que presencial. Necesitás cámara y micrófono y un espacio tranquilo. Se envía link y recordatorio. La sesión puede grabarse para que la revivas si lo deseas.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 md:py-32 bg-separator text-white text-center" aria-labelledby="cta-terapias-heading">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <h2 id="cta-terapias-heading" class="font-serif text-3xl md:text-4xl font-semibold mb-4 leading-tight">¿Querés trabajar en tu proceso personal?</h2>
+      <p class="text-white/90 text-lg max-w-xl mx-auto mb-8 font-nav">Una sesión individual te permite ir al origen de tu síntoma o conflicto y desactivar el programa biológico con acompañamiento profesional.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/#contacto" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase">Sesión Online</a>
+        <a href="https://wa.me/54911XXXXXXXX" target="_blank" rel="noopener noreferrer" class="cta-secondary-dark inline-flex items-center justify-center px-8 py-3.5 border-2 border-white text-white font-nav text-[16px] leading-[22px] font-normal rounded no-underline uppercase">Consulta Presencial</a>
+        <!-- PLACEHOLDER: replace WhatsApp number -->
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto" class="footer py-24 md:py-28 bg-neutral-dark text-white" aria-label="Contacto y pie de página">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <div class="footer__grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-16 items-start text-center lg:text-left">
+        <section class="footer__section footer__section--brand" aria-labelledby="footer-brand-heading">
+          <h2 id="footer-brand-heading" class="font-serif text-2xl font-semibold text-accent block mb-4">Andrea Blangino</h2>
+          <p class="text-white/70 text-sm leading-relaxed">Terapeuta, Coach y Formadora en Biodecodificación Biológica. Reconectando Bio.</p>
+        </section>
+        <section class="footer__section" aria-labelledby="footer-nav-heading">
+          <h3 id="footer-nav-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Navegación</h3>
+          <ul class="footer__nav-list space-y-3 text-sm text-white/70" role="list">
+            <li><a href="/#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+            <li><a href="/escuela-de-formacion" class="hover:text-white transition-colors">Formación</a></li>
+            <li><a href="/#talleres" class="hover:text-white transition-colors">Talleres</a></li>
+            <li><a href="/#terapias" class="hover:text-white transition-colors">Terapias</a></li>
+            <li><a href="/#sobre-mi" class="hover:text-white transition-colors">Sobre Mí</a></li>
+          </ul>
+        </section>
+        <section class="footer__section footer__section--social" aria-labelledby="footer-social-heading">
+          <h3 id="footer-social-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Redes Sociales</h3>
+          <ul class="footer__social-list flex flex-wrap justify-center gap-4 text-lg" role="list">
+            <li><a href="https://instagram.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://youtube.com/@andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+            <li><a href="https://facebook.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+          </ul>
+        </section>
+        <section class="footer__section" aria-labelledby="footer-contact-heading">
+          <h3 id="footer-contact-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Contacto</h3>
+          <ul class="footer__contact-list space-y-3 text-sm text-white/70" role="list">
+            <li class="footer__contact-row flex items-center justify-center lg:justify-start gap-3">
+              <i class="far fa-envelope text-accent w-5 flex-shrink-0 text-center" aria-hidden="true"></i>
+              <span>andreablangino@gmail.com</span>
+            </li>
+            <li class="footer__contact-row flex items-center justify-center lg:justify-start gap-3">
+              <i class="fab fa-whatsapp text-accent w-5 flex-shrink-0 text-center" aria-hidden="true"></i>
+              <span>+5493541574635</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 text-xs text-white/50 text-center md:text-left">
+        <p>&copy; 2025 Andrea Blangino. Todos los derechos reservados.</p>
+        <p><a href="/politica-privacidad" class="hover:text-white/70 transition-colors">Política de privacidad</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

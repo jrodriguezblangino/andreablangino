@@ -36,6 +36,7 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600;700&family=Gilda+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/tailwind-extras.css">
 </head>
 <body class="antialiased font-body text-neutral-dark bg-white overflow-x-hidden">
@@ -44,7 +45,7 @@
     <nav id="nav-bar" class="nav-bar z-50 sticky top-0 lg:static bg-neutral-light border-b border-neutral-200/80 transition-shadow duration-300 shadow-sm" role="navigation" aria-label="Navegación principal">
         <div class="nav-bar-inner max-w-container mx-auto px-4 sm:px-5 lg:px-20 py-3 md:py-4">
             <!-- Izquierda: logo + nombre -->
-            <a href="#inicio" class="nav-logo flex items-center gap-3 shrink-0 no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded font-nav">
+            <a href="/" class="nav-logo flex items-center gap-3 shrink-0 no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded font-nav">
                 <img src="assets/images/logo.svg" alt="" class="nav-logo-img h-9 md:h-40 w-auto object-contain" width="320" height="32" aria-hidden="true">
                 <div class="hidden sm:flex flex-col">
                     <span class="font-nav text-lg md:text-2xl font-semibold text-primary tracking-tight leading-tight">Andrea Blangino</span>
@@ -226,7 +227,7 @@
                 <h3 class="font-serif text-xl font-semibold mb-2">Sesiones Online</h3>
                 <p class="text-neutral-mid text-sm">Consultas por Zoom desde cualquier lugar.</p>
             </a>
-            <a href="#talleres" class="group bg-white rounded-2xl p-8 text-center no-underline text-neutral-dark block border border-transparent hover:border-primary-pale hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+            <a href="/talleres" class="group bg-white rounded-2xl p-8 text-center no-underline text-neutral-dark block border border-transparent hover:border-primary-pale hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                 <div class="w-16 h-16 mx-auto mb-5 rounded-xl bg-primary-pale/80 flex items-center justify-center text-neutral-mid group-hover:text-primary group-hover:bg-primary-pale transition-colors">
                     <i class="fas fa-calendar-alt text-3xl" aria-hidden="true"></i>
                 </div>
@@ -448,11 +449,11 @@
                 <section class="footer__section" aria-labelledby="footer-nav-heading">
                     <h3 id="footer-nav-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Navegación</h3>
                     <ul class="footer__nav-list space-y-3 text-sm text-white/70" role="list">
-                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="/#inicio" class="hover:text-white transition-colors">Inicio</a></li>
                         <li><a href="/escuela-de-formacion" class="hover:text-white transition-colors">Formación</a></li>
-                        <li><a href="#talleres" class="hover:text-white transition-colors">Talleres</a></li>
-                        <li><a href="#terapias" class="hover:text-white transition-colors">Terapias</a></li>
-                        <li><a href="#sobre-mi" class="hover:text-white transition-colors">Sobre Mí</a></li>
+                        <li><a href="/#talleres" class="hover:text-white transition-colors">Talleres</a></li>
+                        <li><a href="/#terapias" class="hover:text-white transition-colors">Terapias</a></li>
+                        <li><a href="/#sobre-mi" class="hover:text-white transition-colors">Sobre Mí</a></li>
                     </ul>
                 </section>
                 <section class="footer__section footer__section--social" aria-labelledby="footer-social-heading">

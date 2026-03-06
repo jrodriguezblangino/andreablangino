@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre Mí | Andrea Blangino — Biodecodificación Biológica</title>
+  <meta name="description" content="Conocé a Andrea Blangino: terapeuta, coach y formadora en Biodecodificación Biológica. Mi historia, formación y filosofía de acompañamiento.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2D5A1B',
+            'primary-light': '#4A7C35',
+            'primary-pale': '#EBF2E4',
+            accent: '#C8A96E',
+            'accent-dark': '#B1873A',
+            separator: '#3D4A35',
+            'neutral-dark': '#1C1C1C',
+            'neutral-mid': '#5C5C5C',
+            'neutral-light': '#F5F3EF',
+          },
+          fontFamily: {
+            serif:   ['"Gilda Display"', 'serif'],
+            sans:    ['"Montserrat"', '"Montserrat Fallback"', 'system-ui', 'sans-serif'],
+            body:    ['"Montserrat"', '"Montserrat Fallback"', 'system-ui', 'sans-serif'],
+            nav:     ['"Source Sans Pro"', 'system-ui', 'sans-serif'],
+            display: ['"Gilda Display"', 'serif'],
+          },
+          maxWidth: { 'container': '1200px' },
+        },
+      },
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600;700&family=Gilda+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/tailwind-extras.css">
+</head>
+<body class="antialiased font-body text-neutral-dark bg-white overflow-x-hidden">
+
+  <nav id="nav-bar" class="nav-bar z-50 sticky top-0 lg:static bg-neutral-light border-b border-neutral-200/80 transition-shadow duration-300 shadow-sm" role="navigation" aria-label="Navegación principal">
+    <div class="nav-bar-inner max-w-container mx-auto px-4 sm:px-5 lg:px-20 py-3 md:py-4">
+      <a href="/" class="nav-logo flex items-center gap-3 shrink-0 no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded font-nav">
+        <img src="assets/images/logo.svg" alt="" class="nav-logo-img h-9 md:h-40 w-auto object-contain" width="320" height="32" aria-hidden="true">
+        <div class="hidden sm:flex flex-col">
+          <span class="font-nav text-lg md:text-2xl font-semibold text-primary tracking-tight leading-tight">Andrea Blangino</span>
+          <span class="text-[10px] uppercase tracking-[0.15em] text-neutral-mid mx-auto">Terapeuta Holística</span>
+        </div>
+      </a>
+      <div class="nav-right hidden lg:flex items-center gap-6 xl:gap-8">
+        <a href="/#inicio" role="menuitem" class="nav-link-tailwind nav-link font-nav">INICIO</a>
+        <a href="/#formacion" role="menuitem" class="nav-link-tailwind nav-link font-nav">FORMACIÓN</a>
+        <a href="/#talleres" role="menuitem" class="nav-link-tailwind nav-link font-nav">TALLERES</a>
+        <a href="/#terapias" role="menuitem" class="nav-link-tailwind nav-link font-nav">TERAPIAS</a>
+        <a href="/#sobre-mi" role="menuitem" class="nav-link-tailwind nav-link font-nav">SOBRE MÍ</a>
+        <a href="/#contacto" class="nav-cta inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-sm hover:shadow no-underline whitespace-nowrap uppercase">CONTACTO</a>
+      </div>
+      <button type="button" id="nav-trigger" class="nav-trigger lg:hidden flex items-center justify-center w-11 h-11 rounded-lg text-primary hover:bg-primary-pale/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 shrink-0" aria-expanded="false" aria-controls="nav-menu-mobile" aria-label="Abrir menú de navegación">
+        <span class="nav-trigger-icons" aria-hidden="true">
+          <i class="nav-icon-menu fas fa-bars" aria-hidden="true"></i>
+          <i class="nav-icon-close fas fa-times" aria-hidden="true"></i>
+        </span>
+      </button>
+    </div>
+    <div id="nav-menu-mobile" class="nav-menu-mobile fixed inset-0 z-40 flex flex-col lg:hidden nav-menu-mobile-panel" role="dialog" aria-modal="true" aria-label="Menú de navegación" aria-hidden="true">
+      <div class="nav-menu-backdrop" aria-hidden="true"></div>
+      <div class="nav-menu-mobile-content">
+        <nav class="nav-menu-mobile-links" role="menubar" aria-label="Enlaces del menú">
+          <a href="/#inicio" role="menuitem" class="nav-menu-link font-nav">Inicio</a>
+          <a href="/#formacion" role="menuitem" class="nav-menu-link font-nav">Formación</a>
+          <a href="/#talleres" role="menuitem" class="nav-menu-link font-nav">Talleres</a>
+          <a href="/#terapias" role="menuitem" class="nav-menu-link font-nav">Terapias</a>
+          <a href="/#sobre-mi" role="menuitem" class="nav-menu-link font-nav">Sobre Mí</a>
+        </nav>
+        <a href="/#contacto" class="nav-menu-cta font-nav text-[16px] leading-[22px] font-normal uppercase">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="relative overflow-hidden bg-[url('assets/images/home-value-background.jpg')] bg-cover bg-center bg-no-repeat py-24 md:py-32">
+    <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div>
+        <span class="inline-block text-primary font-semibold text-xs uppercase tracking-[0.2em] mb-4">Terapeuta Holística</span>
+        <h1 class="font-display text-[48px] font-normal leading-[72px] text-neutral-dark mb-6">Hola, soy Andrea Blangino</h1>
+        <p class="text-neutral-mid text-lg leading-relaxed mb-8 max-w-md font-nav"><!-- PLACEHOLDER: Tagline personal en Hero -->Terapeuta, coach y formadora. Acompaño a personas y profesionales a reconectar con el sentido biológico del síntoma y a vivir con más conciencia y plenitud.</p>
+        <a href="/#contacto" class="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-md hover:shadow-lg no-underline uppercase">Reservar una sesión</a>
+      </div>
+      <div class="flex justify-center">
+        <div class="w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-primary-pale/50">
+          <img src="assets/images/Andrea-picture.jpg" alt="Andrea Blangino — Terapeuta y formadora" class="w-full h-full object-cover object-center" width="600" height="750" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="py-24 md:py-32 bg-white" aria-labelledby="mi-historia-heading">
+    <div class="max-w-3xl mx-auto px-5 lg:px-20">
+      <h2 id="mi-historia-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark mb-10 text-center">Mi Historia</h2>
+      <div class="space-y-4 text-neutral-mid leading-relaxed">
+        <p>Mi camino comenzó con la búsqueda de respuestas que me llevaron a estudiar <strong class="text-accent-dark">Psicología</strong> y trabajar como <strong class="text-accent-dark">Asistente Terapéutica</strong>. En 2016 descubrí la <strong class="text-accent-dark">Biodecodificación</strong> y, años más tarde, los <strong class="text-accent-dark">Registros Akáshicos</strong>, dos prácticas que transformaron mi manera de entender el síntoma, las emociones y la vida misma.</p>
+        <p>Soy <strong class="text-accent-dark">Andrea Carolina</strong>, curiosa insaciable, emprendedora y con una profunda vocación de servicio. Entiendo el síntoma no como un enemigo, sino como un mensaje que nos invita a mirar hacia adentro. Mi propósito es acompañarte en ese proceso de sanación, conciencia y evolución, porque una vida más plena y consciente es posible para todos.</p>
+        <p><!-- PLACEHOLDER: Bio completa — párrafo 3 y siguientes -->Sigo formándome y profundizando en herramientas que integran cuerpo, emoción y sentido, para ofrecer un acompañamiento cada vez más completo y respetuoso con tu proceso.</p>
+      </div>
+      <p class="font-body italic text-xl text-neutral-dark mt-8 text-center">"Tu sistema es el mapa hacia tu tesoro interior."</p>
+      <img src="assets/images/Andrea-picture-2.jpg" alt="Andrea Blangino — Terapeuta y formadora" class="rounded-2xl shadow-xl w-full max-w-2xl mx-auto mt-10 block object-cover" loading="lazy" width="800" height="600">
+    </div>
+  </section>
+
+  <section class="py-14 bg-white border-y border-neutral-200" aria-labelledby="stats-heading">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <h2 id="stats-heading" class="sr-only">Experiencia y alcance</h2>
+      <div class="grid grid-cols-3 gap-6 text-center">
+        <div>
+          <span class="stat-number block text-3xl md:text-4xl font-serif font-semibold mb-1 text-accent" data-counter="10" data-suffix="+">0</span>
+          <span class="text-neutral-mid text-xs uppercase tracking-widest">Años de experiencia</span>
+        </div>
+        <div>
+          <span class="stat-number block text-3xl md:text-4xl font-serif font-semibold mb-1 text-accent" data-counter="5" data-suffix="k+">0</span>
+          <span class="text-neutral-mid text-xs uppercase tracking-widest">Personas acompañadas</span>
+        </div>
+        <div>
+          <span class="stat-number block text-3xl md:text-4xl font-serif font-semibold mb-1 text-accent">∞</span>
+          <span class="text-neutral-mid text-xs uppercase tracking-widest">Posibilidades de cambio</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 md:py-32 bg-neutral-light" aria-labelledby="formacion-cred-heading">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <h2 id="formacion-cred-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Formación y Credenciales</h2>
+      <p class="text-center text-neutral-mid mb-12 max-w-xl mx-auto font-nav text-base">Trayectoria formativa y certificaciones.</p>
+      <div class="grid md:grid-cols-2 gap-12 items-start max-w-4xl mx-auto">
+        <div class="space-y-6">
+          <div class="flex gap-4 items-start">
+            <span class="text-accent font-semibold font-nav text-sm w-16 shrink-0 pt-0.5">2016</span>
+            <div>
+              <p class="font-semibold text-neutral-dark text-sm">Inicio en Biodecodificación Biológica</p>
+              <p class="text-neutral-mid text-sm">Formación y práctica en las 5 Leyes Biológicas y sentido del síntoma.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="text-accent font-semibold font-nav text-sm w-16 shrink-0 pt-0.5"><!-- PLACEHOLDER: año hito 2 -->—</span>
+            <div>
+              <p class="font-semibold text-neutral-dark text-sm"><!-- PLACEHOLDER: hito timeline 2 -->Formación continua en herramientas complementarias</p>
+              <p class="text-neutral-mid text-sm"><!-- PLACEHOLDER: descripción -->PNL, Constelaciones, Registros Akáshicos.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="text-accent font-semibold font-nav text-sm w-16 shrink-0 pt-0.5"><!-- PLACEHOLDER: año hito 3 -->—</span>
+            <div>
+              <p class="font-semibold text-neutral-dark text-sm"><!-- PLACEHOLDER: hito timeline 3 -->Docencia y formación</p>
+              <p class="text-neutral-mid text-sm"><!-- PLACEHOLDER: descripción -->Escuela de Formación en Biodecodificación.</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <article class="bg-white rounded-2xl p-5 text-center shadow-sm border border-neutral-100">
+            <i class="fas fa-certificate text-accent text-2xl mb-3 block" aria-hidden="true"></i>
+            <h4 class="font-serif text-neutral-dark text-base font-semibold mb-1"><!-- PLACEHOLDER: Certificación 1 -->Biodecodificación Biológica</h4>
+            <span class="text-neutral-mid text-xs">Formación integral</span>
+          </article>
+          <article class="bg-white rounded-2xl p-5 text-center shadow-sm border border-neutral-100">
+            <i class="fas fa-certificate text-accent text-2xl mb-3 block" aria-hidden="true"></i>
+            <h4 class="font-serif text-neutral-dark text-base font-semibold mb-1"><!-- PLACEHOLDER: Certificación 2 -->Registros Akáshicos</h4>
+            <span class="text-neutral-mid text-xs">Lectora certificada</span>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 md:py-32 bg-separator text-white" aria-labelledby="filosofia-heading">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <p class="font-serif italic text-2xl md:text-3xl text-white leading-snug text-center mb-6">"Tu sistema es el mapa hacia tu tesoro interior."</p>
+      <div class="gold-line"></div>
+      <h2 id="filosofia-heading" class="sr-only">Mi Filosofía</h2>
+      <div class="grid md:grid-cols-3 gap-6 mt-12">
+        <article class="bg-white/10 border border-white/20 rounded-2xl p-6 text-center">
+          <i class="fas fa-comment-medical text-accent text-3xl mb-4 block" aria-hidden="true"></i>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-white">El síntoma como mensaje</h3>
+          <p class="text-white/80 text-sm font-nav leading-relaxed"><!-- PLACEHOLDER: descripción pilar 1 -->Cada síntoma tiene un sentido biológico. No es un error del cuerpo sino una solución de supervivencia. Acompaño a leer ese mensaje para desactivar el programa y recuperar el bienestar.</p>
+        </article>
+        <article class="bg-white/10 border border-white/20 rounded-2xl p-6 text-center">
+          <i class="fas fa-sitemap text-accent text-3xl mb-4 block" aria-hidden="true"></i>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-white">Transgeneracional y linaje</h3>
+          <p class="text-white/80 text-sm font-nav leading-relaxed"><!-- PLACEHOLDER: descripción pilar 2 -->Lo que no se resolvió en el clan puede repetirse. Trabajamos proyecto sentido y árbol para liberar cargas que no te pertenecen y abrir nuevas posibilidades.</p>
+        </article>
+        <article class="bg-white/10 border border-white/20 rounded-2xl p-6 text-center">
+          <i class="fas fa-sun text-accent text-3xl mb-4 block" aria-hidden="true"></i>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-white">Conciencia y empoderamiento</h3>
+          <p class="text-white/80 text-sm font-nav leading-relaxed"><!-- PLACEHOLDER: descripción pilar 3 -->De víctima del síntoma a protagonista de tu vida. Mi propósito es que recuperes tu poder y puedas vivir con más plenitud y libertad.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 md:py-32 bg-separator text-white text-center" aria-labelledby="cta-sobre-heading">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <h2 id="cta-sobre-heading" class="font-serif text-3xl md:text-4xl font-semibold mb-4 leading-tight">¿Querés comenzar tu proceso?</h2>
+      <p class="text-white/90 font-nav text-lg mb-8 max-w-xl mx-auto">Una sesión individual es el primer paso para conectar con el sentido de lo que te pasa y abrir la puerta al cambio.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center flex-wrap">
+        <a href="/#contacto" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase">Reservar sesión</a>
+        <a href="/terapias" class="cta-secondary-dark inline-flex items-center justify-center px-8 py-3.5 border-2 border-white text-white font-nav text-[16px] leading-[22px] font-normal rounded no-underline uppercase">Ver terapias</a>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto" class="footer py-24 md:py-28 bg-neutral-dark text-white" aria-label="Contacto y pie de página">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <div class="footer__grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-16 items-start text-center lg:text-left">
+        <section class="footer__section footer__section--brand" aria-labelledby="footer-brand-heading">
+          <h2 id="footer-brand-heading" class="font-serif text-2xl font-semibold text-accent block mb-4">Andrea Blangino</h2>
+          <p class="text-white/70 text-sm leading-relaxed">Terapeuta, Coach y Formadora en Biodecodificación Biológica. Reconectando Bio.</p>
+        </section>
+        <section class="footer__section" aria-labelledby="footer-nav-heading">
+          <h3 id="footer-nav-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Navegación</h3>
+          <ul class="footer__nav-list space-y-3 text-sm text-white/70" role="list">
+            <li><a href="/#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+            <li><a href="/escuela-de-formacion" class="hover:text-white transition-colors">Formación</a></li>
+            <li><a href="/#talleres" class="hover:text-white transition-colors">Talleres</a></li>
+            <li><a href="/#terapias" class="hover:text-white transition-colors">Terapias</a></li>
+            <li><a href="/#sobre-mi" class="hover:text-white transition-colors">Sobre Mí</a></li>
+          </ul>
+        </section>
+        <section class="footer__section footer__section--social" aria-labelledby="footer-social-heading">
+          <h3 id="footer-social-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Redes Sociales</h3>
+          <ul class="footer__social-list flex flex-wrap justify-center gap-4 text-lg" role="list">
+            <li><a href="https://instagram.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+            <li><a href="https://youtube.com/@andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+            <li><a href="https://facebook.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+          </ul>
+        </section>
+        <section class="footer__section" aria-labelledby="footer-contact-heading">
+          <h3 id="footer-contact-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Contacto</h3>
+          <ul class="footer__contact-list space-y-3 text-sm text-white/70" role="list">
+            <li class="footer__contact-row flex items-center justify-center lg:justify-start gap-3">
+              <i class="far fa-envelope text-accent w-5 flex-shrink-0 text-center" aria-hidden="true"></i>
+              <span>andreablangino@gmail.com</span>
+            </li>
+            <li class="footer__contact-row flex items-center justify-center lg:justify-start gap-3">
+              <i class="fab fa-whatsapp text-accent w-5 flex-shrink-0 text-center" aria-hidden="true"></i>
+              <span>+5493541574635</span>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 text-xs text-white/50 text-center md:text-left">
+        <p>&copy; 2025 Andrea Blangino. Todos los derechos reservados.</p>
+        <p><a href="/politica-privacidad" class="hover:text-white/70 transition-colors">Política de privacidad</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
