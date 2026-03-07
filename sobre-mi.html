@@ -81,15 +81,17 @@
 
   <header class="relative overflow-hidden bg-[url('assets/images/home-value-background.jpg')] bg-cover bg-center bg-no-repeat py-24 md:py-32">
     <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div>
+      <div class="order-2 md:order-1">
         <span class="inline-block text-primary font-semibold text-xs uppercase tracking-[0.2em] mb-4">Terapeuta Holística</span>
         <h1 class="font-display text-[48px] font-normal leading-[72px] text-neutral-dark mb-6">Hola, soy Andrea Blangino</h1>
-        <p class="text-neutral-mid text-lg leading-relaxed mb-8 max-w-md font-nav"><!-- PLACEHOLDER: Tagline personal en Hero -->Terapeuta, coach y formadora. Acompaño a personas y profesionales a reconectar con el sentido biológico del síntoma y a vivir con más conciencia y plenitud.</p>
-        <a href="/#contacto" class="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-md hover:shadow-lg no-underline uppercase">Reservar una sesión</a>
+        <p class="text-neutral-mid text-lg leading-relaxed mb-8 max-w-md font-nav">Terapeuta, coach y formadora. Acompaño a personas y profesionales a reconectar con el sentido biológico del síntoma y a vivir con más conciencia y plenitud.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/#contacto" class="hero-cta hero-cta--primary inline-flex items-center justify-center text-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-md hover:shadow-lg no-underline uppercase">Reservar una sesión</a>
+        </div>
       </div>
-      <div class="flex justify-center">
+      <div class="order-1 md:order-2 flex justify-center">
         <div class="w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-primary-pale/50">
-          <img src="assets/images/Andrea-picture.jpg" alt="Andrea Blangino — Terapeuta y formadora" class="w-full h-full object-cover object-center" width="600" height="750" loading="lazy">
+          <img src="assets/images/Andrea-3.webp" alt="Andrea Blangino — Terapeuta y formadora" class="w-full h-full object-cover object-center" width="600" height="750" loading="lazy">
         </div>
       </div>
     </div>
@@ -103,8 +105,7 @@
         <p>Soy <strong class="text-accent-dark">Andrea Carolina</strong>, curiosa insaciable, emprendedora y con una profunda vocación de servicio. Entiendo el síntoma no como un enemigo, sino como un mensaje que nos invita a mirar hacia adentro. Mi propósito es acompañarte en ese proceso de sanación, conciencia y evolución, porque una vida más plena y consciente es posible para todos.</p>
         <p><!-- PLACEHOLDER: Bio completa — párrafo 3 y siguientes -->Sigo formándome y profundizando en herramientas que integran cuerpo, emoción y sentido, para ofrecer un acompañamiento cada vez más completo y respetuoso con tu proceso.</p>
       </div>
-      <p class="font-body italic text-xl text-neutral-dark mt-8 text-center">"Tu sistema es el mapa hacia tu tesoro interior."</p>
-      <img src="assets/images/Andrea-picture-2.jpg" alt="Andrea Blangino — Terapeuta y formadora" class="rounded-2xl shadow-xl w-full max-w-2xl mx-auto mt-10 block object-cover" loading="lazy" width="800" height="600">
+      <img src="assets/images/Andrea-grupo.webp" alt="Andrea Blangino — Terapeuta y formadora" class="rounded-2xl shadow-xl w-full max-w-2xl mx-auto mt-10 block object-cover" loading="lazy" width="800" height="600">
     </div>
   </section>
 
@@ -131,42 +132,91 @@
   <section class="py-24 md:py-32 bg-neutral-light" aria-labelledby="formacion-cred-heading">
     <div class="max-w-container mx-auto px-5 lg:px-20">
       <h2 id="formacion-cred-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Formación y Credenciales</h2>
-      <p class="text-center text-neutral-mid mb-12 max-w-xl mx-auto font-nav text-base">Trayectoria formativa y certificaciones.</p>
-      <div class="grid md:grid-cols-2 gap-12 items-start max-w-4xl mx-auto">
-        <div class="space-y-6">
-          <div class="flex gap-4 items-start">
-            <span class="text-accent font-semibold font-nav text-sm w-16 shrink-0 pt-0.5">2016</span>
-            <div>
-              <p class="font-semibold text-neutral-dark text-sm">Inicio en Biodecodificación Biológica</p>
-              <p class="text-neutral-mid text-sm">Formación y práctica en las 5 Leyes Biológicas y sentido del síntoma.</p>
-            </div>
-          </div>
-          <div class="flex gap-4 items-start">
-            <span class="text-accent font-semibold font-nav text-sm w-16 shrink-0 pt-0.5"><!-- PLACEHOLDER: año hito 2 -->—</span>
-            <div>
-              <p class="font-semibold text-neutral-dark text-sm"><!-- PLACEHOLDER: hito timeline 2 -->Formación continua en herramientas complementarias</p>
-              <p class="text-neutral-mid text-sm"><!-- PLACEHOLDER: descripción -->PNL, Constelaciones, Registros Akáshicos.</p>
-            </div>
-          </div>
-          <div class="flex gap-4 items-start">
-            <span class="text-accent font-semibold font-nav text-sm w-16 shrink-0 pt-0.5"><!-- PLACEHOLDER: año hito 3 -->—</span>
-            <div>
-              <p class="font-semibold text-neutral-dark text-sm"><!-- PLACEHOLDER: hito timeline 3 -->Docencia y formación</p>
-              <p class="text-neutral-mid text-sm"><!-- PLACEHOLDER: descripción -->Escuela de Formación en Biodecodificación.</p>
-            </div>
-          </div>
+      <p class="text-center text-neutral-mid mb-14 max-w-xl mx-auto font-nav text-base">Trayectoria formativa y certificaciones.</p>
+
+      <div class="max-w-3xl mx-auto space-y-12">
+        <div>
+          <h3 class="font-nav text-primary font-semibold text-xs uppercase tracking-[0.15em] mb-5">Formación académica y en salud mental</h3>
+          <ul class="space-y-4" role="list">
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">1986–90</span>
+              <span class="text-neutral-dark text-sm">Universidad de Córdoba, Psicología.</span>
+            </li>
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">1989</span>
+              <span class="text-neutral-dark text-sm">Curso Títeres y Salud Mental, CECI, Córdoba.</span>
+            </li>
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">1989</span>
+              <span class="text-neutral-dark text-sm">Programa de Desarrollo de Acompañante Terapéutico, CECI.</span>
+            </li>
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">1989</span>
+              <span class="text-neutral-dark text-sm">Curso Psicosis Infantil y Patologías graves de la Conducta, CECI.</span>
+            </li>
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">1994</span>
+              <span class="text-neutral-dark text-sm">Asistente 2das. Jornadas de Escuela de Psicología, UNC.</span>
+            </li>
+          </ul>
         </div>
-        <div class="grid grid-cols-2 gap-4">
-          <article class="bg-white rounded-2xl p-5 text-center shadow-sm border border-neutral-100">
-            <i class="fas fa-certificate text-accent text-2xl mb-3 block" aria-hidden="true"></i>
-            <h4 class="font-serif text-neutral-dark text-base font-semibold mb-1"><!-- PLACEHOLDER: Certificación 1 -->Biodecodificación Biológica</h4>
-            <span class="text-neutral-mid text-xs">Formación integral</span>
-          </article>
-          <article class="bg-white rounded-2xl p-5 text-center shadow-sm border border-neutral-100">
-            <i class="fas fa-certificate text-accent text-2xl mb-3 block" aria-hidden="true"></i>
-            <h4 class="font-serif text-neutral-dark text-base font-semibold mb-1"><!-- PLACEHOLDER: Certificación 2 -->Registros Akáshicos</h4>
-            <span class="text-neutral-mid text-xs">Lectora certificada</span>
-          </article>
+
+        <div>
+          <h3 class="font-nav text-primary font-semibold text-xs uppercase tracking-[0.15em] mb-5">Biodecodificación y desarrollo personal</h3>
+          <ul class="space-y-4" role="list">
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">2016</span>
+              <span class="text-neutral-dark text-sm">Formación en Decodificación y Desprogramación Biológica, Instituto Kausay.</span>
+            </li>
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">2017</span>
+              <span class="text-neutral-dark text-sm">Curso de Numerología Astrológica Kármica y Transgeneracional, Victoria Serondino Abril.</span>
+            </li>
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">2017</span>
+              <span class="text-neutral-dark text-sm">Nivel 1, 2 y Maestría Aqualead, Alejandra Ferrero.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-nav text-primary font-semibold text-xs uppercase tracking-[0.15em] mb-5">Registros Akáshicos</h3>
+          <ul class="space-y-4" role="list">
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">2017</span>
+              <span class="text-neutral-dark text-sm">Seminario de Registros Akáshicos, Niveles 1, 2 y 3, Centro Akasha.</span>
+            </li>
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">2019</span>
+              <span class="text-neutral-dark text-sm">Maestría en Registros Akáshicos, Patricia Marino.</span>
+            </li>
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">2019</span>
+              <span class="text-neutral-dark text-sm">Taller de Limpieza y Protección Energética, AATMA.</span>
+            </li>
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">2019</span>
+              <span class="text-neutral-dark text-sm">Facilitador Registros Akáshicos, Daniel Camurri.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="font-nav text-primary font-semibold text-xs uppercase tracking-[0.15em] mb-5">Linaje y sanación ancestral</h3>
+          <ul class="space-y-4" role="list">
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">2022</span>
+              <span class="text-neutral-dark text-sm">Curso Sanación Ancestral y Sanación de Linaje Materno y Paterno, Muluc Luna.</span>
+            </li>
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">2023</span>
+              <span class="text-neutral-dark text-sm">Formación 13 Rito Munay Ki — Linaje Materno, Rito del Útero.</span>
+            </li>
+            <li class="flex gap-4 md:gap-6 items-baseline">
+              <span class="text-accent font-semibold font-nav text-sm w-14 shrink-0">2023</span>
+              <span class="text-neutral-dark text-sm">Formación en Linaje Paterno.</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
