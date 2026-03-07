@@ -307,7 +307,7 @@ body.nav-menu-open .nav-icon-close {
   max-width: 100%;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 414px) {
   .hero-terapias {
     padding-left: 0;
     padding-right: 0;
@@ -318,11 +318,12 @@ body.nav-menu-open .nav-icon-close {
     gap: 1.5rem;
   }
   .hero-terapias__title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.35;
     max-width: 100%;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+    hyphens: none;
+    overflow-wrap: normal;
+    word-break: normal;
   }
   .hero-terapias .hero-cta {
     white-space: normal;
