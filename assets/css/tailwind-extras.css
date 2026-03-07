@@ -283,6 +283,15 @@ body.nav-menu-open .nav-icon-close {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Hero CTA: texto centrado en el botón (index + terapias) */
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: nowrap;
+}
+
 .stat-number {
   font-family: "Gilda Display", serif;
   color: #C8A96E;

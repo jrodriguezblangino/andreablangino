@@ -81,18 +81,24 @@
 
   <header class="relative overflow-hidden bg-[url('assets/images/home-value-background.jpg')] bg-cover bg-center bg-no-repeat py-24 md:py-32">
     <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div>
-        <span class="inline-block text-primary font-semibold text-xs uppercase tracking-[0.2em] mb-4">Terapias Individuales</span>
-        <h1 class="font-display text-[48px] font-normal leading-[72px] text-neutral-dark mb-6">Acompañamiento personalizado para tu proceso de sanación</h1>
-        <p class="text-neutral-mid text-lg leading-relaxed mb-8 max-w-md font-nav">Una sesión individual te permite ir al origen de tu síntoma o conflicto y desactivar el programa biológico con acompañamiento profesional. Online por Zoom o en consultorio presencial.</p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="#online" class="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-md hover:shadow-lg no-underline uppercase">Reservar Sesión Online</a>
-          <a href="#presencial" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-primary text-primary font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-pale transition-colors no-underline uppercase">Consulta Presencial <i class="fas fa-arrow-right text-sm"></i></a>
+      <div class="order-1 md:order-2 flex justify-center">
+        <div class="w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-primary-pale/50">
+          <img src="assets/images/consultorio.webp" alt="Andrea Blangino — Terapeuta en Biodecodificación" class="w-full h-full object-cover object-center" width="600" height="750">
         </div>
       </div>
-      <div class="flex justify-center">
-        <div class="w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-primary-pale/50">
-          <img src="assets/images/Andrea-picture.jpg" alt="Andrea Blangino — Terapeuta en Biodecodificación" class="w-full h-full object-cover object-center" width="600" height="750" loading="lazy">
+      <div class="order-2 md:order-1">
+        <span class="inline-block text-primary font-semibold text-xs uppercase tracking-[0.2em] mb-4">Terapias Individuales</span>
+        <h1 class="font-display text-[48px] font-normal leading-[72px] text-neutral-dark mb-6">
+          Acompañamiento personalizado para tu proceso de sanación
+        </h1>
+        <p class="text-neutral-mid text-lg leading-relaxed mb-8 max-w-md font-nav">
+          Una sesión individual te permite ir al origen de tu síntoma o conflicto y desactivar el programa biológico con acompañamiento profesional. Online por Zoom o en consultorio presencial.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#online" class="hero-cta hero-cta--primary inline-flex items-center justify-center text-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-md hover:shadow-lg no-underline uppercase">Reservar Sesión Online</a>
+          <a href="#presencial" class="hero-cta hero-cta--secondary inline-flex items-center justify-center text-center gap-2 px-8 py-3.5 border-2 border-primary text-primary font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-pale transition-colors no-underline uppercase">
+            Consulta Presencial <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i>
+          </a>
         </div>
       </div>
     </div>
@@ -123,44 +129,93 @@
   </section>
 
   <section id="online" class="py-24 md:py-32 bg-white" aria-labelledby="online-heading">
-    <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
-      <div>
-        <i class="fas fa-desktop text-primary text-4xl mb-4 block" aria-hidden="true"></i>
-        <h2 id="online-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4">Sesiones Online</h2>
-        <p class="text-neutral-mid leading-relaxed mb-6">Consultas por Zoom desde cualquier lugar. Mismo rigor y profundidad que en presencial, con la comodidad de tu espacio.</p>
-        <ul class="space-y-3 text-neutral-mid font-nav mb-6" role="list">
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Sin desplazamientos, desde tu hogar</li>
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Zoom con cámara y micrófono</li>
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Link y recordatorio por email</li>
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Posibilidad de grabar la sesión</li>
-        </ul>
-        <p class="text-neutral-mid text-sm mb-2"><i class="fas fa-clock text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: Duración sesión — ej. 90 minutos -->90 minutos aprox.</p>
-        <p class="text-neutral-mid text-sm mb-6"><i class="fas fa-tag text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: Precio sesión online -->Consultar precio</p>
-        <a href="/#contacto" class="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-md no-underline uppercase">Reservar Online</a>
-      </div>
-      <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-primary-pale/50 shadow-xl">
+    <div class="max-w-container mx-auto px-5 lg:px-20 grid grid-cols-1 md:grid-cols-[0.45fr_0.55fr] gap-12 items-center">
+      <div class="w-full h-[280px] md:h-auto md:aspect-[4/3] rounded-2xl overflow-hidden bg-primary-pale/50 shadow-xl min-h-0">
         <img src="assets/images/home-value-background.jpg" alt="" class="w-full h-full object-cover" loading="lazy">
+      </div>
+      <div class="text-center md:text-left">
+        <div class="flex flex-col items-center md:items-start mb-4">
+          <i class="fas fa-desktop text-primary text-4xl mb-4 block" aria-hidden="true"></i>
+          <h2 id="online-heading" class="font-serif text-3xl font-semibold text-neutral-dark">Sesiones Online</h2>
+        </div>
+        <p class="text-neutral-mid leading-relaxed mb-6">Consultas por Zoom desde cualquier lugar. Mismo rigor y profundidad que en presencial, con la comodidad de tu espacio.</p>
+        <div class="flex justify-center md:justify-start mb-6">
+          <ul class="space-y-3 text-neutral-mid font-nav w-full max-w-md" role="list">
+            <li class="flex items-center gap-3">
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+              <span>Sin desplazamientos, desde tu hogar</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+              <span>Zoom con cámara y micrófono</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+              <span>Link y recordatorio por email</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+              <span>Posibilidad de grabar la sesión</span>
+            </li>
+          </ul>
+        </div>
+        <ul class="space-y-1.5 mb-6 w-full max-w-md mx-auto md:mx-0" role="list" aria-label="Duración y precio">
+          <li class="flex items-center gap-3 text-neutral-mid text-sm">
+            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary" aria-hidden="true"><i class="fas fa-clock" aria-hidden="true"></i></span>
+            <span>90 minutos aprox.</span>
+          </li>
+          <li class="flex items-center gap-3 text-neutral-mid text-sm">
+            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary" aria-hidden="true"><i class="fas fa-tag" aria-hidden="true"></i></span>
+            <span>Consultar precio</span>
+          </li>
+        </ul>
+        <div class="flex justify-center md:justify-start">
+          <a href="/#contacto" class="inline-flex items-center justify-center w-full max-w-[280px] md:max-w-none md:w-auto px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-md no-underline uppercase">Reservar Online</a>
+        </div>
       </div>
     </div>
   </section>
 
   <section id="presencial" class="py-24 md:py-32 bg-neutral-light" aria-labelledby="presencial-heading">
-    <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 items-center">
-      <div class="order-2 md:order-1 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+    <div class="max-w-container mx-auto px-5 lg:px-20 grid grid-cols-1 md:grid-cols-[0.45fr_0.55fr] gap-12 items-center">
+      <div class="w-full h-[280px] md:h-auto md:aspect-[4/3] rounded-2xl overflow-hidden shadow-xl min-h-0">
         <img src="assets/images/Andrea-picture-2.jpg" alt="Consultorio presencial — Andrea Blangino" class="w-full h-full object-cover object-center" loading="lazy">
       </div>
-      <div class="order-1 md:order-2">
-        <i class="fas fa-door-open text-primary text-4xl mb-4 block" aria-hidden="true"></i>
-        <h2 id="presencial-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4">Consultorio Presencial</h2>
+      <div class="text-center md:text-left">
+        <div class="flex flex-col items-center md:items-start mb-4">
+          <i class="fas fa-door-open text-primary text-4xl mb-4 block" aria-hidden="true"></i>
+          <h2 id="presencial-heading" class="font-serif text-3xl font-semibold text-neutral-dark">Consultorio Presencial</h2>
+        </div>
         <p class="text-neutral-mid leading-relaxed mb-6">Para un acompañamiento personal, cercano y profundo. En un espacio tranquilo donde podés conectar con tu proceso sin distracciones.</p>
-        <ul class="space-y-3 text-neutral-mid font-nav mb-6" role="list">
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Sesión en persona</li>
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Espacio reservado y confidencial</li>
-          <li class="flex items-center gap-3"><i class="fas fa-check-circle text-primary flex-shrink-0" aria-hidden="true"></i> Misma duración y enfoque que online</li>
+        <div class="flex justify-center md:justify-start mb-6">
+          <ul class="space-y-3 text-neutral-mid font-nav w-full max-w-md" role="list">
+            <li class="flex items-center gap-3">
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+              <span>Sesión en persona</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+              <span>Espacio reservado y confidencial</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary" aria-hidden="true"><i class="fas fa-check-circle" aria-hidden="true"></i></span>
+              <span>Misma duración y enfoque que online</span>
+            </li>
+          </ul>
+        </div>
+        <ul class="space-y-1.5 mb-6 w-full max-w-md mx-auto md:mx-0" role="list" aria-label="Ubicación y precio">
+          <li class="flex items-center gap-3 text-neutral-mid text-sm">
+            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary" aria-hidden="true"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+            <span>Consultorio en Córdoba — consultar dirección</span>
+          </li>
+          <li class="flex items-center gap-3 text-neutral-mid text-sm">
+            <span class="flex h-6 w-6 flex-shrink-0 items-center justify-center text-primary" aria-hidden="true"><i class="fas fa-tag" aria-hidden="true"></i></span>
+            <span>Consultar precio</span>
+          </li>
         </ul>
-        <p class="text-neutral-mid text-sm mb-2"><i class="fas fa-map-marker-alt text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: Dirección consultorio -->Consultorio en Córdoba — consultar dirección</p>
-        <p class="text-neutral-mid text-sm mb-6"><i class="fas fa-tag text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: Precio sesión presencial -->Consultar precio</p>
-        <a href="https://wa.me/54911XXXXXXXX" target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase">Consultar Disponibilidad</a>
+        <div class="flex justify-center md:justify-start">
+          <a href="https://wa.me/54911XXXXXXXX" target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center w-full max-w-[280px] md:max-w-none md:w-auto px-8 py-3.5 bg-accent text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase">Consultar Disponibilidad</a>
+        </div>
         <!-- PLACEHOLDER: replace WhatsApp number -->
       </div>
     </div>
