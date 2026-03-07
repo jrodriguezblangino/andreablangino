@@ -36,10 +36,15 @@ body.nav-menu-open {
   overflow-x: hidden;
 }
 
-/* Panel del menú móvil: full viewport bajo la barra, transición suave */
+/* Panel del menú móvil: overlay; contenido = continuación de la barra, ancho completo, altura justa */
 .nav-menu-mobile-panel {
   top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -59,23 +64,26 @@ body.nav-menu-open .nav-menu-mobile-panel {
   -webkit-backdrop-filter: blur(4px);
 }
 
+/* Contenido: ancho completo, continuación visual de la nav bar; altura según contenido (no toda la pantalla) */
 .nav-menu-mobile-content {
   position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 100%;
+  max-height: calc(100vh - 5rem);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   text-align: center;
   background: #F5F3EF;
-  width: 100%;
-  max-width: 100%;
-  min-height: 0;
-  max-height: 100vh;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   overflow-y: auto;
   overflow-x: hidden;
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
-  padding: 1.5rem 1.5rem 2rem;
-  padding-top: max(1.5rem, 5rem);
+  padding: 1rem 1.5rem 1.5rem;
+  padding-top: max(1rem, 4.5rem);
 }
 @media (prefers-reduced-motion: no-preference) {
   .nav-menu-mobile-content {
