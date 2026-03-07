@@ -83,7 +83,7 @@
     <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
       <div class="order-1 md:order-2 flex justify-center">
         <div class="w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-primary-pale/50">
-          <img src="assets/images/consultorio.webp" alt="Andrea Blangino — Terapeuta en Biodecodificación" class="w-full h-full object-cover object-center" width="600" height="750">
+          <img src="assets/images/Andrea-picture-2.jpg" alt="Andrea Blangino — Terapeuta en Biodecodificación" class="w-full h-full object-cover object-center" width="600" height="750">
         </div>
       </div>
       <div class="order-2 md:order-1">
@@ -131,7 +131,7 @@
   <section id="online" class="py-24 md:py-32 bg-white" aria-labelledby="online-heading">
     <div class="max-w-container mx-auto px-5 lg:px-20 grid grid-cols-1 md:grid-cols-[0.45fr_0.55fr] gap-12 items-center">
       <div class="w-full h-[280px] md:h-auto md:aspect-[4/3] rounded-2xl overflow-hidden bg-primary-pale/50 shadow-xl min-h-0">
-        <img src="assets/images/home-value-background.jpg" alt="" class="w-full h-full object-cover" loading="lazy">
+        <img src="assets/images/online.webp" alt="" class="w-full h-full object-cover" loading="lazy">
       </div>
       <div class="text-center md:text-left">
         <div class="flex flex-col items-center md:items-start mb-4">
@@ -179,7 +179,7 @@
   <section id="presencial" class="py-24 md:py-32 bg-neutral-light" aria-labelledby="presencial-heading">
     <div class="max-w-container mx-auto px-5 lg:px-20 grid grid-cols-1 md:grid-cols-[0.45fr_0.55fr] gap-12 items-center">
       <div class="w-full h-[280px] md:h-auto md:aspect-[4/3] rounded-2xl overflow-hidden shadow-xl min-h-0">
-        <img src="assets/images/Andrea-picture-2.jpg" alt="Consultorio presencial — Andrea Blangino" class="w-full h-full object-cover object-center" loading="lazy">
+        <img src="assets/images/consultorio.webp" alt="Consultorio presencial — Andrea Blangino" class="w-full h-full object-cover object-center" loading="lazy">
       </div>
       <div class="text-center md:text-left">
         <div class="flex flex-col items-center md:items-start mb-4">
@@ -258,30 +258,21 @@
     </div>
   </section>
 
-  <section class="py-24 md:py-32 bg-primary-pale/40" aria-labelledby="testimonios-terapias-heading">
+  <section id="testimonios-heading" class="py-24 md:py-32 bg-white" aria-labelledby="testimonios-heading-title">
     <div class="max-w-container mx-auto px-5 lg:px-20">
-      <h2 id="testimonios-terapias-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Experiencias de personas acompañadas</h2>
-      <p class="text-center text-neutral-mid mb-12 max-w-xl mx-auto font-nav text-base">Lo que comparten quienes han hecho sesiones.</p>
-      <div class="grid md:grid-cols-3 gap-6">
-        <article class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
-          <div class="w-14 h-14 rounded-full bg-primary-pale/80 mx-auto mb-4 flex items-center justify-center text-primary text-xl font-serif font-semibold" aria-hidden="true">A</div>
-          <p class="font-serif italic text-neutral-dark mb-4 text-base">La sesión me permitió ver el sentido de un síntoma que arrastraba hace años. Siento alivio y claridad.</p>
-          <p class="font-semibold text-neutral-dark text-sm">M. R.</p>
-          <span class="text-neutral-mid text-xs">Sesión online</span>
-        </article>
-        <article class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
-          <div class="w-14 h-14 rounded-full bg-primary-pale/80 mx-auto mb-4 flex items-center justify-center text-primary text-xl font-serif font-semibold" aria-hidden="true">B</div>
-          <p class="font-serif italic text-neutral-dark mb-4 text-base">Andrea tiene una escucha profunda. En presencial me sentí muy contenida y pude trabajar temas que no me animaba por Zoom.</p>
-          <p class="font-semibold text-neutral-dark text-sm">C. L.</p>
-          <span class="text-neutral-mid text-xs">Sesión presencial</span>
-        </article>
-        <article class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
-          <div class="w-14 h-14 rounded-full bg-primary-pale/80 mx-auto mb-4 flex items-center justify-center text-primary text-xl font-serif font-semibold" aria-hidden="true">C</div>
-          <p class="font-serif italic text-neutral-dark mb-4 text-base">Recomiendo las sesiones a cualquiera que quiera entender qué le dice el cuerpo. En una sesión ya se nota el trabajo.</p>
-          <p class="font-semibold text-neutral-dark text-sm">P. G.</p>
-          <span class="text-neutral-mid text-xs">Sesión online</span>
-        </article>
+      <h2 id="testimonios-heading-title" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Lo que dicen quienes nos eligieron</h2>
+      <p class="text-center text-neutral-mid mb-12 max-w-xl mx-auto font-nav text-base">Reseñas verificadas en Google</p>
+
+      <div class="reviews-slider-container relative">
+        <button type="button" class="slider-btn slider-btn--prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border-2 border-primary text-primary flex items-center justify-center shadow-md hover:bg-primary hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" aria-label="Reseña anterior">&#8249;</button>
+        <div class="reviews-track overflow-hidden">
+          <div class="reviews-slider-inner flex transition-transform duration-300 ease-out" id="reviews-slider-inner">
+            <!-- Tarjetas generadas por JS -->
+          </div>
+        </div>
+        <button type="button" class="slider-btn slider-btn--next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border-2 border-primary text-primary flex items-center justify-center shadow-md hover:bg-primary hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" aria-label="Reseña siguiente">&#8250;</button>
       </div>
+      <div class="slider-dots flex justify-center gap-2 mt-8" role="tablist" aria-label="Navegación del carrusel"></div>
     </div>
   </section>
 
