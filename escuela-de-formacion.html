@@ -306,30 +306,45 @@
     </div>
   </section>
 
-  <section class="py-24 md:py-32 bg-white" aria-labelledby="testimonios-heading">
+  <section class="py-16 md:py-24 bg-white" aria-label="Programa y modalidad del curso">
     <div class="max-w-container mx-auto px-5 lg:px-20">
-      <h2 id="testimonios-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Lo que dicen nuestros alumnos</h2>
-      <p class="text-center text-neutral-mid mb-12 max-w-xl mx-auto font-nav text-base">Experiencias de quienes ya forman parte de la escuela.</p>
-      <div class="grid md:grid-cols-3 gap-6">
-        <article class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
-          <div class="w-14 h-14 rounded-full bg-primary-pale/80 mx-auto mb-4 flex items-center justify-center text-primary text-xl font-serif font-semibold" aria-hidden="true">A</div>
-          <p class="font-serif italic text-neutral-dark mb-4 text-base"><!-- PLACEHOLDER: testimonio 1 -->Una formación que superó mis expectativas. Herramientas claras y acompañamiento humano.</p>
-          <p class="font-semibold text-neutral-dark text-sm"><!-- PLACEHOLDER: nombre testimonio 1 -->María G.</p>
-          <span class="text-neutral-mid text-xs"><!-- PLACEHOLDER: ocupación testimonio 1 -->Terapeuta</span>
-        </article>
-        <article class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
-          <div class="w-14 h-14 rounded-full bg-primary-pale/80 mx-auto mb-4 flex items-center justify-center text-primary text-xl font-serif font-semibold" aria-hidden="true">B</div>
-          <p class="font-serif italic text-neutral-dark mb-4 text-base"><!-- PLACEHOLDER: testimonio 2 -->El programa me dio estructura y confianza para trabajar con el sentido biológico del síntoma.</p>
-          <p class="font-semibold text-neutral-dark text-sm"><!-- PLACEHOLDER: nombre testimonio 2 -->Laura S.</p>
-          <span class="text-neutral-mid text-xs"><!-- PLACEHOLDER: ocupación testimonio 2 -->Coach</span>
-        </article>
-        <article class="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
-          <div class="w-14 h-14 rounded-full bg-primary-pale/80 mx-auto mb-4 flex items-center justify-center text-primary text-xl font-serif font-semibold" aria-hidden="true">C</div>
-          <p class="font-serif italic text-neutral-dark mb-4 text-base"><!-- PLACEHOLDER: testimonio 3 -->Profundo, práctico y con mucho respeto por el proceso de cada uno. Lo recomiendo.</p>
-          <p class="font-semibold text-neutral-dark text-sm"><!-- PLACEHOLDER: nombre testimonio 3 -->Pablo R.</p>
-          <span class="text-neutral-mid text-xs"><!-- PLACEHOLDER: ocupación testimonio 3 -->Profesional de la salud</span>
-        </article>
+      <div class="programa-modalidad-wrap w-full md:max-w-[80%] mx-auto fade-in-scroll">
+        <img src="assets/images/escuela.png" alt="Programa y modalidad de la Escuela de Biodecodificación" class="w-full rounded-2xl shadow-lg object-cover" width="1200" height="800" loading="lazy">
       </div>
+    </div>
+  </section>
+
+  <section class="video-formacion-section py-16 md:py-24 bg-neutral-light" aria-labelledby="video-formacion-heading">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <h2 id="video-formacion-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Conocé cómo es la formación</h2>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/dqdWcGL5224"
+          title="Video de presentación de la Escuela de Formación en Biodecodificación"
+          frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonios-heading" class="py-24 md:py-32 bg-white" aria-labelledby="testimonios-heading-title">
+    <div class="max-w-container mx-auto px-5 lg:px-20">
+      <h2 id="testimonios-heading-title" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Lo que dicen quienes nos eligieron</h2>
+      <p class="text-center text-neutral-mid mb-12 max-w-xl mx-auto font-nav text-base">Reseñas verificadas en Google</p>
+
+      <div class="reviews-slider-container relative">
+        <button type="button" class="slider-btn slider-btn--prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border-2 border-primary text-primary flex items-center justify-center shadow-md hover:bg-primary hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" aria-label="Reseña anterior">&#8249;</button>
+        <div class="reviews-track overflow-hidden">
+          <div class="reviews-slider-inner flex transition-transform duration-300 ease-out" id="reviews-slider-inner">
+            <!-- Tarjetas generadas por JS -->
+          </div>
+        </div>
+        <button type="button" class="slider-btn slider-btn--next absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border-2 border-primary text-primary flex items-center justify-center shadow-md hover:bg-primary hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" aria-label="Reseña siguiente">&#8250;</button>
+      </div>
+      <div class="slider-dots flex justify-center gap-2 mt-8" role="tablist" aria-label="Navegación del carrusel"></div>
     </div>
   </section>
 
@@ -381,58 +396,57 @@
       <div class="max-w-3xl mx-auto space-y-4">
         <div class="faq-item">
           <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-form-1" id="faq-btn-form-1">
-            <span><!-- PLACEHOLDER: pregunta formación 1 -->¿Necesito formación previa en salud o terapia?</span>
+            <span>¿A quién está dirigida esta formación?</span>
             <span class="faq-icon">+</span>
           </button>
           <div id="faq-form-1" class="faq-content" role="region" aria-labelledby="faq-btn-form-1" aria-hidden="true">
-            <div class="faq-content-inner"><!-- PLACEHOLDER: respuesta formación 1 -->No es obligatorio. La formación está diseñada para quienes recién se acercan y para profesionales que quieren profundizar. Se trabaja desde cero en los fundamentos.</div>
+            <div class="faq-content-inner">A personas que sienten el deseo de acompañar a otros desde un enfoque humano y consciente. Ideal para quienes ya trabajan con personas y buscan sumar herramientas, o para quienes inician su camino en el acompañamiento.</div>
           </div>
         </div>
         <div class="faq-item">
           <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-form-2" id="faq-btn-form-2">
-            <span><!-- PLACEHOLDER: pregunta formación 2 -->¿Cómo son las prácticas supervisadas?</span>
+            <span>¿Necesito conocimientos previos para inscribirme?</span>
             <span class="faq-icon">+</span>
           </button>
           <div id="faq-form-2" class="faq-content" role="region" aria-labelledby="faq-btn-form-2" aria-hidden="true">
-            <div class="faq-content-inner"><!-- PLACEHOLDER: respuesta formación 2 -->Se realizan en pares o en grupo reducido, con supervisión de la docente. Permiten llevar a la práctica lo visto en teoría y recibir feedback.</div>
+            <div class="faq-content-inner">No se requieren conocimientos previos. La formación está diseñada para comenzar desde lo esencial y avanzar hacia la práctica de manera progresiva. Si ya trabajás acompañando personas, estas herramientas se integrarán a tu experiencia; si estás iniciando, te brindaremos el marco necesario para transitar el proceso con seguridad.</div>
           </div>
         </div>
         <div class="faq-item">
           <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-form-3" id="faq-btn-form-3">
-            <span><!-- PLACEHOLDER: pregunta formación 3 -->¿Puedo pagar en cuotas?</span>
+            <span>¿Qué aprenderé y cómo es la formación?</span>
             <span class="faq-icon">+</span>
           </button>
           <div id="faq-form-3" class="faq-content" role="region" aria-labelledby="faq-btn-form-3" aria-hidden="true">
-            <div class="faq-content-inner"><!-- PLACEHOLDER: respuesta formación 3 -->Sí, ofrecemos planes de cuotas. Consultá por WhatsApp o por el formulario de contacto.</div>
+            <div class="faq-content-inner">Cubre fundamentos científicos y aplicación práctica: formulación de hipótesis biológicas, manejo de casos reales y protocolos terapéuticos. Combina teoría y práctica en módulos con ejercicios clínicos supervisados.</div>
           </div>
         </div>
         <div class="faq-item">
           <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-form-4" id="faq-btn-form-4">
-            <span><!-- PLACEHOLDER: pregunta formación 4 -->¿Las clases quedan grabadas?</span>
+            <span>¿Qué certificación obtengo al finalizar?</span>
             <span class="faq-icon">+</span>
           </button>
           <div id="faq-form-4" class="faq-content" role="region" aria-labelledby="faq-btn-form-4" aria-hidden="true">
-            <div class="faq-content-inner"><!-- PLACEHOLDER: respuesta formación 4 -->Sí. Tenés acceso a las grabaciones 24h para verlas cuando te quede bien.</div>
+            <div class="faq-content-inner">Recibirás un certificado que acredita tu recorrido formativo dentro de la Escuela y tu capacitación práctica como consultor/a en Biodecodificación (presencial u online).</div>
           </div>
         </div>
         <div class="faq-item">
           <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-form-5" id="faq-btn-form-5">
-            <span><!-- PLACEHOLDER: pregunta formación 5 -->¿Dónde se dictan las clases?</span>
+            <span>¿Cómo me apoya la escuela después del curso?</span>
             <span class="faq-icon">+</span>
           </button>
           <div id="faq-form-5" class="faq-content" role="region" aria-labelledby="faq-btn-form-5" aria-hidden="true">
-            <div class="faq-content-inner"><!-- PLACEHOLDER: respuesta formación 5 -->Las clases tienen lugar en la ciudad de Villa Carlos Paz, Provincia de Cordoba.</div>
+            <div class="faq-content-inner">Acceso a actualizaciones, grupos de estudio, supervisión de casos, mentorías y eventos de especialización continua para acompañar tu desarrollo profesional.</div>
           </div>
         </div>
         <div class="faq-item">
           <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-form-6" id="faq-btn-form-6">
-            <span><!-- PLACEHOLDER: pregunta formación 6 -->¿Cuándo comienza la formación?</span>
+            <span>¿Tiene proyección a largo plazo?</span>
             <span class="faq-icon">+</span>
           </button>
           <div id="faq-form-6" class="faq-content" role="region" aria-labelledby="faq-btn-form-6" aria-hidden="true">
-            <div class="faq-content-inner"><!-- PLACEHOLDER: respuesta formación 6 -->Se inicia el sabado 15 de marzo de 2026</div>
+            <div class="faq-content-inner">Sí. Muchas personas que completan la formación continúan acompañando procesos individuales, creando espacios de bienestar, brindando talleres o integrando lo aprendido a sus actividades actuales. La formación brinda una base sólida que puede sostenerse en el tiempo y seguir desarrollándose.</div>
           </div>
-        </div>
         </div>
       </div>
     </div>
@@ -441,7 +455,7 @@
   <section class="py-24 md:py-32 bg-separator text-white text-center" aria-labelledby="cta-final-heading">
     <div class="max-w-container mx-auto px-5 lg:px-20">
       <h2 id="cta-final-heading" class="font-serif text-3xl md:text-4xl font-semibold mb-4 leading-tight">¿Lista/o para comenzar tu transformación?</h2>
-      <p class="text-white/90 font-nav mb-8 max-w-xl mx-auto">Sumate a la próxima cohorte y formate con bases sólidas en Biodecodificación Biológica.</p>
+      <p class="text-white/90 font-nav mb-8 max-w-xl mx-auto">Sumate al próximo grupo formate con bases sólidas en Biodecodificación Biológica.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a href="#inscripcion" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase">Inscribirme</a>
         <a href="https://wa.me/54911XXXXXXXX" target="_blank" rel="noopener noreferrer" class="cta-secondary-dark inline-flex items-center justify-center px-8 py-3.5 border-2 border-white text-white font-nav text-[16px] leading-[22px] font-normal rounded no-underline uppercase">Hablar por WhatsApp</a>

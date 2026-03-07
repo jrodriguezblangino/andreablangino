@@ -202,6 +202,25 @@
         }
     }
 
+    // ----- Fade-in al scroll (elementos con .fade-in-scroll) -----
+    function initFadeInScroll() {
+        var elements = document.querySelectorAll('.fade-in-scroll');
+        if (!elements.length) return;
+        var observer = new IntersectionObserver(
+            function (entries) {
+                for (var i = 0; i < entries.length; i++) {
+                    if (entries[i].isIntersecting) {
+                        entries[i].target.classList.add('visible');
+                    }
+                }
+            },
+            { threshold: 0.15 }
+        );
+        for (var j = 0; j < elements.length; j++) {
+            observer.observe(elements[j]);
+        }
+    }
+
     // ----- Formación hero: animate on scroll -----
     function initFormacionHero() {
         var section = document.getElementById('formacion');
@@ -277,13 +296,155 @@
         });
     }
 
+    // ----- Slider de reseñas (página formación) -----
+    var REVIEWS_GOOGLE_URL = 'https://www.google.com/search?q=andrea+blangino+biodecodificacion';
+    var REVIEWS_DATA = [
+        { author: 'María G.', date: 'Hace 2 semanas', rating: 5, text: 'Una formación que superó mis expectativas. Herramientas claras y acompañamiento humano.' },
+        { author: 'Laura S.', date: 'Hace 1 mes', rating: 5, text: 'El programa me dio estructura y confianza para trabajar con el sentido biológico del síntoma.' },
+        { author: 'Pablo R.', date: 'Hace 3 semanas', rating: 5, text: 'Profundo, práctico y con mucho respeto por el proceso de cada uno. Lo recomiendo.' },
+        { author: 'Carla M.', date: 'Hace 2 meses', rating: 5, text: 'Andrea transmite con claridad y calidez. La formación me abrió un nuevo camino profesional.' },
+        { author: 'Diego L.', date: 'Hace 1 mes', rating: 5, text: 'Excelente nivel teórico y práctico. Las supervisiones son muy enriquecedoras.' },
+        { author: 'Valeria P.', date: 'Hace 3 semanas', rating: 5, text: 'Recomiendo totalmente la escuela. Aprendí a acompañar con más seguridad y criterio.' }
+    ];
+
+    function getVisibleSlides() {
+        var w = window.innerWidth;
+        if (w >= 1024) return 3;
+        if (w >= 768) return 2;
+        return 1;
+    }
+
+    function initReviewsSlider() {
+        var container = document.getElementById('testimonios-heading');
+        var inner = document.getElementById('reviews-slider-inner');
+        var dotsContainer = container ? container.querySelector('.slider-dots') : null;
+        var prevBtn = container ? container.querySelector('.slider-btn--prev') : null;
+        var nextBtn = container ? container.querySelector('.slider-btn--next') : null;
+
+        if (!container || !inner || !REVIEWS_DATA.length) return;
+
+        var total = REVIEWS_DATA.length;
+        var currentIndex = 0;
+        var autoTimer = null;
+
+        function starString(n) {
+            var s = '';
+            for (var i = 0; i < n; i++) s += '★';
+            return s;
+        }
+
+        function buildCards() {
+            inner.innerHTML = '';
+            for (var i = 0; i < REVIEWS_DATA.length; i++) {
+                var r = REVIEWS_DATA[i];
+                var initial = r.author.charAt(0).toUpperCase();
+                var card = document.createElement('div');
+                card.className = 'review-card';
+                card.innerHTML =
+                    '<a href="' + REVIEWS_GOOGLE_URL + '" target="_blank" rel="noopener noreferrer" role="article">' +
+                    '  <div class="review-header">' +
+                    '    <div class="review-avatar" aria-hidden="true">' + initial + '</div>' +
+                    '    <div class="review-meta">' +
+                    '      <span class="review-author">' + r.author + '</span>' +
+                    '      <span class="review-date">' + r.date + '</span>' +
+                    '    </div>' +
+                    '    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="google-logo" width="48">' +
+                    '  </div>' +
+                    '  <div class="review-stars" aria-label="' + r.rating + ' de 5 estrellas">' + starString(r.rating) + '</div>' +
+                    '  <p class="review-text">"' + r.text + '"</p>' +
+                    '</a>';
+                inner.appendChild(card);
+            }
+        }
+
+        function updatePosition() {
+            var visible = getVisibleSlides();
+            var maxIndex = Math.max(0, total - visible);
+            currentIndex = currentIndex > maxIndex ? maxIndex : currentIndex;
+            var offset = (currentIndex / total) * 100;
+            inner.style.transform = 'translateX(-' + offset + '%)';
+
+            if (dotsContainer) {
+                var dots = dotsContainer.querySelectorAll('button');
+                for (var d = 0; d < dots.length; d++) {
+                    dots[d].setAttribute('aria-selected', d === currentIndex ? 'true' : 'false');
+                }
+            }
+        }
+
+        function goTo(index) {
+            var visible = getVisibleSlides();
+            var maxIndex = Math.max(0, total - visible);
+            currentIndex = (index + total) % total;
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
+            updatePosition();
+        }
+
+        function next() {
+            var visible = getVisibleSlides();
+            var maxIndex = Math.max(0, total - visible);
+            if (currentIndex >= maxIndex) goTo(0);
+            else goTo(currentIndex + 1);
+        }
+
+        function prev() {
+            var visible = getVisibleSlides();
+            var maxIndex = Math.max(0, total - visible);
+            if (currentIndex <= 0) goTo(maxIndex);
+            else goTo(currentIndex - 1);
+        }
+
+        function buildDots() {
+            if (!dotsContainer) return;
+            dotsContainer.innerHTML = '';
+            for (var i = 0; i < total; i++) {
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.setAttribute('aria-label', 'Ir a reseña ' + (i + 1));
+                btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+                btn.addEventListener('click', function (idx) {
+                    return function () { goTo(idx); };
+                }(i));
+                dotsContainer.appendChild(btn);
+            }
+        }
+
+        function startAuto() {
+            stopAuto();
+            autoTimer = setInterval(next, 5000);
+        }
+        function stopAuto() {
+            if (autoTimer) {
+                clearInterval(autoTimer);
+                autoTimer = null;
+            }
+        }
+
+        buildCards();
+        buildDots();
+        updatePosition();
+
+        if (prevBtn) prevBtn.addEventListener('click', prev);
+        if (nextBtn) nextBtn.addEventListener('click', next);
+
+        container.addEventListener('mouseenter', stopAuto);
+        container.addEventListener('mouseleave', startAuto);
+        startAuto();
+
+        window.addEventListener('resize', function () {
+            updatePosition();
+        });
+    }
+
     function init() {
         initNav();
         initNavScroll();
         initFaq();
         initCounters();
+        initFadeInScroll();
         initFormacionHero();
         initVideoCarousel();
+        initReviewsSlider();
     }
 
     if (document.readyState === 'loading') {
