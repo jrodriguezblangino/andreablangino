@@ -87,7 +87,9 @@
         document.addEventListener('keydown', handleKeydown);
 
         window.addEventListener('resize', function () {
-            if (window.innerWidth >= 1024 && isMenuOpen()) closeMenu();
+            // Close only when switching to desktop navbar (>=1280 / Tailwind xl),
+            // otherwise opening the menu can trigger a "resize" (scrollbar) and immediately close it.
+            if (window.innerWidth >= 1280 && isMenuOpen()) closeMenu();
         });
     }
 
