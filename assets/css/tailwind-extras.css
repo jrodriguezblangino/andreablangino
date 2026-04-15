@@ -18,7 +18,7 @@
   margin-right: auto;
   position: relative;
   z-index: 50;
-  background-color: #F5F3EF;
+  background-color: transparent;
 }
 /* <1024px: layout con hamburger (móvil + tablet) */
 @media (max-width: 1023px) {
@@ -59,7 +59,7 @@ body.nav-menu-open .nav-menu-mobile-panel {
 .nav-menu-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(28, 28, 28, 0.4);
+  background: rgba(0, 144, 147, 0.35);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
@@ -76,8 +76,8 @@ body.nav-menu-open .nav-menu-mobile-panel {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  background: #F5F3EF;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: var(--color-primary-active);
+  border-bottom: 1px solid rgba(0, 144, 147, 0.22);
   overflow-y: auto;
   overflow-x: hidden;
   overscroll-behavior: contain;
@@ -117,7 +117,7 @@ body.nav-menu-open .nav-menu-mobile-panel {
   left: 0;
   bottom: -3px;
   height: 2px;
-  background-color: #2D5A1B;
+  background-color: var(--color-primary);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -182,7 +182,7 @@ body.nav-menu-open .nav-icon-close {
 }
 .faq-content-inner {
   padding: 1.25rem 1.25rem 1.25rem;
-  color: #525252;
+  color: var(--text-muted);
   line-height: 1.625;
   font-size: 15px;
 }
@@ -195,30 +195,30 @@ body.nav-menu-open .nav-icon-close {
   align-items: center;
   gap: 1rem;
   font-weight: 600;
-  color: #1C1C1C;
+  color: var(--text-primary);
   background: #fff;
   border: none;
-  border-bottom: 2px solid #EBF2E4;
+  border-bottom: 2px solid var(--color-primary-light);
   border-radius: 0.75rem 0.75rem 0 0;
   transition: background-color 0.2s, box-shadow 0.2s, border-color 0.2s;
   cursor: pointer;
 }
 .faq-trigger:hover {
-  background-color: rgba(235, 242, 228, 0.4);
+  background-color: rgba(0, 144, 147, 0.08);
 }
 .faq-item .faq-trigger[aria-expanded="true"] {
-  border-bottom-color: #2D5A1B;
-  background-color: rgba(235, 242, 228, 0.5);
+  border-bottom-color: var(--color-primary);
+  background-color: rgba(0, 144, 147, 0.1);
 }
 .faq-trigger:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2D5A1B;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(0, 144, 147, 0.75);
 }
 .faq-item .faq-trigger[aria-expanded="true"] .faq-icon {
   transform: rotate(45deg);
 }
 .faq-icon {
-  color: #2D5A1B;
+  color: var(--color-primary);
   font-size: 1.25rem;
   font-weight: 300;
   transition: transform 0.2s;
@@ -226,13 +226,13 @@ body.nav-menu-open .nav-icon-close {
 }
 .faq-item {
   border-radius: 0.75rem;
-  border: 1px solid rgba(45, 90, 27, 0.12);
+  border: 1px solid rgba(0, 144, 147, 0.18);
   background: #fff;
   overflow: hidden;
-  box-shadow: 0 1px 3px rgba(45, 90, 27, 0.06);
+  box-shadow: 0 1px 3px rgba(0, 144, 147, 0.08);
 }
 .faq-content {
-  background: linear-gradient(to bottom, rgba(235, 242, 228, 0.35), #fff);
+  background: linear-gradient(to bottom, rgba(0, 144, 147, 0.08), #fff);
 }
 .nav-menu-link {
   display: block;
@@ -243,8 +243,8 @@ body.nav-menu-open .nav-icon-close {
   transition: background-color 0.2s, color 0.2s;
 }
 .nav-menu-link:hover {
-  background-color: #EBF2E4;
-  color: #2D5A1B;
+  background-color: var(--color-primary-light);
+  color: var(--color-primary);
 }
 .nav-menu-cta {
   display: inline-flex;
@@ -252,14 +252,14 @@ body.nav-menu-open .nav-icon-close {
   justify-content: center;
   margin-top: 1.5rem;
   padding: 0.875rem 1.5rem;
-  background-color: #2D5A1B;
+  background-color: var(--color-primary);
   color: #fff;
   border-radius: 0.5rem;
   transition: background-color 0.2s;
   width: fit-content;
 }
 .nav-menu-cta:hover {
-  background-color: #4A7C35;
+  background-color: var(--color-primary-hover);
   color: #fff;
 }
 /* Botones CTA accent (Quiero formarme, Sesión Online, Reservar Consulta): hover evidente */
@@ -267,12 +267,23 @@ body.nav-menu-open .nav-icon-close {
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 .cta-accent:hover {
-  background-color: #a88b52 !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(200, 169, 110, 0.35);
+  background-color: var(--color-accent-hover) !important;
+  box-shadow: 0 8px 20px rgba(0, 144, 147, 0.25), 0 2px 6px rgba(0, 144, 147, 0.18);
 }
 .cta-accent:focus-visible {
-  outline: 2px solid #2D5A1B;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+/* CTA primario (forzar mismo color real en cualquier fondo) */
+.cta-primary {
+  background-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+.cta-primary:hover {
+  background-color: var(--color-primary-hover) !important;
+  box-shadow: 0 8px 20px rgba(0, 144, 147, 0.25), 0 2px 6px rgba(0, 144, 147, 0.18);
 }
 
 /* Mismo hover que "Ver Talleres" (bg fill evidente): botón borde blanco en fondo oscuro */
@@ -307,7 +318,7 @@ body.nav-menu-open .nav-icon-close {
 
 .stat-number {
   font-family: "Gilda Display", serif;
-  color: #C8A96E;
+  color: var(--color-accent);
 }
 
 /* Video carousel: un video a la vez, flechas y dots */
@@ -337,19 +348,19 @@ body.nav-menu-open .nav-icon-close {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  border: 2px solid #2D5A1B;
+  border: 2px solid var(--color-primary);
   background: #fff;
-  color: #2D5A1B;
+  color: var(--color-primary);
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s, transform 0.2s;
 }
 .video-carousel__btn:hover {
-  background: #2D5A1B;
+  background: var(--color-primary);
   color: #fff;
 }
 .video-carousel__btn:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 4px #2D5A1B;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(0, 144, 147, 0.75);
 }
 .video-carousel__btn:active {
   transform: scale(0.97);
@@ -365,20 +376,20 @@ body.nav-menu-open .nav-icon-close {
   height: 0.5rem;
   border-radius: 50%;
   border: none;
-  background: rgba(45, 90, 27, 0.25);
+  background: rgba(0, 144, 147, 0.25);
   cursor: pointer;
   transition: background-color 0.2s, transform 0.2s;
 }
 .video-carousel__dot:hover {
-  background: rgba(45, 90, 27, 0.5);
+  background: rgba(0, 144, 147, 0.5);
 }
 .video-carousel__dot[aria-selected="true"] {
-  background: #2D5A1B;
+  background: var(--color-primary);
   transform: scale(1.25);
 }
 .video-carousel__dot:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #2D5A1B;
+  box-shadow: 0 0 0 2px rgba(0, 144, 147, 0.75);
 }
 
 /* ========== FORMACIÓN ANUAL — Premium hero ========== */
@@ -400,19 +411,19 @@ body.nav-menu-open .nav-icon-close {
 }
 
 .formacion-hero__check {
-  color: #fcd34d;
+  color: var(--color-violet-light);
 }
 
 .formacion-cta-premium:hover {
-  background: linear-gradient(to right, #fbbf24, #f59e0b);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  box-shadow: 0 20px 25px -5px rgba(0, 144, 147, 0.22), 0 8px 10px -6px rgba(0, 144, 147, 0.16);
 }
 
 .formacion-image-wrap {
   transition: box-shadow 0.3s ease;
 }
 .formacion-image-wrap:hover {
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 25px 50px -12px rgba(0, 144, 147, 0.35);
 }
 .formacion-image-wrap:hover .formacion-image {
   transform: scale(1.05);
@@ -484,6 +495,16 @@ body.nav-menu-open .nav-icon-close {
   margin: 0;
 }
 
+/* Footer hover hierarchy on dark teal */
+.footer a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.2s ease;
+}
+.footer a:hover,
+.footer a:focus-visible {
+  color: var(--color-primary);
+}
+
 .footer__section--social .footer__social-list {
   width: 100%;
   display: flex;
@@ -535,7 +556,7 @@ body.nav-menu-open .nav-icon-close {
   aspect-ratio: 16 / 9;
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 10px 25px -5px rgba(45, 90, 27, 0.15), 0 4px 6px -2px rgba(45, 90, 27, 0.08);
+  box-shadow: 0 10px 25px -5px rgba(0, 144, 147, 0.18), 0 4px 6px -2px rgba(0, 144, 147, 0.1);
 }
 .video-formacion-section .video-wrapper iframe {
   position: absolute;
@@ -601,13 +622,13 @@ body.nav-menu-open .nav-icon-close {
   border-radius: 1rem;
   padding: 1.5rem;
   background: #fff;
-  border: 1px solid rgba(45, 90, 27, 0.1);
-  box-shadow: 0 1px 3px rgba(45, 90, 27, 0.06);
+  border: 1px solid rgba(0, 144, 147, 0.12);
+  box-shadow: 0 1px 3px rgba(0, 144, 147, 0.08);
   transition: box-shadow 0.2s, border-color 0.2s;
 }
 .review-card a:hover {
-  box-shadow: 0 10px 25px -5px rgba(45, 90, 27, 0.12);
-  border-color: rgba(45, 90, 27, 0.2);
+  box-shadow: 0 10px 25px -5px rgba(0, 144, 147, 0.16);
+  border-color: rgba(0, 144, 147, 0.25);
 }
 
 .review-header {
@@ -622,8 +643,8 @@ body.nav-menu-open .nav-icon-close {
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background: #EBF2E4;
-  color: #2D5A1B;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -640,14 +661,14 @@ body.nav-menu-open .nav-icon-close {
 .review-author {
   display: block;
   font-weight: 600;
-  color: #1C1C1C;
+  color: var(--text-primary);
   font-size: 0.9375rem;
 }
 
 .review-date {
   display: block;
   font-size: 0.75rem;
-  color: #5C5C5C;
+  color: var(--text-muted);
 }
 
 .review-card .google-logo {
@@ -667,7 +688,7 @@ body.nav-menu-open .nav-icon-close {
 .review-text {
   font-size: 0.9375rem;
   line-height: 1.5;
-  color: #1C1C1C;
+  color: var(--text-primary);
   margin: 0;
 }
 
@@ -676,19 +697,19 @@ body.nav-menu-open .nav-icon-close {
   height: 0.5rem;
   border-radius: 50%;
   border: none;
-  background: rgba(45, 90, 27, 0.25);
+  background: rgba(0, 144, 147, 0.25);
   cursor: pointer;
   padding: 0;
   transition: background 0.2s, transform 0.2s;
 }
 .slider-dots button:hover {
-  background: rgba(45, 90, 27, 0.5);
+  background: rgba(0, 144, 147, 0.5);
 }
 .slider-dots button[aria-selected="true"] {
-  background: #2D5A1B;
+  background: var(--color-primary);
   transform: scale(1.25);
 }
 .slider-dots button:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #2D5A1B;
+  box-shadow: 0 0 0 2px rgba(0, 144, 147, 0.75);
 }

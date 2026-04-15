@@ -1,0 +1,47 @@
+:root {
+  /* Primary */
+  --color-primary: #009093;
+  --color-primary-hover: #007A7D;
+  --color-primary-active: #006366;
+  --color-primary-disabled: #66B4B6;
+  --color-primary-light: #E6F5F5;
+
+  /* Secondary (support-only) */
+  --color-secondary: var(--color-primary);
+  --color-secondary-hover: var(--color-primary-hover);
+  --color-secondary-light: var(--color-primary-light);
+
+  /* Accent */
+  --color-accent: #3B6EB4;
+  --color-accent-hover: #2F5890;
+  --color-accent-light: #EBF1F8;
+
+  /* Supporting (violet) */
+  --color-violet: #705BA6;
+  --color-violet-light: #C7BBEA;
+
+  /* Semantic */
+  --color-success: #429580;
+  --color-success-light: #EDF7F4;
+  --color-warning: #E8A838;
+  --color-warning-light: #FDF5E8;
+  --color-error: #D63447;
+  --color-error-light: #FDEAEC;
+
+  /* Neutrals */
+  --color-white: #FFFFFF;
+  --text-primary: #1A1A1A;
+  --text-muted: #6B7280;
+
+  /* Effects */
+  --shadow-focus: 0 0 0 3px rgba(0, 144, 147, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 144, 147, 0.1);
+
+  /* Backwards-compatible aliases (existing site tokens) */
+  --color-primary-pale: var(--color-primary-light);
+  --color-neutral-dark: var(--text-primary);
+  --color-neutral-mid: var(--text-muted);
+  --color-primary-light-legacy: var(--color-primary-hover);
+  --color-neutral-light: #F5F3EF;
+  --color-separator-bg: var(--color-primary-active);
+}

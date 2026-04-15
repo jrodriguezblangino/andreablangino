@@ -11,13 +11,32 @@
         theme: {
           extend: {
             colors: {
-              primary: '#2D5A1B',
-              'primary-light': '#4A7C35',
-              'primary-pale': '#EBF2E4',
-              accent: '#C8A96E',
-              separator: '#3D4A35',
-              'neutral-dark': '#1C1C1C',
-              'neutral-mid': '#5C5C5C',
+              primary: {
+                DEFAULT: '#009093',
+                hover: '#007A7D',
+                active: '#006366',
+                disabled: '#66B4B6',
+                light: '#E6F5F5',
+              },
+              accent: {
+                DEFAULT: '#3B6EB4',
+                hover: '#2F5890',
+                light: '#EBF1F8',
+              },
+              violet: {
+                DEFAULT: '#705BA6',
+                light: '#C7BBEA',
+              },
+
+              /* Legacy keys used by existing markup */
+              'primary-hover': '#007A7D',
+              'primary-active': '#006366',
+              'primary-light': '#E6F5F5',
+              'primary-pale': '#E6F5F5',
+              'accent-dark': '#2F5890',
+              separator: '#006366',
+              'neutral-dark': '#1A1A1A',
+              'neutral-mid': '#6B7280',
               'neutral-light': '#F5F3EF',
             },
             fontFamily: {
@@ -30,12 +49,16 @@
             maxWidth: {
               'container': '1200px',
             },
+            boxShadow: {
+              focus: '0 0 0 3px rgba(0, 144, 147, 0.2)',
+            },
           },
         },
       }
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Source+Sans+Pro:wght@400;500;600;700&family=Gilda+Display&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/colors.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/tailwind-extras.css">
 </head>
@@ -60,11 +83,11 @@
                 <a href="talleres.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">TALLERES</a>
                 <a href="terapias.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">TERAPIAS</a>
                 <a href="sobre-mi.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">SOBRE MÍ</a>
-                <a href="#contacto" class="nav-cta inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-sm hover:shadow no-underline whitespace-nowrap uppercase">CONTACTO</a>
+                <a href="#contacto" class="nav-cta inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-hover transition-colors shadow-sm hover:shadow no-underline whitespace-nowrap uppercase">CONTACTO</a>
             </div>
 
             <!-- Hamburger / X (móvil + tablet <1024px): mismo botón, misma posición -->
-            <button type="button" id="nav-trigger" class="nav-trigger xl:hidden flex items-center justify-center w-11 h-11 rounded-lg text-primary hover:bg-primary-pale/50 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 shrink-0" aria-expanded="false" aria-controls="nav-menu-mobile" aria-label="Abrir menú de navegación">
+            <button type="button" id="nav-trigger" class="nav-trigger xl:hidden flex items-center justify-center w-11 h-11 rounded-lg text-primary hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-active shrink-0" aria-expanded="false" aria-controls="nav-menu-mobile" aria-label="Abrir menú de navegación">
                 <span class="nav-trigger-icons" aria-hidden="true">
                     <i class="nav-icon-menu fas fa-bars" aria-hidden="true"></i>
                     <i class="nav-icon-close fas fa-times" aria-hidden="true"></i>
@@ -100,7 +123,7 @@
                     Una formación integral que une la precisión de las 5 Leyes Biológicas con la profundidad de la sanación transgeneracional.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="escuela-de-formacion.html" class="hero-cta hero-cta--primary inline-flex items-center justify-center text-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-md hover:shadow-lg no-underline uppercase">Ver Formación Anual</a>
+                    <a href="escuela-de-formacion.html" class="hero-cta hero-cta--primary inline-flex items-center justify-center text-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-hover transition-colors shadow-md hover:shadow-lg no-underline uppercase">Ver Formación Anual</a>
                     <a href="talleres.html" class="hero-cta hero-cta--secondary inline-flex items-center justify-center text-center gap-2 px-8 py-3.5 border-2 border-primary text-primary font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-pale transition-colors no-underline uppercase">
                         Ver Talleres <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i>
                     </a>
@@ -152,13 +175,13 @@
     <!-- QUOTE BANNER -->
     <section class="pt-20 pb-20 md:pt-28 md:pb-28 bg-separator text-white" aria-labelledby="quote-heading">
         <div class="max-w-container mx-auto px-5 lg:px-20 text-center">
-            <p id="quote-heading" class="font-serif italic text-2xl md:text-3xl lg:text-4xl text-white mb-6 leading-snug">
-                "El cuerpo habla lo que la mente calla"
+            <p id="quote-heading" class="font-serif italic text-2xl md:text-3xl lg:text-4xl text-white mb-6 leading-snug tracking-wide">
+                <span class="text-accent">"</span>El cuerpo habla lo que la mente calla<span class="text-accent">"</span>
             </p>
-            <p class="text-white/90 max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-10 font-nav">
+            <p class="text-white/85 max-w-2xl mx-auto text-base md:text-lg leading-relaxed mb-10 font-nav">
                 Cada síntoma es un mapa preciso. No es un error de la naturaleza, sino una solución biológica a un conflicto emocional que no hemos podido gestionar. Mi misión es acompañarte a leer ese mapa para que puedas recuperar tu poder y liberar las cargas que no te pertenecen.
             </p>
-            <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Me%20gustar%C3%ADa%20reservar%20una%20consulta%20de%20biodecodificaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase">Reservar Consulta</a>
+            <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Me%20gustar%C3%ADa%20reservar%20una%20consulta%20de%20biodecodificaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="cta-primary inline-flex items-center justify-center px-8 py-3.5 font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase">Reservar Consulta</a>
         </div>
     </section>
 
@@ -167,7 +190,7 @@
         <div class="max-w-container mx-auto px-5 lg:px-20">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 mb-14 pb-8 border-b border-neutral-200">
                 <h2 id="talleres-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark leading-tight">Talleres & Workshops</h2>
-                <a href="talleres.html" class="text-primary font-semibold text-sm hover:text-primary-light transition-colors no-underline flex items-center gap-1">Ver calendario completo <i class="fas fa-arrow-right"></i></a>
+                <a href="talleres.html" class="text-primary font-semibold text-sm hover:text-primary-hover transition-colors no-underline flex items-center gap-1">Ver calendario completo <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <article class="group">
@@ -178,7 +201,7 @@
                         </div>
                         <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Sanando la Relación con el Dinero</h3>
                         <p class="text-neutral-mid text-sm mb-4 line-clamp-2">Explora los conflictos de supervivencia y territorio que bloquean tu abundancia.</p>
-                        <span class="text-primary font-semibold text-sm hover:text-primary-light transition-colors inline-flex items-center gap-1">Ver detalles <i class="fas fa-arrow-right text-xs"></i></span>
+                        <span class="text-primary font-semibold text-sm hover:text-primary-hover transition-colors inline-flex items-center gap-1">Ver detalles <i class="fas fa-arrow-right text-xs"></i></span>
                     </a>
                 </article>
                 <article class="group">
@@ -189,7 +212,7 @@
                         </div>
                         <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Limpieza Energética y Códigos Sagrados</h3>
                         <p class="text-neutral-mid text-sm mb-4">Aprende técnicas ancestrales de protección y limpieza energética de personas y espacios, y descubre el poder de los Códigos Sagrados como herramienta de apoyo para tu vida cotidiana</p>
-                        <span class="text-primary font-semibold text-sm hover:text-primary-light transition-colors inline-flex items-center gap-1">Ver detalles <i class="fas fa-arrow-right text-xs"></i></span>
+                        <span class="text-primary font-semibold text-sm hover:text-primary-hover transition-colors inline-flex items-center gap-1">Ver detalles <i class="fas fa-arrow-right text-xs"></i></span>
                     </a>
                 </article>
                 <article class="group">
@@ -200,7 +223,7 @@
                         </div>
                         <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Sana tu niño herido</h3>
                         <p class="text-neutral-mid text-sm mb-4">Reconecta con tu niño interior para sanar heridas emocionales del pasado, liberar patrones limitantes y recuperar tu alegría, creatividad y vitalidad natural</p>
-                        <span class="text-primary font-semibold text-sm hover:text-primary-light transition-colors inline-flex items-center gap-1">Ver detalles <i class="fas fa-arrow-right text-xs"></i></span>
+                        <span class="text-primary font-semibold text-sm hover:text-primary-hover transition-colors inline-flex items-center gap-1">Ver detalles <i class="fas fa-arrow-right text-xs"></i></span>
                     </a>
                 </article>
             </div>
@@ -209,15 +232,15 @@
 
     <!-- FORMACIÓN ANUAL -->
     <section id="formacion" class="formacion-hero py-24 md:py-32 text-white relative overflow-hidden" aria-labelledby="formacion-heading">
-        <div class="formacion-hero__bg absolute inset-0 bg-gradient-to-br from-green-900 via-green-800 to-green-700" aria-hidden="true"></div>
+        <div class="formacion-hero__bg absolute inset-0 bg-gradient-to-br from-primary-active via-primary to-primary-hover" aria-hidden="true"></div>
         <div class="formacion-hero__grain absolute inset-0 opacity-[0.06] pointer-events-none" aria-hidden="true"></div>
-        <div class="formacion-hero__glow absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[400px] bg-amber-400/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/4" aria-hidden="true"></div>
+        <div class="formacion-hero__glow absolute left-0 top-1/2 -translate-y-1/2 w-[500px] h-[400px] bg-accent/10 rounded-full blur-[120px] pointer-events-none -translate-x-1/4" aria-hidden="true"></div>
 
         <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-20 xl:gap-24 items-center relative z-10">
             <div class="formacion-hero__content order-2 md:order-1 max-w-xl md:max-w-2xl md:text-left text-center">
-                <span class="inline-block text-amber-300 font-semibold text-xs uppercase tracking-[0.2em] mb-4">Lanzamiento 2026</span>
+                <span class="inline-block text-violet-light font-semibold text-xs uppercase tracking-[0.2em] mb-4">Lanzamiento 2026</span>
                 <h2 id="formacion-heading" class="formacion-hero__title formacion-hero__title--spaced font-serif text-4xl md:text-5xl xl:text-6xl font-semibold mb-6">
-                    Formación <span class="text-amber-300">Integral</span> en<br class="hidden sm:block"> Biodecodificación Biológica
+                    Formación <span class="text-violet-light">Integral</span> en<br class="hidden sm:block"> Biodecodificación Biológica
                 </h2>
                 <p class="text-white/80 text-lg leading-relaxed mb-8 font-nav max-w-2xl md:max-w-none">
                     Un recorrido profundo de transformación personal y profesional. Dirigido a terapeutas, coaches, profesionales de la salud y a quienes buscan respuestas sobre el sentido de la enfermedad y el síntoma.
@@ -241,14 +264,14 @@
                     </li>
                 </ul>
                 <div class="flex justify-center md:justify-center">
-                    <a href="escuela-de-formacion.html" class="formacion-cta-premium inline-flex items-center justify-center w-full md:w-auto px-10 py-4 bg-gradient-to-r from-amber-400 to-amber-500 text-neutral-dark font-nav text-base font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 no-underline uppercase tracking-wide focus-visible:ring-2 focus-visible:ring-amber-300 focus-visible:ring-offset-2 focus-visible:ring-offset-green-900">Quiero Formarme</a>
+                    <a href="escuela-de-formacion.html" class="inline-flex items-center justify-center px-8 py-3.5 bg-white text-primary font-nav text-[16px] leading-[22px] font-semibold rounded shadow-md no-underline uppercase hover:bg-primary-light transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-active">Quiero Formarme</a>
                 </div>
             </div>
             <div class="formacion-hero__media order-1 md:order-2 flex justify-center md:justify-end">
                 <div class="formacion-image-wrap w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
                     <div class="relative aspect-[4/3] md:aspect-[5/4] overflow-hidden">
                         <img src="assets/images/talller.jpg" alt="Formación en Biodecodificación — Taller presencial y online" class="w-full h-full object-cover transition-transform duration-500 formacion-image" width="800" height="450" loading="lazy">
-                        <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" aria-hidden="true"></div>
+                        <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-separator/60 to-transparent pointer-events-none" aria-hidden="true"></div>
                     </div>
                 </div>
             </div>
@@ -286,11 +309,11 @@
     <section id="terapias" class="py-24 md:py-32 bg-separator text-white text-center" aria-labelledby="cta-consulta-heading">
         <div class="max-w-container mx-auto px-5 lg:px-20">
             <h2 id="cta-consulta-heading" class="font-serif text-3xl md:text-4xl font-semibold mb-4 leading-tight">¿Querés trabajar en tu proceso personal?</h2>
-            <p class="text-white/90 text-lg max-w-xl mx-auto mb-8 font-nav">
+            <p class="text-white/85 text-lg max-w-xl mx-auto mb-8 font-nav">
                 Una sesión individual te permite ir al origen de tu síntoma o conflicto y desactivar el programa biológico con acompañamiento profesional.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="terapias.html" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-accent text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase">Sesión Online</a>
+                <a href="terapias.html" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase hover:bg-primary-hover transition-colors">Sesión Online</a>
                 <a href="terapias.html#presencial" class="cta-secondary-dark inline-flex items-center justify-center px-8 py-3.5 border-2 border-white text-white font-nav text-[16px] leading-[22px] font-normal rounded no-underline uppercase">Consulta Presencial</a>
             </div>
         </div>
@@ -307,11 +330,11 @@
             <div>
                 <h2 id="sobre-mi-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark mb-6 leading-tight">Sobre Mi</h2>
                 <div class="space-y-4 text-neutral-mid leading-relaxed">
-                    <p>Mi camino comenzó con la búsqueda de respuestas que me llevaron a estudiar <strong style="color: #b1873a;">Psicología</strong> y trabajar como <strong style="color: #b1873a;">Asistente Terapéutica</strong>. En 2016 descubrí la <strong style="color: #b1873a;">Biodecodificación</strong> y, años más tarde, los <strong style="color: #b1873a;">Registros Akáshicos</strong>, dos prácticas que transformaron mi manera de entender el síntoma, las emociones y la vida misma.</p>
+                    <p>Mi camino comenzó con la búsqueda de respuestas que me llevaron a estudiar <strong class="text-accent-dark">Psicología</strong> y trabajar como <strong class="text-accent-dark">Asistente Terapéutica</strong>. En 2016 descubrí la <strong class="text-accent-dark">Biodecodificación</strong> y, años más tarde, los <strong class="text-accent-dark">Registros Akáshicos</strong>, dos prácticas que transformaron mi manera de entender el síntoma, las emociones y la vida misma.</p>
 
-                    <p>Soy <strong style="color: #b1873a;">Andrea Carolina</strong>, curiosa insaciable, emprendedora y con una profunda vocación de servicio. Entiendo el síntoma no como un enemigo, sino como un mensaje que nos invita a mirar hacia adentro. Mi propósito es acompañarte en ese proceso de sanación, conciencia y evolución, porque una vida más plena y consciente es posible para todos.</p>
+                    <p>Soy <strong class="text-accent-dark">Andrea Carolina</strong>, curiosa insaciable, emprendedora y con una profunda vocación de servicio. Entiendo el síntoma no como un enemigo, sino como un mensaje que nos invita a mirar hacia adentro. Mi propósito es acompañarte en ese proceso de sanación, conciencia y evolución, porque una vida más plena y consciente es posible para todos.</p>
                 </div>
-                <a href="sobre-mi.html" class="inline-flex items-center justify-center mt-8 px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-light transition-colors shadow-md no-underline uppercase">Conocer más sobre mí</a>
+                <a href="sobre-mi.html" class="inline-flex items-center justify-center mt-8 px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-hover transition-colors shadow-md no-underline uppercase">Conocer más sobre mí</a>
                 <div class="mt-12 pt-8 border-t border-neutral-200 grid grid-cols-3 gap-6">
                     <div class="text-center">
                         <span class="stat-number block text-3xl md:text-4xl font-serif font-semibold mb-1 text-accent" data-counter="10" data-suffix="+">0</span>
@@ -403,7 +426,7 @@
             <div id="video-carousel" class="video-carousel" role="region" aria-roledescription="carrusel" aria-label="Videos de YouTube">
                 <div class="video-carousel__viewport">
                     <div class="video-carousel__slide" data-video-index="0">
-                        <div class="aspect-video w-full max-w-4xl mx-auto rounded-2xl overflow-hidden bg-neutral-dark shadow-xl ring-1 ring-black/10">
+                        <div class="aspect-video w-full max-w-4xl mx-auto rounded-2xl overflow-hidden bg-separator shadow-xl ring-1 ring-white/10">
                             <iframe id="video-carousel-iframe" class="w-full h-full" src="https://www.youtube.com/embed/NetMzf0Xle8?start=3" title="Video 1 — Andrea Blangino" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                         </div>
                     </div>
@@ -429,7 +452,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer id="contacto" class="footer py-24 md:py-28 bg-neutral-dark text-white" aria-label="Contacto y pie de página">
+    <footer id="contacto" class="footer py-24 md:py-28 bg-separator text-white" aria-label="Contacto y pie de página">
         <div class="max-w-container mx-auto px-5 lg:px-20">
             <div class="footer__grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-16 items-start text-center lg:text-left">
                 <section class="footer__section footer__section--brand" aria-labelledby="footer-brand-heading">
