@@ -97,16 +97,16 @@
     </div>
   </nav>
 
-  <header class="bg-primary-active text-white py-20 md:py-28">
+  <header class="bg-gradient-to-br from-primary-hover via-primary to-accent-dark text-white py-20 md:py-28">
     <div class="max-w-container mx-auto px-5 lg:px-20 text-center">
-      <span class="inline-block text-accent font-semibold text-xs uppercase tracking-[0.2em] mb-4">Encuentros temáticos</span>
+      <span class="inline-block text-white/90 font-semibold text-xs uppercase tracking-[0.2em] mb-4">Encuentros temáticos</span>
       <h1 class="font-serif text-4xl md:text-5xl font-semibold mb-4 text-white">Talleres & Workshops</h1>
       <p class="text-white/85 font-nav text-lg max-w-xl mx-auto mb-10">Próximos encuentros, presenciales y grabaciones disponibles. Filtrá por tipo.</p>
       <div class="flex flex-wrap justify-center gap-3" role="group" aria-label="Filtrar talleres">
         <button type="button" class="filter-pill font-nav text-sm px-5 py-2 rounded-full transition-colors cursor-pointer bg-primary text-white" data-filter="todos">Todos</button>
         <button type="button" class="filter-pill font-nav text-sm px-5 py-2 rounded-full transition-colors cursor-pointer bg-white/10 text-white/80" data-filter="proximo">Próximo</button>
         <button type="button" class="filter-pill font-nav text-sm px-5 py-2 rounded-full transition-colors cursor-pointer bg-white/10 text-white/80" data-filter="presencial">Presencial</button>
-        <button type="button" class="filter-pill font-nav text-sm px-5 py-2 rounded-full transition-colors cursor-pointer bg-white/10 text-white/80" data-filter="grabado">Grabado</button>
+        <button type="button" class="filter-pill font-nav text-sm px-5 py-2 rounded-full transition-colors cursor-pointer bg-white/10 text-white/80" data-filter="online">Online</button>
       </div>
     </div>
   </header>
@@ -114,73 +114,78 @@
   <section class="py-24 md:py-32 bg-white" aria-labelledby="talleres-grid-heading">
     <div class="max-w-container mx-auto px-5 lg:px-20">
       <h2 id="talleres-grid-heading" class="sr-only">Listado de talleres</h2>
+      <!-- SYNC: este bloque debe coincidir con index.html -->
       <div class="grid md:grid-cols-3 gap-8">
-        <article class="group" data-status="proximo">
+        <article class="group" data-tags="proximo abril">
           <a href="#dinero" class="no-underline block">
             <div class="overflow-hidden rounded-2xl mb-4 relative aspect-video bg-neutral-100">
               <img src="assets/images/abundancia.png" alt="Taller Sanando la relación con el dinero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450" loading="lazy">
-              <span class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Próximo</span>
+              <span class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Abril</span>
             </div>
-            <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Sanando la Relación con el Dinero</h3>
-            <p class="text-neutral-mid text-sm mb-4 line-clamp-2">Explora los conflictos de supervivencia y territorio que bloquean tu abundancia.</p>
+            <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Abundancia</h3>
+            <p class="text-neutral-mid text-sm mb-4 line-clamp-2">Libérate de creencias limitantes y abre tu mente a las infinitas posibilidades de la abundancia.</p>
             <span class="text-primary font-semibold text-sm hover:text-primary-hover transition-colors inline-flex items-center gap-1">Ver detalles <i class="fas fa-arrow-right text-xs"></i></span>
           </a>
         </article>
-        <article class="group" data-status="presencial">
+        <article class="group" data-tags="presencial mayo">
           <a href="#pareja" class="no-underline block">
             <div class="overflow-hidden rounded-2xl mb-4 relative aspect-video bg-neutral-100">
               <img src="assets/images/limpieza-energetica.png" alt="Taller Limpieza Energética y Códigos Sagrados" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450" loading="lazy">
-              <span class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Presencial</span>
+              <span class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Mayo</span>
             </div>
             <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Limpieza Energética y Códigos Sagrados</h3>
             <p class="text-neutral-mid text-sm mb-4 line-clamp-2">Aprende técnicas ancestrales de protección y limpieza energética de personas y espacios, y descubre el poder de los Códigos Sagrados.</p>
             <span class="text-primary font-semibold text-sm hover:text-primary-hover transition-colors inline-flex items-center gap-1">Ver detalles <i class="fas fa-arrow-right text-xs"></i></span>
           </a>
         </article>
-        <article class="group" data-status="grabado">
+        <article class="group" data-tags="online septiembre">
           <a href="#sobrepeso" class="no-underline block">
             <div class="overflow-hidden rounded-2xl mb-4 relative aspect-video bg-neutral-100">
               <img src="assets/images/nino-herido.png" alt="Taller Sana tu niño herido" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450" loading="lazy">
-              <span class="absolute top-4 right-4 bg-neutral-mid text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Grabado</span>
+              <span class="absolute top-4 right-4 bg-neutral-mid text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Septiembre</span>
             </div>
             <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Sana tu niño herido</h3>
             <p class="text-neutral-mid text-sm mb-4 line-clamp-2">Reconecta con tu niño interior para sanar heridas emocionales del pasado, liberar patrones limitantes y recuperar tu alegría y vitalidad.</p>
             <span class="text-primary font-semibold text-sm hover:text-primary-hover transition-colors inline-flex items-center gap-1">Ver detalles <i class="fas fa-arrow-right text-xs"></i></span>
           </a>
         </article>
-        <article class="group" data-status="proximo">
+        <article class="group" data-tags="presencial online octubre">
           <a href="#taller-4" class="no-underline block">
             <div class="overflow-hidden rounded-2xl mb-4 relative aspect-video bg-neutral-100">
-              <img src="assets/images/home-value-background.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450" loading="lazy">
-              <span class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Próximo</span>
+              <img src="assets/images/taller-mujeres.png" alt="Taller Mujeres que Sanan, Rito del Útero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450" loading="lazy">
+              <span class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Octubre</span>
             </div>
-            <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors"><!-- PLACEHOLDER: título taller 4 -->Taller 4</h3>
-            <p class="text-neutral-mid text-sm mb-4 line-clamp-2"><!-- PLACEHOLDER: descripción taller 4 -->Descripción próximamente.</p>
+            <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Mujeres que Sanan, Rito del Útero</h3>
+            <p class="text-neutral-mid text-sm mb-4 line-clamp-2">Un círculo de sanación y apoyo entre mujeres. Aprende a sanar tu cuerpo, mente y alma, liberando las cargas que limitan tu poder y autenticidad. Te invito a reconectar con tu poder femenino ancestral y transformar tus heridas en fuerza.</p>
             <span class="text-primary font-semibold text-sm hover:text-primary-hover transition-colors inline-flex items-center gap-1">Ver detalles <i class="fas fa-arrow-right text-xs"></i></span>
           </a>
         </article>
-        <article class="group" data-status="presencial">
+        <!-- HIDDEN PLACEHOLDER: restore when ready
+        <div class="group" data-tags="presencial">
           <a href="#taller-5" class="no-underline block">
             <div class="overflow-hidden rounded-2xl mb-4 relative aspect-video bg-neutral-100">
               <img src="assets/images/home-value-background.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450" loading="lazy">
               <span class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Presencial</span>
             </div>
-            <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors"><!-- PLACEHOLDER: título taller 5 -->Taller 5</h3>
-            <p class="text-neutral-mid text-sm mb-4 line-clamp-2"><!-- PLACEHOLDER: descripción taller 5 -->Descripción próximamente.</p>
+            <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Taller 5</h3>
+            <p class="text-neutral-mid text-sm mb-4 line-clamp-2">Descripción próximamente.</p>
             <span class="text-primary font-semibold text-sm hover:text-primary-hover transition-colors inline-flex items-center gap-1">Ver detalles <i class="fas fa-arrow-right text-xs"></i></span>
           </a>
-        </article>
-        <article class="group" data-status="grabado">
+        </div>
+        -->
+        <!-- HIDDEN PLACEHOLDER: restore when ready
+        <div class="group" data-tags="online">
           <a href="#taller-6" class="no-underline block">
             <div class="overflow-hidden rounded-2xl mb-4 relative aspect-video bg-neutral-100">
               <img src="assets/images/home-value-background.png" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450" loading="lazy">
               <span class="absolute top-4 right-4 bg-neutral-mid text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Grabado</span>
             </div>
-            <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors"><!-- PLACEHOLDER: título taller 6 -->Taller 6</h3>
-            <p class="text-neutral-mid text-sm mb-4 line-clamp-2"><!-- PLACEHOLDER: descripción taller 6 -->Descripción próximamente.</p>
+            <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Taller 6</h3>
+            <p class="text-neutral-mid text-sm mb-4 line-clamp-2">Descripción próximamente.</p>
             <span class="text-primary font-semibold text-sm hover:text-primary-hover transition-colors inline-flex items-center gap-1">Ver detalles <i class="fas fa-arrow-right text-xs"></i></span>
           </a>
-        </article>
+        </div>
+        -->
       </div>
     </div>
   </section>
@@ -191,8 +196,8 @@
         <img src="assets/images/abundancia.png" alt="Sanando la relación con el dinero" class="rounded-2xl shadow-xl w-full object-cover" loading="lazy">
       </div>
       <div>
-        <span class="inline-block bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide mb-4">Próximo</span>
-        <h2 id="dinero-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4">Sanando la Relación con el Dinero</h2>
+        <span class="inline-block bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide mb-4">Abril</span>
+        <h2 id="dinero-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4">Abundancia</h2>
         <p class="text-neutral-mid leading-relaxed mb-6">Explora los conflictos de supervivencia y territorio que bloquean tu abundancia. Un taller para conectar con el sentido biológico de la escasez y abrirte a nuevas creencias.</p>
         <h3 class="font-serif text-lg font-semibold text-neutral-dark mb-4">¿Qué aprenderás?</h3>
         <ul class="space-y-3 text-neutral-mid font-nav mb-6" role="list">
@@ -205,10 +210,10 @@
           <span><i class="fas fa-clock text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: duración dinero -->3 horas</span>
           <span><i class="fas fa-calendar text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: fecha dinero -->Próxima fecha a confirmar</span>
         </div>
-        <p class="font-serif text-2xl text-accent font-semibold mt-4"><!-- PLACEHOLDER: precio dinero -->Consultar</p>
+        <p class="font-serif text-2xl text-accent font-semibold mt-4"><!-- PLACEHOLDER: precio dinero --></p>
         <div class="mt-6 flex flex-wrap gap-4">
-          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Me%20quiero%20inscribir%20a%20un%20taller%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-hover transition-colors shadow-md no-underline uppercase">Inscribirme</a>
-          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Consulta%20sobre%20talleres." target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase hover:bg-primary-hover transition-colors">Consultar</a>
+          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Me%20quiero%20inscribir%20a%20un%20taller%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase hover:bg-primary-hover transition-colors">Inscribirme</a>
+          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Consulta%20sobre%20talleres." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-primary text-primary font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-pale transition-colors no-underline uppercase">Consultar</a>
         </div>
       </div>
     </div>
@@ -217,7 +222,7 @@
   <section id="pareja" class="py-24 md:py-32 bg-white" aria-labelledby="pareja-heading">
     <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 items-start">
       <div class="order-2 md:order-1">
-        <span class="inline-block bg-accent text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide mb-4">Presencial</span>
+        <span class="inline-block bg-accent text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide mb-4">Mayo</span>
         <h2 id="pareja-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4">Limpieza Energética y Códigos Sagrados</h2>
         <p class="text-neutral-mid leading-relaxed mb-6">Aprende técnicas ancestrales de protección y limpieza energética de personas y espacios, y descubre el poder de los Códigos Sagrados como herramienta de apoyo para tu vida cotidiana.</p>
         <h3 class="font-serif text-lg font-semibold text-neutral-dark mb-4">¿Qué aprenderás?</h3>
@@ -228,13 +233,13 @@
           <li class="flex items-start gap-3"><span class="formacion-hero__check flex-shrink-0 mt-0.5" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><!-- PLACEHOLDER: qué aprenderás pareja 4 -->Práctica guiada en el taller</span></li>
         </ul>
         <div class="flex flex-wrap gap-6 text-sm text-neutral-mid mb-4">
-          <span><i class="fas fa-clock text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: duración pareja -->Consultar</span>
+          <span><i class="fas fa-clock text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: duración pareja --> 2.5 horas</span>
           <span><i class="fas fa-calendar text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: fecha pareja -->Consultar fechas</span>
         </div>
-        <p class="font-serif text-2xl text-accent font-semibold mt-4"><!-- PLACEHOLDER: precio pareja -->Consultar</p>
+        <p class="font-serif text-2xl text-accent font-semibold mt-4"><!-- PLACEHOLDER: precio pareja --></p>
         <div class="mt-6 flex flex-wrap gap-4">
-          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Me%20quiero%20inscribir%20a%20un%20taller%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-hover transition-colors shadow-md no-underline uppercase">Inscribirme</a>
-          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Consulta%20sobre%20talleres." target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase hover:bg-primary-hover transition-colors">Consultar</a>
+          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Me%20quiero%20inscribir%20a%20un%20taller%2C%20necesito%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase hover:bg-primary-hover transition-colors">Inscribirme</a>
+          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Consulta%20sobre%20talleres." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-primary text-primary font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-pale transition-colors no-underline uppercase">Consultar</a>
         </div>
       </div>
       <div class="order-1 md:order-2">
@@ -249,7 +254,7 @@
         <img src="assets/images/nino-herido.png" alt="Sana tu niño herido" class="rounded-2xl shadow-xl w-full object-cover" loading="lazy">
       </div>
       <div>
-        <span class="inline-block bg-neutral-mid text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide mb-4">Grabado</span>
+        <span class="inline-block bg-neutral-mid text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide mb-4">Septiembre</span>
         <h2 id="sobrepeso-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4">Sana tu niño herido</h2>
         <p class="text-neutral-mid leading-relaxed mb-6">Reconecta con tu niño interior para sanar heridas emocionales del pasado, liberar patrones limitantes y recuperar tu alegría, creatividad y vitalidad natural.</p>
         <h3 class="font-serif text-lg font-semibold text-neutral-dark mb-4">¿Qué aprenderás?</h3>
@@ -259,10 +264,13 @@
           <li class="flex items-start gap-3"><span class="formacion-hero__check flex-shrink-0 mt-0.5" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><!-- PLACEHOLDER: qué aprenderás sobrepeso 3 -->Ejercicios de reconexión</span></li>
           <li class="flex items-start gap-3"><span class="formacion-hero__check flex-shrink-0 mt-0.5" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><!-- PLACEHOLDER: qué aprenderás sobrepeso 4 -->Integración en la vida cotidiana</span></li>
         </ul>
-        <p class="text-sm text-neutral-mid mb-4"><i class="fas fa-check-circle text-primary mr-2" aria-hidden="true"></i>Disponible ahora</p>
-        <p class="font-serif text-2xl text-accent font-semibold mt-4"><!-- PLACEHOLDER: precio sobrepeso -->Consultar</p>
+        <div class="flex flex-wrap gap-6 text-sm text-neutral-mid mb-4">
+          <span><i class="fas fa-clock text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: duración dinero -->3 horas</span>
+          <span><i class="fas fa-calendar text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: fecha dinero -->Próxima fecha a confirmar</span>
+        </div>
+        <!-- PLACEHOLDER: precio sobrepeso --></p>
         <div class="mt-6 flex flex-wrap gap-4">
-          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Consulta%20sobre%20acceso%20a%20grabaci%C3%B3n%20de%20taller." target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase hover:bg-primary-hover transition-colors">Acceder a la grabación</a>
+          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Consulta%20sobre%20acceso%20a%20grabaci%C3%B3n%20de%20taller." target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase hover:bg-primary-hover transition-colors">Inscribirme</a>
           <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Consulta%20sobre%20talleres." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-primary text-primary font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-pale transition-colors no-underline uppercase">Consultar</a>
         </div>
       </div>
@@ -270,27 +278,53 @@
   </section>
 
   <section id="taller-4" class="py-24 md:py-32 bg-white" aria-labelledby="taller-4-heading">
-    <div class="max-w-container mx-auto px-5 lg:px-20">
-      <h2 id="taller-4-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4"><!-- PLACEHOLDER: título detalle taller 4 -->Taller 4 — Próximamente</h2>
-      <p class="text-neutral-mid max-w-2xl"><!-- PLACEHOLDER: descripción detalle taller 4 -->Más información próximamente.</p>
+    <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 items-start">
+      <div>
+        <img src="assets/images/taller-mujeres.png" alt="Mujeres que Sanan, Rito del Útero" class="rounded-2xl shadow-xl w-full object-cover" loading="lazy">
+      </div>
+      <div>
+        <span class="inline-block bg-neutral-mid text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide mb-4">Octubre</span>
+        <h2 id="taller-4-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4">Mujeres que Sanan, Rito del Útero</h2>
+        <p class="text-neutral-mid leading-relaxed mb-6">Un círculo de sanación y apoyo entre mujeres. Aprende a sanar tu cuerpo, mente y alma, liberando las cargas que limitan tu poder y autenticidad. Te invito a reconectar con tu poder femenino ancestral y transformar tus heridas en fuerza.</p>
+        <h3 class="font-serif text-lg font-semibold text-neutral-dark mb-4">¿Qué aprenderás?</h3>
+        <ul class="space-y-3 text-neutral-mid font-nav mb-6" role="list">
+          <li class="flex items-start gap-3"><span class="formacion-hero__check flex-shrink-0 mt-0.5" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><!-- PLACEHOLDER: qué aprenderás taller-4 1 -->Reconectar con tu energía femenina y tu sabiduría interna</span></li>
+          <li class="flex items-start gap-3"><span class="formacion-hero__check flex-shrink-0 mt-0.5" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><!-- PLACEHOLDER: qué aprenderás taller-4 2 -->Fortalecer tu autoestima, autenticidad y poder personal</span></li>
+          <li class="flex items-start gap-3"><span class="formacion-hero__check flex-shrink-0 mt-0.5" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><!-- PLACEHOLDER: qué aprenderás taller-4 3 -->Honrar tu linaje femenino y transformar heridas en fuerza</span></li>
+          <li class="flex items-start gap-3"><span class="formacion-hero__check flex-shrink-0 mt-0.5" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.667 5L7.5 14.167 3.333 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span><!-- PLACEHOLDER: qué aprenderás taller-4 4 -->Integrar prácticas de sanación emocional, corporal y espiritual</span></li>
+        </ul>
+        <div class="flex flex-wrap gap-6 text-sm text-neutral-mid mb-4">
+          <span><i class="fas fa-clock text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: duración dinero -->3 horas</span>
+          <span><i class="fas fa-calendar text-primary mr-2" aria-hidden="true"></i><!-- PLACEHOLDER: fecha dinero -->Próxima fecha a confirmar</span>
+        </div>
+        <!-- PLACEHOLDER: precio taller-4 --></p>
+        <div class="mt-6 flex flex-wrap gap-4">
+          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Consulta%20sobre%20acceso%20o%20inscripci%C3%B3n%20al%20taller%20Mujeres%20que%20Sanan%2C%20Rito%20del%20%C3%9Atero." target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase hover:bg-primary-hover transition-colors">Inscribirme</a>
+          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Consulta%20sobre%20el%20taller%20Mujeres%20que%20Sanan%2C%20Rito%20del%20%C3%9Atero." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-primary text-primary font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-pale transition-colors no-underline uppercase">Consultar</a>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- !HIDDEN PLACEHOLDER: restore when ready
   <section id="taller-5" class="py-24 md:py-32 bg-neutral-light" aria-labelledby="taller-5-heading">
     <div class="max-w-container mx-auto px-5 lg:px-20">
-      <h2 id="taller-5-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4"><!-- PLACEHOLDER: título detalle taller 5 -->Taller 5 — Próximamente</h2>
-      <p class="text-neutral-mid max-w-2xl"><!-- PLACEHOLDER: descripción detalle taller 5 -->Más información próximamente.</p>
+      <h2 id="taller-5-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4"><!-- PLACEHOLDER: título detalle taller 5 Taller 5 — Próximamente</h2>
+      <p class="text-neutral-mid max-w-2xl"><!-- PLACEHOLDER: descripción detalle taller 5 Más información próximamente.</p>
     </div>
   </section>
+  -->
 
+  <!-- !HIDDEN PLACEHOLDER: restore when ready
   <section id="taller-6" class="py-24 md:py-32 bg-white" aria-labelledby="taller-6-heading">
     <div class="max-w-container mx-auto px-5 lg:px-20">
-      <h2 id="taller-6-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4"><!-- PLACEHOLDER: título detalle taller 6 -->Taller 6 — Próximamente</h2>
-      <p class="text-neutral-mid max-w-2xl"><!-- PLACEHOLDER: descripción detalle taller 6 -->Más información próximamente.</p>
+      <h2 id="taller-6-heading" class="font-serif text-3xl font-semibold text-neutral-dark mb-4"><!-- PLACEHOLDER: título detalle taller 6 Taller 6 — Próximamente</h2>
+      <p class="text-neutral-mid max-w-2xl"><! PLACEHOLDER: descripción detalle taller 6 Más información próximamente.</p>
     </div>
   </section>
+  -->
 
-  <section class="py-20 md:py-24 bg-separator text-white text-center" aria-labelledby="cta-talleres-heading">
+  <section class="py-20 md:py-24 bg-gradient-to-br from-primary-hover via-primary to-accent-dark text-white text-center" aria-labelledby="cta-talleres-heading">
     <div class="max-w-container mx-auto px-5 lg:px-20">
       <h2 id="cta-talleres-heading" class="font-serif text-3xl font-semibold mb-4 text-white">¿Querés que te avisemos del próximo taller?</h2>
       <p class="text-white/80 font-nav mb-8 max-w-md mx-auto">Escribinos por WhatsApp y te sumamos a la lista para novedades y fechas.</p>
@@ -354,8 +388,9 @@
       pills.forEach(function(btn) {
         btn.addEventListener('click', function() {
           var filter = btn.dataset.filter;
-          document.querySelectorAll('[data-status]').forEach(function(card) {
-            card.style.display = (filter === 'todos' || card.dataset.status === filter) ? '' : 'none';
+          document.querySelectorAll('[data-tags]').forEach(function(card) {
+            var tags = (card.dataset.tags || '').split(/\s+/).filter(Boolean);
+            card.style.display = (filter === 'todos' || tags.indexOf(filter) !== -1) ? '' : 'none';
           });
           pills.forEach(function(b) {
             b.classList.remove('bg-primary','text-white');

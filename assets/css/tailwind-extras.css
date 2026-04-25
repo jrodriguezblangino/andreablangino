@@ -238,9 +238,15 @@ body.nav-menu-open .nav-icon-close {
   display: block;
   padding: 0.875rem 1rem;
   font-weight: 500;
-  color: #262626;
+  color: var(--color-white);
   border-radius: 0.5rem;
   transition: background-color 0.2s, color 0.2s;
+}
+.nav-menu-mobile-links .nav-menu-link {
+  border-bottom: 1px solid color-mix(in srgb, var(--color-primary-light) 20%, transparent);
+}
+.nav-menu-mobile-links .nav-menu-link:last-child {
+  border-bottom: 0;
 }
 .nav-menu-link:hover {
   background-color: var(--color-primary-light);
@@ -567,11 +573,11 @@ body.nav-menu-open .nav-icon-close {
 
 /* ========== Slider de reseñas Google ========== */
 .reviews-slider-container {
-  padding: 0 3rem;
+  padding: 0 4rem;
 }
 @media (max-width: 767px) {
   .reviews-slider-container {
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
   }
   .reviews-slider-container .slider-btn--prev,
   .reviews-slider-container .slider-btn--next {
@@ -584,6 +590,12 @@ body.nav-menu-open .nav-icon-close {
   }
   .reviews-slider-container .slider-btn--next {
     right: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .reviews-slider-container {
+    padding: 0 3.5rem;
   }
 }
 
