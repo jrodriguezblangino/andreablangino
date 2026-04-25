@@ -301,17 +301,21 @@
     // ----- Slider de reseñas (página formación) -----
     var REVIEWS_GOOGLE_URL = 'https://www.google.com/search?q=andrea+blangino+biodecodificacion';
     var REVIEWS_DATA = [
-        { author: 'María G.', date: 'Hace 2 semanas', rating: 5, text: 'Una formación que superó mis expectativas. Herramientas claras y acompañamiento humano.' },
-        { author: 'Laura S.', date: 'Hace 1 mes', rating: 5, text: 'El programa me dio estructura y confianza para trabajar con el sentido biológico del síntoma.' },
-        { author: 'Pablo R.', date: 'Hace 3 semanas', rating: 5, text: 'Profundo, práctico y con mucho respeto por el proceso de cada uno. Lo recomiendo.' },
-        { author: 'Carla M.', date: 'Hace 2 meses', rating: 5, text: 'Andrea transmite con claridad y calidez. La formación me abrió un nuevo camino profesional.' },
-        { author: 'Diego L.', date: 'Hace 1 mes', rating: 5, text: 'Excelente nivel teórico y práctico. Las supervisiones son muy enriquecedoras.' },
-        { author: 'Valeria P.', date: 'Hace 3 semanas', rating: 5, text: 'Recomiendo totalmente la escuela. Aprendí a acompañar con más seguridad y criterio.' }
+        { author: 'Valeria', date: 'Hace 2 semanas', rating: 5, text: 'Mí experiencia con Andrea fue y sigue siendo excelente! No solo por su profesionalismo y empatía, sino con los resultados luego de la consulta. Realmente pude resolver muchas cosas y sigo haciéndolo, sino que logré modificar muchas otras que venía trayendo de muchos años. Hay un antes y un después en mi vida a partir de la consulta con Andrea. Solo me queda por decir, GRACIAS, GRACIAS , GRACIAS!' },
+        { author: 'Johana Murador', date: 'Hace 1 mes', rating: 5, text: 'Mi camino comenzó con personas maravillosas que llegaron a mi vida y una de ellas es Andrea ❤️. Hermosa experiencia en cada consulta, con mucho amor y acompañamiento. Su conocimiento y comprensión son una caricia al Alma. Sin dudas una gran maestra 💛.' },
+        { author: 'Luciana', date: 'Hace 3 semanas', rating: 5, text: 'Andrea es muy profesional, cálida y es portadora de un canal hermoso de luz y amor. Además hace un seguimiento y te aporta muchas herramientas. Súper recomendable' },
+        { author: 'Carolina Elfstrom', date: 'Hace 2 meses', rating: 5, text: 'Amo a Andrea! Una genia total. Impresionante la claridad que tiene para canalizar y para explicar, un amor, una sencillez... Es espectacular! Un antes y un después en mí vida! 💗' },
+        { author: 'Jesica Bringas', date: 'Hace 1 mes', rating: 5, text: 'Andre gracias por tu hermosa energía, por acompañar con tanto amor y dulzura cada proceso de sanación! Sos mágica! Gracias por tanto!' },
+        { author: 'Vane Barañano', date: 'Hace 3 semanas', rating: 5, text: 'Agradezco con todo mi corazón haberme encontrado con Andrea, en un momento de mi vida que me sentía mal siempre y en el fondo sabía que algo andaba mal conmigo misma. Andrea me enseñó y me mostró otra manera de ver lo que me había pasado, aprender de esas experiencias, comprender que las dificultades son para crecer y somos responsables de cómo las manejamos y las vivimos.' },
+        { author: 'Veronica Tellechea', date: 'Hace 2 semanas', rating: 5, text: 'Excelente taller. Con importantes herramientas para analizar y tomar conciencia de los para que del " cancer" . Que nos vino a mostrar y a enseñar. Y como seres integrales que somos ,como podemos sanar.Gracias Andrea por ser tan clara y amorosa' },
+        { author: 'Veronica del Arca', date: 'Hace 1 mes', rating: 5, text: 'Andrea es una persona sumamente amorosa ! Y logra con sus palabras y su experiencia que podamos entender situaciones de nuestro clan y de nuestra vida que están íntimamente conectados, que de otra forma serían muy dolorosas comprender!' },
+        { author: 'Silvia Oliver', date: 'Hace 2 meses', rating: 5, text: 'Mi experiencia con Andrea siempre ha sido altamente satisfactoria, no solo a nivel humano, sino a nivel profesional. La Sra Andrea está pendiente de sus pacientes , y busca alternativas posibles para ayudar y para que cada ser se sienta mejor cada día, y pueda lograr sanar el alma. Excelente experiencia.' },
+        { author: 'Linnatte Castellanos', date: 'Hace 3 semanas', rating: 5, text: 'De corazón les digo que Andrea y su terapia es lo mejor que me a pasado, lo digo con honestidad. He hecho muchos tipos de terapia y si me habían ayudado, pero llegar a Andrea y hacer la biodecodificacion era lo que me faltaba y de verdad comprendí muchas cosas y esto ayudo a mi sanación y a aprender desde la conciencia y a tener herramientas. La recomiendo al 1000%.' }
     ];
 
     function getVisibleSlides() {
         var w = window.innerWidth;
-        if (w >= 1024) return 3;
+        if (w >= 1024) return 2;
         if (w >= 768) return 2;
         return 1;
     }
@@ -359,50 +363,78 @@
             }
         }
 
+        function applyLayout() {
+            var visible = getVisibleSlides();
+            var pages = Math.max(1, Math.ceil(total / visible));
+            inner.style.width = (pages * 100) + '%';
+
+            var basis = (100 / total) + '%';
+            var cards = inner.querySelectorAll('.review-card');
+            for (var i = 0; i < cards.length; i++) {
+                cards[i].style.flex = '0 0 ' + basis;
+            }
+        }
+
         function updatePosition() {
             var visible = getVisibleSlides();
-            var maxIndex = Math.max(0, total - visible);
+            var pages = Math.max(1, Math.ceil(total / visible));
+            var maxPage = pages - 1;
+            var maxIndex = maxPage * visible;
             currentIndex = currentIndex > maxIndex ? maxIndex : currentIndex;
-            var offset = (currentIndex / total) * 100;
+            currentIndex = currentIndex < 0 ? 0 : currentIndex;
+
+            var currentPage = Math.floor(currentIndex / visible);
+            if (currentPage > maxPage) currentPage = maxPage;
+            var offset = currentPage * (100 / pages);
             inner.style.transform = 'translateX(-' + offset + '%)';
 
             if (dotsContainer) {
                 var dots = dotsContainer.querySelectorAll('button');
                 for (var d = 0; d < dots.length; d++) {
-                    dots[d].setAttribute('aria-selected', d === currentIndex ? 'true' : 'false');
+                    dots[d].setAttribute('aria-selected', d === currentPage ? 'true' : 'false');
                 }
             }
         }
 
         function goTo(index) {
             var visible = getVisibleSlides();
-            var maxIndex = Math.max(0, total - visible);
-            currentIndex = (index + total) % total;
+            var pages = Math.max(1, Math.ceil(total / visible));
+            var maxPage = pages - 1;
+            var maxIndex = maxPage * visible;
+
+            currentIndex = Math.round(index / visible) * visible;
+            if (currentIndex < 0) currentIndex = 0;
             if (currentIndex > maxIndex) currentIndex = maxIndex;
             updatePosition();
         }
 
         function next() {
             var visible = getVisibleSlides();
-            var maxIndex = Math.max(0, total - visible);
-            if (currentIndex >= maxIndex) goTo(0);
-            else goTo(currentIndex + 1);
+            var pages = Math.max(1, Math.ceil(total / visible));
+            var maxPage = pages - 1;
+            var currentPage = Math.floor(currentIndex / visible);
+            if (currentPage >= maxPage) goTo(0);
+            else goTo(currentIndex + visible);
         }
 
         function prev() {
             var visible = getVisibleSlides();
-            var maxIndex = Math.max(0, total - visible);
-            if (currentIndex <= 0) goTo(maxIndex);
-            else goTo(currentIndex - 1);
+            var pages = Math.max(1, Math.ceil(total / visible));
+            var maxPage = pages - 1;
+            var currentPage = Math.floor(currentIndex / visible);
+            if (currentPage <= 0) goTo(maxPage * visible);
+            else goTo(currentIndex - visible);
         }
 
         function buildDots() {
             if (!dotsContainer) return;
+            var visible = getVisibleSlides();
+            var pages = Math.max(1, Math.ceil(total / visible));
             dotsContainer.innerHTML = '';
-            for (var i = 0; i < total; i++) {
+            for (var i = 0; i < pages; i++) {
                 var btn = document.createElement('button');
                 btn.type = 'button';
-                btn.setAttribute('aria-label', 'Ir a reseña ' + (i + 1));
+                btn.setAttribute('aria-label', 'Ir a página de reseñas ' + (i + 1));
                 btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
                 btn.addEventListener('click', function (idx) {
                     return function () { goTo(idx); };
@@ -423,6 +455,7 @@
         }
 
         buildCards();
+        applyLayout();
         buildDots();
         updatePosition();
 
@@ -434,6 +467,8 @@
         startAuto();
 
         window.addEventListener('resize', function () {
+            applyLayout();
+            buildDots();
             updatePosition();
         });
     }
