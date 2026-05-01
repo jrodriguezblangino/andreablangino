@@ -535,3 +535,133 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
     width: 100px;
     margin: 1.5rem auto;
 }
+
+/* ========== SOBRE MÍ — Icon colors (GLOBAL) ========== */
+.sobre-filosofia-icon--sintoma { color: var(--color-warning) !important; }
+.sobre-filosofia-icon--transgeneracional { color: var(--color-violet-light) !important; }
+.sobre-filosofia-icon--empoderamiento { color: var(--color-success) !important; }
+
+/* ========== TERAPIAS — Testimonials background (GLOBAL) ========== */
+#testimonios-heading {
+    background-color: var(--color-neutral-light);
+}
+
+/* ========== MOBILE SURGICAL OVERRIDES (≤375px) ========== */
+@media (max-width: 375px) {
+    /* Fix #1 — index hero title: max 2 lines */
+    .home-hero__title {
+        font-size: 36px !important;
+        line-height: 1.15 !important;
+    }
+
+    /* Fix #6 — sobre-mi hero title: mirror fix #1 */
+    .sobre-hero__title {
+        font-size: 36px !important;
+        line-height: 1.15 !important;
+    }
+
+    /* Fix #2 — index "Sobre mí": center title + CTA */
+    #sobre-mi #sobre-mi-heading {
+        text-align: center;
+    }
+    #sobre-mi a[href="sobre-mi.html"] {
+        display: inline-flex;
+    }
+    #sobre-mi .home-about__content {
+        text-align: center;
+    }
+
+    /* Fix #3 — terapias mirror sections: bullet + title/icon alignment */
+    .terapias-mirror-title {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .terapias-mirror-title h2 {
+        font-size: 22px !important;
+        line-height: 1.2 !important;
+    }
+    #online ul[role="list"],
+    #presencial ul[role="list"] {
+        text-align: left !important;
+    }
+    #online ul[role="list"] li,
+    #presencial ul[role="list"] li {
+        align-items: flex-start !important;
+    }
+
+    /* Fix #5 — talleres workshop cards: internal spacing */
+    .workshop-desc {
+        margin-top: 0.75rem;
+    }
+    .workshop-meta {
+        margin-top: 1rem;
+    }
+    .workshop-cta {
+        margin-top: 2rem;
+    }
+}
+
+/* ========== MOBILE SURGICAL OVERRIDES (≤320px) ========== */
+@media (max-width: 320px) {
+    /* index.html — "Talleres & Workshops": center title + link */
+    #talleres .max-w-container > div {
+        align-items: center;
+        text-align: center;
+    }
+    #talleres .max-w-container > div > a {
+        display: inline-flex;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+
+    /* index.html — "Formación": fix overflow at the source (containment) */
+    #formacion {
+        max-width: 100%;
+        overflow-x: visible;
+    }
+    #formacion > .max-w-container {
+        padding-left: 1.25rem;  /* match Tailwind px-5 */
+        padding-right: 1.25rem; /* match Tailwind px-5 */
+    }
+    /* The decorative glow can create horizontal overflow at 320px */
+    #formacion .formacion-hero__glow {
+        display: none;
+    }
+    /* Prevent grid/flex children from forcing overflow at tiny widths */
+    #formacion > .max-w-container,
+    #formacion .formacion-hero__content,
+    #formacion .formacion-hero__media {
+        min-width: 0;
+    }
+
+    /* index.html — "Sobre mí" footer stats: prevent 3-col overflow */
+    #sobre-mi .home-about__content > div.mt-12 {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        justify-items: center;
+        text-align: center;
+    }
+    #sobre-mi .home-about__content > div.mt-12 span {
+        white-space: normal;
+    }
+
+    /* sobre-mi.html — stats block: prevent 3-col overflow */
+    section[aria-labelledby="stats-heading"] .grid.grid-cols-3 {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        justify-items: center;
+        text-align: center;
+    }
+    section[aria-labelledby="stats-heading"] .grid.grid-cols-3 span {
+        white-space: normal;
+    }
+
+    /* talleres.html — workshop detail CTAs: center buttons + more spacing from meta */
+    .workshop-cta {
+        justify-content: center;
+        margin-top: 2.5rem !important;
+    }
+}
