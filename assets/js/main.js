@@ -223,6 +223,44 @@
         }
     }
 
+    // ----- Imágenes con data-src: fallback IO + fade-in -----
+    function initLazyImages() {
+        var imgs = document.querySelectorAll('img[data-src]');
+        if (!imgs.length) return;
+
+        function reveal(el) {
+            var ds = el.getAttribute('data-src');
+            if (ds) {
+                el.src = ds;
+            }
+            el.classList.add('img-loaded');
+        }
+
+        if (typeof IntersectionObserver === 'undefined') {
+            for (var i = 0; i < imgs.length; i++) {
+                reveal(imgs[i]);
+            }
+            return;
+        }
+
+        var observer = new IntersectionObserver(
+            function (entries) {
+                for (var k = 0; k < entries.length; k++) {
+                    if (entries[k].isIntersecting) {
+                        var el = entries[k].target;
+                        reveal(el);
+                        observer.unobserve(el);
+                    }
+                }
+            },
+            { rootMargin: '200px 0px', threshold: 0 }
+        );
+
+        for (var j = 0; j < imgs.length; j++) {
+            observer.observe(imgs[j]);
+        }
+    }
+
     // ----- Formación hero: animate on scroll -----
     function initFormacionHero() {
         var section = document.getElementById('formacion');
@@ -479,6 +517,7 @@
         initFaq();
         initCounters();
         initFadeInScroll();
+        initLazyImages();
         initFormacionHero();
         initVideoCarousel();
         initReviewsSlider();

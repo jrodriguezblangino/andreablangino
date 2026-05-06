@@ -55,6 +55,8 @@
   <link rel="stylesheet" href="assets/css/colors.css">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/tailwind-extras.css">
+  <link rel="preload" as="image" href="assets/images/Andrea-sobre-mi-800w.webp" imagesrcset="assets/images/Andrea-sobre-mi-480w.webp 480w,
+                       assets/images/Andrea-sobre-mi-800w.webp 800w" imagesizes="(max-width: 768px) 100vw, 50vw">
 </head>
 <body class="antialiased font-body text-neutral-dark bg-white overflow-x-hidden">
 
@@ -97,7 +99,7 @@
     </div>
   </nav>
 
-  <header class="relative overflow-hidden bg-[url('assets/images/home-value-background.png')] bg-cover bg-center bg-no-repeat py-24 md:py-32">
+  <header class="relative overflow-hidden bg-home-value bg-cover bg-center bg-no-repeat py-24 md:py-32">
     <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
       <div class="order-2 md:order-1">
         <span class="inline-block text-primary font-semibold text-xs uppercase tracking-[0.2em] mb-4">Terapeuta Holística</span>
@@ -111,7 +113,7 @@
       </div>
       <div class="order-1 md:order-2 flex justify-center">
         <div class="w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-primary-pale/50">
-          <img src="assets/images/Andrea-sobre-mi.jpg" alt="Andrea Blangino — Terapeuta y formadora" class="w-full h-full object-cover object-center" width="600" height="750" loading="lazy">
+          <img src="assets/images/Andrea-sobre-mi.jpg" alt="Andrea Blangino — Terapeuta y formadora" class="w-full h-full object-cover object-center" width="600" height="750" loading="eager" fetchpriority="high">
         </div>
       </div>
     </div>
@@ -125,7 +127,11 @@
         <p>Soy <strong class="text-accent-dark">Andrea Carolina</strong>, curiosa insaciable, emprendedora y con una profunda vocación de servicio. Entiendo el síntoma no como un enemigo, sino como un mensaje que nos invita a mirar hacia adentro. Mi propósito es acompañarte en ese proceso de sanación, conciencia y evolución, porque una vida más plena y consciente es posible para todos.</p>
         <p><!-- PLACEHOLDER: Bio completa — párrafo 3 y siguientes -->Sigo formándome y profundizando en herramientas que integran cuerpo, emoción y sentido, para ofrecer un acompañamiento cada vez más completo y respetuoso con tu proceso.</p>
       </div>
-      <img src="assets/images/Andrea-grupo.webp" alt="Andrea Blangino — Terapeuta y formadora" class="rounded-2xl shadow-xl w-full max-w-2xl mx-auto mt-10 block object-cover" loading="lazy" width="800" height="600">
+      <picture>
+        <source type="image/avif" srcset="assets/images/Andrea-grupo-480w.avif 480w, assets/images/Andrea-grupo-800w.avif 800w" sizes="(max-width: 768px) 100vw, 42rem">
+        <source type="image/webp" srcset="assets/images/Andrea-grupo-480w.webp 480w, assets/images/Andrea-grupo-800w.webp 800w" sizes="(max-width: 768px) 100vw, 42rem">
+        <img src="assets/images/Andrea-grupo.webp" alt="Andrea Blangino — Terapeuta y formadora" class="rounded-2xl shadow-xl w-full max-w-2xl mx-auto mt-10 block object-cover" width="800" height="600" loading="lazy" data-src="assets/images/Andrea-grupo.webp">
+      </picture>
     </div>
   </section>
 

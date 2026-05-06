@@ -61,6 +61,8 @@
     <link rel="stylesheet" href="assets/css/colors.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/tailwind-extras.css">
+    <link rel="preload" as="image" href="assets/images/Andrea-picture-800w.webp" imagesrcset="assets/images/Andrea-picture-480w.webp 480w,
+                       assets/images/Andrea-picture-800w.webp 800w" imagesizes="(max-width: 768px) 100vw, 50vw">
 </head>
 <body class="antialiased font-body text-neutral-dark bg-white overflow-x-hidden">
 
@@ -112,7 +114,7 @@
     </nav>
 
     <!-- HERO -->
-    <header id="inicio" class="relative overflow-hidden bg-[url('assets/images/home-value-background.png')] bg-cover bg-center bg-no-repeat py-24 md:py-32">
+    <header id="inicio" class="relative overflow-hidden bg-home-value bg-cover bg-center bg-no-repeat py-24 md:py-32">
         <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div class="order-2 md:order-1">
                 <span class="inline-block text-primary font-semibold text-xs uppercase tracking-[0.2em] mb-4">Biodecodificación Biológica</span>
@@ -138,7 +140,7 @@ En sesiones presenciales u online, descubriremos el sentido de tu experiencia y 
             </div>
             <div class="order-1 md:order-2 flex justify-center">
                 <div class="w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-primary-pale/50">
-                    <img src="assets/images/Andrea-picture.jpg" alt="Andrea Blangino — Terapeuta y formadora en Biodecodificación Biológica" class="w-full h-full object-cover object-center" width="600" height="750">
+                    <img src="assets/images/Andrea-picture.jpg" alt="Andrea Blangino — Terapeuta y formadora en Biodecodificación Biológica" class="w-full h-full object-cover object-center" width="600" height="750" loading="eager" fetchpriority="high">
                 </div>
             </div>
         </div>
@@ -200,7 +202,11 @@ En sesiones presenciales u online, descubriremos el sentido de tu experiencia y 
                 <article class="group">
                     <a href="talleres.html" class="no-underline block">
                         <div class="overflow-hidden rounded-2xl mb-4 relative aspect-video bg-neutral-100">
-                            <img src="assets/images/abundancia.png" alt="Taller Sanando la relación con el dinero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450">
+                            <picture>
+                              <source type="image/avif" srcset="assets/images/abundancia-480w.avif 480w, assets/images/abundancia-800w.avif 800w" sizes="(max-width: 768px) 100vw, 33vw">
+                              <source type="image/webp" srcset="assets/images/abundancia-480w.webp 480w, assets/images/abundancia-800w.webp 800w" sizes="(max-width: 768px) 100vw, 33vw">
+                              <img src="assets/images/abundancia.png" alt="Taller Sanando la relación con el dinero" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450" loading="lazy" data-src="assets/images/abundancia.png">
+                            </picture>
                             <span class="absolute top-4 right-4 bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Abril</span>
                         </div>
                         <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Abundancia</h3>
@@ -211,7 +217,11 @@ En sesiones presenciales u online, descubriremos el sentido de tu experiencia y 
                 <article class="group">
                     <a href="talleres.html" class="no-underline block">
                         <div class="overflow-hidden rounded-2xl mb-4 relative aspect-video bg-neutral-100">
-                            <img src="assets/images/limpieza-energetica.png" alt="Taller Amor y Pareja" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450">
+                            <picture>
+                              <source type="image/avif" srcset="assets/images/limpieza-energetica-480w.avif 480w, assets/images/limpieza-energetica-800w.avif 800w" sizes="(max-width: 768px) 100vw, 33vw">
+                              <source type="image/webp" srcset="assets/images/limpieza-energetica-480w.webp 480w, assets/images/limpieza-energetica-800w.webp 800w" sizes="(max-width: 768px) 100vw, 33vw">
+                              <img src="assets/images/limpieza-energetica.png" alt="Taller Amor y Pareja" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450" loading="lazy" data-src="assets/images/limpieza-energetica.png">
+                            </picture>
                             <span class="absolute top-4 right-4 bg-accent text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Julio</span>
                         </div>
                         <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Limpieza Energética y Códigos Sagrados</h3>
@@ -222,7 +232,11 @@ En sesiones presenciales u online, descubriremos el sentido de tu experiencia y 
                 <article class="group">
                     <a href="talleres.html" class="no-underline block">
                         <div class="overflow-hidden rounded-2xl mb-4 relative aspect-video bg-neutral-100">
-                            <img src="assets/images/nino-herido.png" alt="Taller Decodificando el Sobrepeso" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450">
+                            <picture>
+                              <source type="image/avif" srcset="assets/images/nino-herido-480w.avif 480w, assets/images/nino-herido-800w.avif 800w" sizes="(max-width: 768px) 100vw, 33vw">
+                              <source type="image/webp" srcset="assets/images/nino-herido-480w.webp 480w, assets/images/nino-herido-800w.webp 800w" sizes="(max-width: 768px) 100vw, 33vw">
+                              <img src="assets/images/nino-herido.png" alt="Taller Decodificando el Sobrepeso" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="800" height="450" loading="lazy" data-src="assets/images/nino-herido.png">
+                            </picture>
                             <span class="absolute top-4 right-4 bg-neutral-mid text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide shadow">Septiembre</span>
                         </div>
                         <h3 class="font-serif text-xl text-neutral-dark mb-2 group-hover:text-primary transition-colors">Sana tu niño herido</h3>
@@ -274,7 +288,11 @@ En sesiones presenciales u online, descubriremos el sentido de tu experiencia y 
             <div class="formacion-hero__media order-1 md:order-2 flex justify-center md:justify-end">
                 <div class="formacion-image-wrap w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10">
                     <div class="relative aspect-[4/3] md:aspect-[5/4] overflow-hidden">
-                        <img src="assets/images/Grupal.jpg" alt="Formación en Biodecodificación — Taller presencial y online" class="w-full h-full object-cover transition-transform duration-500 formacion-image" width="800" height="450" loading="lazy">
+                        <picture>
+                          <source type="image/avif" srcset="assets/images/Grupal-480w.avif 480w, assets/images/Grupal-800w.avif 800w" sizes="(max-width: 768px) 100vw, 50vw">
+                          <source type="image/webp" srcset="assets/images/Grupal-480w.webp 480w, assets/images/Grupal-800w.webp 800w" sizes="(max-width: 768px) 100vw, 50vw">
+                          <img src="assets/images/Grupal.jpg" alt="Formación en Biodecodificación — Taller presencial y online" class="w-full h-full object-cover transition-transform duration-500 formacion-image" width="800" height="450" loading="lazy" data-src="assets/images/Grupal.jpg">
+                        </picture>
                         <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-separator/60 to-transparent pointer-events-none" aria-hidden="true"></div>
                     </div>
                 </div>
@@ -324,11 +342,15 @@ En sesiones presenciales u online, descubriremos el sentido de tu experiencia y 
     </section>
 
     <!-- SOBRE MÍ -->
-    <section id="sobre-mi" class="py-24 md:py-32 bg-[url('assets/images/home-value-background.png')] bg-cover bg-center bg-no-repeat" aria-labelledby="sobre-mi-heading">
+    <section id="sobre-mi" class="py-24 md:py-32 bg-home-value bg-cover bg-center bg-no-repeat" aria-labelledby="sobre-mi-heading">
         <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div class="relative">
                 <div class="overflow-hidden rounded-2xl shadow-xl aspect-[4/5] max-h-[600px] bg-neutral-200">
-                    <img src="assets/images/Andrea-picture-2.jpg" alt="Andrea Blangino — Terapeuta y formadora" class="w-full h-full object-cover object-center" width="600" height="750">
+                    <picture>
+                      <source type="image/avif" srcset="assets/images/Andrea-picture-2-480w.avif 480w, assets/images/Andrea-picture-2-800w.avif 800w" sizes="(max-width: 768px) 100vw, 50vw">
+                      <source type="image/webp" srcset="assets/images/Andrea-picture-2-480w.webp 480w, assets/images/Andrea-picture-2-800w.webp 800w" sizes="(max-width: 768px) 100vw, 50vw">
+                      <img src="assets/images/Andrea-picture-2.jpg" alt="Andrea Blangino — Terapeuta y formadora" class="w-full h-full object-cover object-center" width="600" height="750" loading="lazy" data-src="assets/images/Andrea-picture-2.jpg">
+                    </picture>
                 </div>
             </div>
             <div class="home-about__content text-center md:text-left">

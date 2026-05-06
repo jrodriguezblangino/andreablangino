@@ -665,3 +665,25 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
         margin-top: 2.5rem !important;
     }
 }
+
+/* ========== HERO / SECTION BACKGROUNDS (WebP progressive enhancement) ========== */
+.bg-home-value {
+    background-image: url('../images/home-value-background.png');
+}
+@supports (background-image: url('x.webp')) {
+    .bg-home-value {
+        background-image: url('../images/home-value-background.webp');
+    }
+}
+
+img[data-src] {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+img.img-loaded {
+    opacity: 1;
+}
+img[loading="eager"] {
+    opacity: 1 !important;
+    transition: none !important;
+}
