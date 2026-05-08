@@ -687,3 +687,10 @@ img[loading="eager"] {
     opacity: 1 !important;
     transition: none !important;
 }
+
+/* Fix: <picture> element must behave like a transparent block wrapper */
+picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
