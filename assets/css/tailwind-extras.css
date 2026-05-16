@@ -310,6 +310,19 @@ body.nav-menu-open .nav-icon-close {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Index hero: mobile stack order — titles → photo → body (desktop via grid placement in HTML) */
+@media (max-width: 768px) {
+  #inicio .home-hero-layout > .home-hero__titles {
+    order: 1;
+  }
+  #inicio .home-hero-layout > .home-hero__photo {
+    order: 2;
+  }
+  #inicio .home-hero-layout > .home-hero__body {
+    order: 3;
+  }
+}
+
 /* Hero CTA: texto centrado en el botón (index + terapias) */
 .hero-cta {
   display: inline-flex;

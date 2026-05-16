@@ -61,8 +61,7 @@
     <link rel="stylesheet" href="assets/css/colors.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/tailwind-extras.css">
-    <link rel="preload" as="image" href="assets/images/Andrea-picture-800w.webp" imagesrcset="assets/images/Andrea-picture-480w.webp 480w,
-                       assets/images/Andrea-picture-800w.webp 800w" imagesizes="(max-width: 768px) 100vw, 50vw">
+    <link rel="preload" as="image" href="assets/images/Andrea-hero.jpg">
 </head>
 <body class="antialiased font-body text-neutral-dark bg-white overflow-x-hidden">
 
@@ -115,12 +114,19 @@
 
     <!-- HERO -->
     <header id="inicio" class="relative overflow-hidden bg-home-value bg-cover bg-center bg-no-repeat py-24 md:py-32">
-        <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <div class="order-2 md:order-1">
+        <div class="home-hero-layout max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-x-12 lg:gap-x-16 gap-y-12 md:gap-y-0 items-center">
+            <div class="home-hero__titles md:col-start-1 md:row-start-1">
                 <span class="inline-block text-primary font-semibold text-xs uppercase tracking-[0.2em] mb-4">Biodecodificación Biológica</span>
                 <h1 class="home-hero__title font-display text-[48px] font-normal leading-[72px] text-neutral-dark mb-6">
                     Lo que te pasa tiene un sentido
                 </h1>
+            </div>
+            <div class="home-hero__photo md:col-start-2 md:row-start-1 md:row-span-2 flex justify-center">
+                <div class="w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-primary-pale/50">
+                    <img src="assets/images/Andrea-hero.jpg" alt="Andrea Blangino — Terapeuta y formadora en Biodecodificación Biológica" class="w-full h-full object-cover object-center" width="600" height="750" loading="eager" fetchpriority="high">
+                </div>
+            </div>
+            <div class="home-hero__body md:col-start-1 md:row-start-2">
                 <p class="text-neutral-mid text-lg leading-relaxed mb-8 max-w-md font-nav">
                     Te acompaño a comprender y transformar lo que estás viviendo.
 Si estás aquí, quizás buscas respuestas a dolencias, angustias o miedos que otros caminos no han logrado resolver.
@@ -136,11 +142,6 @@ En sesiones presenciales u online, descubriremos el sentido de tu experiencia y 
                     <a href="https://instagram.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-neutral-mid hover:text-primary transition-colors text-xl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Consulta%20desde%20la%20web." target="_blank" rel="noopener noreferrer" class="text-neutral-mid hover:text-primary transition-colors text-xl" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                     <a href="https://youtube.com/@andreablangino" target="_blank" rel="noopener noreferrer" class="text-neutral-mid hover:text-primary transition-colors text-xl" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="order-1 md:order-2 flex justify-center">
-                <div class="w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-primary-pale/50">
-                    <img src="assets/images/Andrea-picture.jpg" alt="Andrea Blangino — Terapeuta y formadora en Biodecodificación Biológica" class="w-full h-full object-cover object-center" width="600" height="750" loading="eager" fetchpriority="high">
                 </div>
             </div>
         </div>
