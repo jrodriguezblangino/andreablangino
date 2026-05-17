@@ -310,7 +310,7 @@ body.nav-menu-open .nav-icon-close {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Index hero: mobile stack order — titles → photo → body (desktop via grid placement in HTML) */
+/* Index hero: mobile stack order + tighter title spacing/typography */
 @media (max-width: 768px) {
   #inicio .home-hero-layout > .home-hero__titles {
     order: 1;
@@ -320,6 +320,11 @@ body.nav-menu-open .nav-icon-close {
   }
   #inicio .home-hero-layout > .home-hero__body {
     order: 3;
+  }
+
+  #inicio .home-hero__title {
+    font-weight: 400;
+    line-height: 1.2;
   }
 }
 
