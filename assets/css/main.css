@@ -551,7 +551,7 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
     /* Fix #1 — index hero title: max 2 lines (≤375px) */
     #inicio .home-hero__title {
         font-size: 36px !important;
-        line-height: 1.2 !important;
+        line-height: 1.12 !important;
         font-weight: 400 !important;
     }
 

@@ -322,9 +322,15 @@ body.nav-menu-open .nav-icon-close {
     order: 3;
   }
 
+  #inicio .home-hero__eyebrow {
+    letter-spacing: 0.15em;
+    margin-bottom: 0.4rem;
+  }
+
   #inicio .home-hero__title {
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.12;
+    text-wrap: balance;
   }
 }
 
