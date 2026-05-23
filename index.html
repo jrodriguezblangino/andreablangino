@@ -115,51 +115,21 @@
     <!-- HERO -->
     <header id="inicio" class="home-hero relative overflow-hidden bg-home-value bg-cover bg-center bg-no-repeat pt-16 pb-20 md:py-28 lg:py-36" aria-labelledby="home-hero-heading">
         <div class="home-hero__inner max-w-container mx-auto px-5 lg:px-20">
-            <div class="home-hero-layout grid md:grid-cols-2 gap-x-14 lg:gap-x-20 gap-y-10 md:gap-y-0 items-center">
+            <div class="home-hero-layout grid md:grid-cols-2 gap-x-14 lg:gap-x-20 gap-y-8 md:gap-y-0 items-center">
 
-                <!-- LEFT COLUMN: eyebrow + title + body + CTAs + social -->
-                <div class="flex flex-col gap-6 md:gap-8">
-
+                <!-- BLOCK 1 — Eyebrow + Title + Divider (top on mobile) -->
+                <div class="flex flex-col gap-5 order-1 md:order-1 md:col-start-1 md:row-start-1 md:row-span-1">
                     <p class="home-hero__eyebrow font-nav text-primary font-semibold text-xs uppercase tracking-[0.18em]">
                         Biodecodificación Biológica
                     </p>
-
                     <h1 id="home-hero-heading" class="home-hero__title font-display text-[clamp(2.4rem,6vw,3.25rem)] font-normal leading-[1.1] tracking-tight text-neutral-dark">
                         Lo que te pasa<br>tiene un sentido
                     </h1>
-
                     <div class="w-12 h-[2px] bg-primary rounded-full"></div>
-
-                    <div class="flex flex-col gap-3 max-w-md">
-                        <p class="home-hero__lead font-nav text-neutral-dark text-lg font-medium leading-relaxed">
-                            Te acompaño a comprender y transformar lo que estás viviendo.
-                        </p>
-                        <p class="home-hero__text font-nav text-neutral-mid text-base leading-relaxed">
-                            Si estás aquí, quizás buscas respuestas a dolencias, angustias o miedos que otros caminos no han logrado resolver. En sesiones presenciales u online, descubriremos el sentido de tu experiencia y te llevarás herramientas concretas para superarla.
-                        </p>
-                    </div>
-
-                    <div class="home-hero__actions flex flex-col sm:flex-row gap-3 sm:gap-4">
-                        <a href="terapias.html" class="hero-cta hero-cta--primary inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-sm font-semibold rounded hover:bg-primary-hover transition-colors shadow-md hover:shadow-lg no-underline uppercase tracking-wide">
-                            Ver Terapias
-                        </a>
-                        <a href="talleres.html" class="hero-cta hero-cta--secondary inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-primary text-primary font-nav text-sm font-semibold rounded hover:bg-primary-pale transition-colors no-underline uppercase tracking-wide">
-                            Ver Talleres <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
-                        </a>
-                    </div>
-
-                    <nav class="home-hero__social" aria-label="Redes sociales de Andrea Blangino">
-                        <ul class="flex items-center gap-5 list-none m-0 p-0">
-                            <li><a href="https://instagram.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-neutral-mid hover:text-primary transition-colors text-xl" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                            <li><a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Consulta%20desde%20la%20web." target="_blank" rel="noopener noreferrer" class="text-neutral-mid hover:text-primary transition-colors text-xl" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
-                            <li><a href="https://youtube.com/@andreablangino" target="_blank" rel="noopener noreferrer" class="text-neutral-mid hover:text-primary transition-colors text-xl" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
-                        </ul>
-                    </nav>
-
                 </div>
 
-                <!-- RIGHT COLUMN: photo -->
-                <figure class="home-hero__photo flex justify-center md:justify-end m-0 order-first md:order-none">
+                <!-- BLOCK 2 — Photo (middle on mobile, right column on desktop) -->
+                <figure class="home-hero__photo flex justify-center md:justify-end m-0 order-2 md:order-none md:col-start-2 md:row-start-1 md:row-span-2">
                     <div class="home-hero__photo-frame w-full max-w-[340px] md:max-w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl bg-primary-pale/50">
                         <img
                             src="assets/images/Andrea-hero.jpg"
@@ -170,6 +140,34 @@
                         >
                     </div>
                 </figure>
+
+                <!-- BLOCK 3 — Body copy + CTAs + Social (bottom on mobile, bottom-left on desktop) -->
+                <div class="flex flex-col gap-6 order-3 md:order-none md:col-start-1 md:row-start-2">
+                    <div class="flex flex-col gap-5 md:gap-6 max-w-md">
+                        <p class="home-hero__lead font-serif text-[1.375rem] md:text-2xl italic text-neutral-dark leading-snug">
+                            Te acompaño a comprender y transformar lo que estás viviendo.
+                        </p>
+                        <div class="w-8 h-px bg-primary/40 hidden md:block" aria-hidden="true"></div>
+                        <p class="home-hero__text hidden md:block font-body text-[0.9rem] text-neutral-mid leading-relaxed">
+                            Si estás aquí, quizás buscas respuestas a dolencias, angustias o miedos que otros caminos no han logrado resolver. En sesiones presenciales u online, descubriremos el sentido de tu experiencia y te llevarás herramientas concretas para superarla.
+                        </p>
+                    </div>
+                    <div class="home-hero__actions flex flex-col sm:flex-row gap-3 sm:gap-4 mt-2 md:mt-8">
+                        <a href="terapias.html" class="hero-cta hero-cta--primary inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-sm font-semibold rounded hover:bg-primary-hover transition-colors shadow-md hover:shadow-lg no-underline uppercase tracking-wide">
+                            Ver Terapias
+                        </a>
+                        <a href="talleres.html" class="hero-cta hero-cta--secondary inline-flex items-center justify-center gap-2 px-8 py-3.5 border-2 border-primary text-primary font-nav text-sm font-semibold rounded hover:bg-primary-pale transition-colors no-underline uppercase tracking-wide">
+                            Ver Talleres <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                    <nav class="home-hero__social" aria-label="Redes sociales de Andrea Blangino">
+                        <ul class="flex items-center gap-5 list-none m-0 p-0">
+                            <li><a href="https://instagram.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-neutral-mid hover:text-primary transition-colors text-xl" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                            <li><a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Consulta%20desde%20la%20web." target="_blank" rel="noopener noreferrer" class="text-neutral-mid hover:text-primary transition-colors text-xl" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a></li>
+                            <li><a href="https://youtube.com/@andreablangino" target="_blank" rel="noopener noreferrer" class="text-neutral-mid hover:text-primary transition-colors text-xl" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </nav>
+                </div>
 
             </div>
         </div>
