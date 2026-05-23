@@ -315,14 +315,6 @@ body.nav-menu-open .nav-icon-close {
   #inicio.home-hero {
     --hero-gutter: clamp(1.125rem, 5vw, 1.5rem);
     --hero-photo-radius: clamp(1.5rem, 5.5vw, 2rem);
-    background-color: var(--color-neutral-light);
-    background-image:
-      linear-gradient(
-        165deg,
-        var(--color-neutral-light) 0%,
-        color-mix(in srgb, var(--color-neutral-light) 94%, white) 38%,
-        color-mix(in srgb, var(--color-primary-light) 22%, var(--color-neutral-light)) 100%
-      );
   }
 
   .nav-bar:has(+ #inicio.home-hero) {
@@ -381,15 +373,6 @@ body.nav-menu-open .nav-icon-close {
     min-height: 3rem;
   }
 
-  #inicio .home-hero__social a {
-    opacity: 0.65;
-    transition: opacity 0.2s ease, color 0.2s ease;
-  }
-
-  #inicio .home-hero__social a:hover,
-  #inicio .home-hero__social a:focus-visible {
-    opacity: 1;
-  }
 }
 
 /* Index hero — desktop: photo glow off, image centered */
