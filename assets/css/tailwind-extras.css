@@ -387,6 +387,14 @@ body.nav-menu-open .nav-icon-close {
   }
 }
 
+/* Hero eyebrow labels — desktop only (≥1024px) */
+@media (min-width: 1024px) {
+  .home-hero__eyebrow {
+    font-size: 0.9375rem !important;
+    letter-spacing: 0.22em !important;
+  }
+}
+
 /* Hero CTA: texto centrado en el botón (index + terapias) */
 .hero-cta {
   display: inline-flex;

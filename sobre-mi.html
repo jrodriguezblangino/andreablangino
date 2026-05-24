@@ -65,7 +65,7 @@
       <a href="/" class="nav-logo flex items-center gap-3 shrink-0 no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded font-nav">
         <img src="assets/images/logo.svg" alt="" class="nav-logo-img h-28 sm:h-24 md:h-40 w-auto object-contain" width="320" height="32" aria-hidden="true">
         <div class="hidden sm:flex flex-col">
-          <span class="font-nav text-lg md:text-2xl font-semibold text-primary tracking-tight leading-tight">Andrea Blangino</span>
+          <span class="hidden font-nav text-lg md:text-2xl font-semibold text-primary tracking-tight leading-tight">Andrea Blangino</span>
           <!-- <span class="text-[10px] uppercase tracking-[0.15em] text-neutral-mid mx-auto">Terapeuta Holística</span> -->
         </div>
       </a>
@@ -99,22 +99,50 @@
     </div>
   </nav>
 
-  <header class="relative overflow-hidden bg-home-value bg-cover bg-center bg-no-repeat py-24 md:py-32">
-    <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div class="order-2 md:order-1">
-        <span class="inline-block text-primary font-semibold text-xs uppercase tracking-[0.2em] mb-4">Terapeuta Holística</span>
-        <h1 class="sobre-hero__title font-display text-[40px] sm:text-[44px] md:text-[48px] font-normal leading-tight tracking-tight text-neutral-dark mb-6">Hola, soy Andrea Blangino</h1>
-        <p class="text-neutral-mid text-lg leading-relaxed mb-8 max-w-md font-nav">Directora de la Escuela de Formación Práctica en Biodecodificación. Acompaño procesos individuales, la formación de nuevos consultores,
-          imparto charlas y talleres.
+  <header class="home-hero relative overflow-hidden bg-home-value bg-cover bg-center bg-no-repeat pt-16 pb-20 md:py-28 lg:py-36" aria-labelledby="sobre-hero-heading">
+    <div class="home-hero__inner max-w-container mx-auto px-6 md:px-5 lg:px-20">
+      <div class="home-hero-layout grid md:grid-cols-2 gap-x-14 lg:gap-x-20 gap-y-8 md:gap-y-0 items-center">
+
+        <!-- BLOCK 1 — Eyebrow + Title + Divider (top on mobile) -->
+        <div class="flex flex-col gap-5 order-1 md:order-1 md:col-start-1 md:row-start-1 md:row-span-1">
+          <p class="home-hero__eyebrow font-nav text-primary font-semibold text-xs uppercase tracking-[0.18em]">
+            Terapeuta Holística
           </p>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Me%20gustar%C3%ADa%20reservar%20una%20sesi%C3%B3n." target="_blank" rel="noopener noreferrer" class="hero-cta hero-cta--primary inline-flex items-center justify-center text-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-hover transition-colors shadow-md hover:shadow-lg no-underline uppercase">Reservar una sesión</a>
+          <h1 id="sobre-hero-heading" class="sobre-hero__title font-display text-[40px] sm:text-[44px] md:text-[48px] font-normal leading-tight tracking-tight text-neutral-dark">
+            Hola, soy Andrea Blangino
+          </h1>
+          <div class="w-12 h-[2px] bg-primary rounded-full"></div>
         </div>
-      </div>
-      <div class="order-1 md:order-2 flex justify-center">
-        <div class="w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-primary-pale/50">
-          <img src="assets/images/Andrea-sobre-mi.jpg" alt="Andrea Blangino — Terapeuta y formadora" class="w-full h-full object-cover object-center" width="600" height="750" loading="eager" fetchpriority="high">
+
+        <!-- BLOCK 2 — Photo (middle on mobile, right column on desktop) -->
+        <figure class="home-hero__photo flex justify-start md:justify-end m-0 max-md:!mx-0 max-md:w-full order-2 md:order-none md:col-start-2 md:row-start-1 md:row-span-2">
+          <div class="home-hero__photo-frame w-full md:max-w-full aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl bg-primary-pale/50">
+            <img
+              src="assets/images/Andrea-sobre-mi.jpg"
+              alt="Andrea Blangino — Terapeuta y formadora"
+              class="home-hero__photo-img w-full h-full object-cover object-center"
+              width="600" height="750"
+              loading="eager" fetchpriority="high"
+            >
+          </div>
+        </figure>
+
+        <!-- BLOCK 3 — Body copy + CTA (bottom on mobile, bottom-left on desktop) -->
+        <div class="flex flex-col gap-0 order-3 -mt-1 pt-0 md:order-none md:col-start-1 md:row-start-2 md:gap-6 md:mt-0">
+          <div class="flex flex-col md:gap-6 max-w-md">
+            <p class="text-neutral-mid text-lg leading-relaxed max-w-md font-nav mx-auto py-5 text-center md:mx-0 md:py-0 md:text-left">
+              Directora de la Escuela de Formación Práctica en Biodecodificación. Acompaño procesos individuales, la formación de nuevos consultores,
+              imparto charlas y talleres.
+            </p>
+          </div>
+          <div class="w-10 h-px bg-primary/30 my-4 md:hidden" aria-hidden="true"></div>
+          <div class="home-hero__cta-group flex w-full flex-col md:w-fit md:gap-6">
+            <div class="home-hero__actions flex flex-col gap-2 w-full md:flex-row md:gap-4 md:mt-8">
+              <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Me%20gustar%C3%ADa%20reservar%20una%20sesi%C3%B3n." target="_blank" rel="noopener noreferrer" class="hero-cta hero-cta--primary inline-flex items-center justify-center text-center w-full min-h-12 px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-hover transition-colors shadow-md hover:shadow-lg no-underline uppercase md:w-auto md:min-h-0">Reservar una sesión</a>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </header>
