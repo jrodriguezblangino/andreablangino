@@ -100,24 +100,29 @@
     </div>
   </nav>
 
-  <header class="terapias-hero relative overflow-hidden bg-home-value bg-cover bg-center bg-no-repeat py-24 md:py-32">
-    <div class="max-w-container mx-auto px-5 lg:px-20 grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <div class="order-2 md:order-1 min-w-0 text-center md:text-left relative z-10">
-        <span class="inline-block text-primary font-semibold text-xs uppercase tracking-[0.2em] mb-4">Terapias Individuales</span>
-        <h1 class="terapias-hero__title font-display text-[48px] font-normal leading-[72px] text-neutral-dark mb-6">
+  <header class="terapias-hero relative overflow-hidden bg-home-value bg-cover bg-center bg-no-repeat pt-16 pb-20 md:py-28 lg:py-36" aria-labelledby="terapias-hero-heading">
+    <div class="max-w-container mx-auto px-6 md:px-5 lg:px-20">
+      <div class="flex flex-col gap-5 min-w-0 text-center md:text-left relative z-10 max-w-xl md:max-w-2xl mx-auto md:mx-0">
+        <p class="home-hero__eyebrow font-nav text-primary font-semibold text-xs uppercase tracking-[0.18em]">
+          Terapias Individuales
+        </p>
+        <h1 id="terapias-hero-heading" class="terapias-hero__title home-hero__title font-display text-[clamp(2.4rem,6vw,3.25rem)] font-normal leading-[1.1] tracking-tight text-neutral-dark">
           Acompañamiento personalizado para tu proceso de sanación
         </h1>
-        <p class="text-neutral-mid text-lg leading-relaxed mb-8 max-w-md font-nav mx-auto md:mx-0">
-          Trabajamos sobre lo que hoy te está afectando: síntomas, emociones o situaciones que se repiten.Identificamos el origen del conflicto y avanzamos con herramientas concretas para que puedas empezar a transformarlo.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <a href="#online" class="hero-cta hero-cta--primary inline-flex items-center justify-center text-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-hover transition-colors shadow-md hover:shadow-lg no-underline uppercase">Reservar Sesión Online</a>
-          <a href="#presencial" class="hero-cta hero-cta--secondary inline-flex items-center justify-center text-center gap-2 px-8 py-3.5 border-2 border-primary text-primary font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-pale transition-colors no-underline uppercase">
-            Consulta Presencial <i class="fas fa-arrow-right text-sm" aria-hidden="true"></i>
-          </a>
+        <div class="w-12 h-[2px] bg-primary rounded-full mx-auto md:mx-0" aria-hidden="true"></div>
+        <div class="flex flex-col gap-6 pt-1 md:pt-0">
+          <p class="home-hero__text font-body text-base md:text-[0.9rem] text-neutral-mid leading-relaxed max-w-md mx-auto md:mx-0">
+            Trabajamos sobre lo que hoy te está afectando: síntomas, emociones o situaciones que se repiten. Identificamos el origen del conflicto y avanzamos con herramientas concretas para que puedas empezar a transformarlo.
+          </p>
+          <div class="home-hero__actions flex flex-col gap-2 w-full md:flex-row md:gap-4 md:mt-8">
+            <a href="#online" class="hero-cta hero-cta--primary inline-flex items-center justify-center w-full min-h-12 px-8 py-3.5 bg-primary text-white font-nav text-sm font-semibold rounded hover:bg-primary-hover transition-colors shadow-md hover:shadow-lg no-underline uppercase tracking-wide md:w-auto md:min-h-0">Reservar Sesión Online</a>
+            <a href="#presencial" class="hero-cta hero-cta--secondary inline-flex items-center justify-center gap-2 w-full min-h-12 px-8 py-3.5 border-2 border-primary text-primary font-nav text-sm font-semibold rounded hover:bg-primary-pale transition-colors no-underline uppercase tracking-wide md:w-auto md:min-h-0">
+              Consulta Presencial <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
       </div>
-      <div class="order-1 md:order-2 flex justify-center relative z-0">
+      <div class="hidden" aria-hidden="true">
         <div class="w-full max-w-md aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl bg-primary-pale/50">
           <img src="assets/images/Andrea-picture-2.jpg" alt="Andrea Blangino — Terapeuta en Biodecodificación" class="w-full h-full object-cover object-center" width="600" height="750" loading="eager" fetchpriority="high">
         </div>
