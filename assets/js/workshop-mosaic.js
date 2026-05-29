@@ -5,10 +5,10 @@
   'use strict';
 
   var SLIDES = [
-    { src: 'assets/images/Slide-1.webp', name: 'Registros Akásicos' },
-    { src: 'assets/images/Slide-2.webp', name: 'Biodecodificación' },
+    { src: 'assets/images/Slide-1.webp', name: 'Abundancia' },
+    { src: 'assets/images/Slide-2.webp', name: 'Mujeres que sanan' },
     { src: 'assets/images/Slide-3.webp', name: 'Constelaciones Familiares' },
-    { src: 'assets/images/Slide-4.webp', name: 'Meditación y Presencia' }
+    { src: 'assets/images/Slide-4.webp', name: 'Sana tu niño interior' }
   ];
 
   var mosaic = document.getElementById('workshop-mosaic');
