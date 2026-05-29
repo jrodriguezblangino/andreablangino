@@ -103,6 +103,35 @@
     <div class="max-w-container mx-auto px-5 lg:px-20 text-center">
       <span class="home-hero__eyebrow inline-block text-white/90 font-semibold text-xs uppercase tracking-[0.2em] mb-4">Encuentros temáticos</span>
       <h1 class="font-serif text-4xl md:text-5xl font-semibold mb-4 text-white">Talleres & Workshops</h1>
+      <div class="workshop-mosaic" id="workshop-mosaic" role="group" aria-label="Galería de talleres anteriores">
+        <button type="button" class="workshop-mosaic__cell workshop-mosaic__cell--slide3" data-slide-index="2" aria-label="Ver Constelaciones Familiares en pantalla completa">
+          <img src="assets/images/Slide-3.webp" alt="Taller Constelaciones Familiares" width="400" height="320" loading="lazy" decoding="async">
+          <span class="workshop-mosaic__shade" aria-hidden="true"></span>
+          <span class="workshop-mosaic__hover" aria-hidden="true"></span>
+          <span class="workshop-mosaic__label" aria-hidden="true">Constelaciones Familiares</span>
+        </button>
+        <button type="button" class="workshop-mosaic__cell workshop-mosaic__cell--slide1" data-slide-index="0" aria-label="Ver Registros Akásicos en pantalla completa">
+          <img src="assets/images/Slide-1.webp" alt="Taller Registros Akásicos" width="280" height="157" loading="lazy" decoding="async">
+          <span class="workshop-mosaic__shade" aria-hidden="true"></span>
+          <span class="workshop-mosaic__hover" aria-hidden="true"></span>
+          <span class="workshop-mosaic__label" aria-hidden="true">Registros Akásicos</span>
+        </button>
+        <button type="button" class="workshop-mosaic__cell workshop-mosaic__cell--slide2" data-slide-index="1" aria-label="Ver Biodecodificación en pantalla completa">
+          <img src="assets/images/Slide-2.webp" alt="Taller Biodecodificación" width="280" height="157" loading="lazy" decoding="async">
+          <span class="workshop-mosaic__shade" aria-hidden="true"></span>
+          <span class="workshop-mosaic__hover" aria-hidden="true"></span>
+          <span class="workshop-mosaic__label" aria-hidden="true">Biodecodificación</span>
+        </button>
+        <button type="button" class="workshop-mosaic__cell workshop-mosaic__cell--slide4" data-slide-index="3" aria-label="Ver Meditación y Presencia en pantalla completa">
+          <img src="assets/images/Slide-4.webp" alt="Taller Meditación y Presencia" width="280" height="157" loading="lazy" decoding="async">
+          <span class="workshop-mosaic__shade" aria-hidden="true"></span>
+          <span class="workshop-mosaic__hover" aria-hidden="true"></span>
+          <span class="workshop-mosaic__label" aria-hidden="true">Meditación y Presencia</span>
+        </button>
+        <div class="workshop-mosaic__cell workshop-mosaic__cell--label" aria-hidden="true">
+          <span class="workshop-mosaic__label-text">•&nbsp;&nbsp;Talleres anteriores</span>
+        </div>
+      </div>
       <p class="text-white/85 font-nav text-lg max-w-xl mx-auto mb-10">Eventos programados para este 2026</p>
       <div class="flex flex-wrap justify-center gap-3" role="group" aria-label="Filtrar talleres">
         <button type="button" class="filter-pill font-nav text-sm px-5 py-2 rounded-full transition-colors cursor-pointer bg-primary text-white" data-filter="todos">Todos</button>
@@ -445,5 +474,6 @@
     })();
   </script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/workshop-mosaic.js"></script>
 </body>
 </html>
