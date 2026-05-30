@@ -128,6 +128,23 @@ body.nav-menu-open .nav-menu-mobile-panel {
   transform: scaleX(1);
 }
 
+.nav-link--active {
+  color: var(--color-primary) !important;
+  position: relative;
+}
+.nav-link--active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-primary);
+  border-radius: 1px;
+  transform: scaleX(1);
+  width: 100%;
+}
+
 /* Hamburger ↔ X: mismo botón, misma posición; iconos Font Awesome (sin recorte) */
 .nav-trigger-icons {
   position: relative;

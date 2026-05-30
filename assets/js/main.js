@@ -511,6 +511,20 @@
         });
     }
 
+    // ----- Active nav link for current page -----
+    function initActiveNavLink() {
+        var links = document.querySelectorAll('.nav-link');
+        var path = window.location.pathname.split('/').pop() || 'index.html';
+        links.forEach(function (link) {
+            var href = (link.getAttribute('href') || '').split('/').pop();
+            var isHome = path === 'index.html' || path === '';
+            var isHomeLink = href === 'index.html' || href === '#inicio';
+            if (href === path || (isHome && isHomeLink) || (path === '' && href === 'index.html')) {
+                link.classList.add('nav-link--active');
+            }
+        });
+    }
+
     // ----- Floating WhatsApp: hide when footer #contacto is in view -----
     function initWaFloat() {
         var btn = document.querySelector('.wa-float');
@@ -532,6 +546,7 @@
         initFormacionHero();
         initVideoCarousel();
         initReviewsSlider();
+        initActiveNavLink();
         initWaFloat();
     }
 
