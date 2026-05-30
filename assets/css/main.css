@@ -5,10 +5,11 @@
 
 /* ========== DESIGN TOKENS (Sistema Visual) ========== */
 :root {
-    /* Tipografía */
-    --font-heading: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'DM Sans', 'Inter', sans-serif;
-    --font-accent: 'Cormorant Garamond', Georgia, serif;
+    /* Tipografía (cargadas vía <link> en cada HTML) */
+    --font-heading: 'Gilda Display', Georgia, serif;
+    --font-body: 'Montserrat', 'Montserrat Fallback', system-ui, sans-serif;
+    --font-accent: 'Gilda Display', Georgia, serif;
+    --font-nav: 'Source Sans Pro', system-ui, sans-serif;
 
     /* Escala tipográfica */
     --text-h1: clamp(2.5rem, 5vw, 4rem);
@@ -31,9 +32,6 @@
 
     --nav-height: 4rem;
 }
-
-/* ========== FUENTES ========== */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 body {
     font-family: var(--font-body);
