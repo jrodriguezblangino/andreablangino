@@ -308,6 +308,9 @@
             for (var d = 0; d < dots.length; d++) {
                 dots[d].setAttribute('aria-selected', d === current ? 'true' : 'false');
             }
+
+            var status = document.getElementById('video-carousel-status');
+            if (status) status.textContent = 'Video ' + (current + 1) + ' de ' + total;
         }
 
         prevBtn.addEventListener('click', function () {
