@@ -246,10 +246,15 @@ body.nav-menu-open .nav-icon-close {
 }
 .faq-icon {
   color: var(--color-primary);
-  font-size: 1.25rem;
-  font-weight: 300;
-  transition: transform 0.2s;
   flex-shrink: 0;
+  transition: transform 0.3s ease;
+  line-height: 1;
+}
+.faq-icon.fas,
+.faq-icon.fab {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-style: normal;
 }
 .faq-item {
   border-radius: 0.75rem;
