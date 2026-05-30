@@ -511,6 +511,17 @@
         });
     }
 
+    // ----- Floating WhatsApp: hide when footer #contacto is in view -----
+    function initWaFloat() {
+        var btn = document.querySelector('.wa-float');
+        var footer = document.getElementById('contacto');
+        if (!btn || !footer) return;
+        var io = new IntersectionObserver(function (entries) {
+            btn.classList.toggle('wa-float--hidden', entries[0].isIntersecting);
+        }, { threshold: 0.2 });
+        io.observe(footer);
+    }
+
     function init() {
         initNav();
         initNavScroll();
@@ -521,6 +532,7 @@
         initFormacionHero();
         initVideoCarousel();
         initReviewsSlider();
+        initWaFloat();
     }
 
     if (document.readyState === 'loading') {

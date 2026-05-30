@@ -686,6 +686,34 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
     }
 }
 
+/* ========== FLOATING WHATSAPP CTA ========== */
+.wa-float {
+    position: fixed;
+    bottom: 1.75rem;
+    right: 1.75rem;
+    z-index: 90;
+    width: 3.25rem;
+    height: 3.25rem;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+}
+.wa-float:hover {
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+.wa-float--hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
 /* ========== HERO / SECTION BACKGROUNDS (WebP progressive enhancement) ========== */
 .bg-home-value {
     background-image: url('../images/home-value-background.png');
