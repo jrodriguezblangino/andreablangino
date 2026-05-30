@@ -530,6 +530,38 @@ body.nav-menu-open .nav-icon-close {
   transform: scale(1.05);
 }
 
+.formacion-logo {
+  max-width: min(100%, 240px);
+}
+
+@media (min-width: 640px) {
+  .formacion-logo {
+    max-width: min(100%, 280px);
+  }
+}
+
+@media (min-width: 768px) {
+  .formacion-logo {
+    max-width: min(100%, 320px);
+  }
+}
+
+.formacion-image-wrap--logo .formacion-logo {
+  max-width: min(100%, 220px);
+}
+
+@media (min-width: 640px) {
+  .formacion-image-wrap--logo .formacion-logo {
+    max-width: min(100%, 260px);
+  }
+}
+
+@media (min-width: 768px) {
+  .formacion-image-wrap--logo .formacion-logo {
+    max-width: min(100%, 300px);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .formacion-hero__content {
     opacity: 0;
