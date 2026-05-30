@@ -660,6 +660,32 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
     }
 }
 
+/* ========== HOME HERO — entrance animation ========== */
+@keyframes heroSlideUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.home-hero__eyebrow       { animation: heroSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
+.home-hero__title         { animation: heroSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both; }
+.home-hero__lead          { animation: heroSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.34s both; }
+.home-hero__text          { animation: heroSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.44s both; }
+.home-hero__actions       { animation: heroSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.52s both; }
+.home-hero__photo-frame   { animation: heroSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both; }
+.home-hero__social        { animation: heroSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both; }
+
+@media (prefers-reduced-motion: reduce) {
+    .home-hero__eyebrow,
+    .home-hero__title,
+    .home-hero__lead,
+    .home-hero__text,
+    .home-hero__actions,
+    .home-hero__photo-frame,
+    .home-hero__social {
+        animation: none;
+    }
+}
+
 /* ========== HERO / SECTION BACKGROUNDS (WebP progressive enhancement) ========== */
 .bg-home-value {
     background-image: url('../images/home-value-background.png');
