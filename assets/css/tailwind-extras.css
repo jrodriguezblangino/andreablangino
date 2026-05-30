@@ -293,43 +293,36 @@ body.nav-menu-open .nav-icon-close {
   background-color: var(--color-primary);
   color: #fff;
   border-radius: 0.5rem;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   width: fit-content;
 }
 .nav-menu-cta:hover {
   background-color: var(--color-primary-hover);
   color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 144, 147, 0.25);
 }
-/* Botones CTA accent (Quiero formarme, Sesión Online, Reservar Consulta): hover evidente */
+.nav-menu-cta:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
 .cta-accent {
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-.cta-accent:hover {
-  background-color: var(--color-accent-hover) !important;
-  box-shadow: 0 8px 20px rgba(0, 144, 147, 0.25), 0 2px 6px rgba(0, 144, 147, 0.18);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .cta-accent:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
-/* CTA primario (forzar mismo color real en cualquier fondo) */
 .cta-primary {
   background-color: var(--color-primary) !important;
   color: var(--color-white) !important;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-}
-.cta-primary:hover {
-  background-color: var(--color-primary-hover) !important;
-  box-shadow: 0 8px 20px rgba(0, 144, 147, 0.25), 0 2px 6px rgba(0, 144, 147, 0.18);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Mismo hover que "Ver Talleres" (bg fill evidente): botón borde blanco en fondo oscuro */
 .cta-secondary-dark {
-  transition: background-color 0.2s ease;
-}
-.cta-secondary-dark:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Index hero — mobile only (≤767px): stacked photo-first layout */
@@ -425,6 +418,11 @@ body.nav-menu-open .nav-icon-close {
   text-align: center;
   white-space: nowrap;
 }
+.hero-cta--primary,
+.hero-cta--secondary,
+.formacion-cta-premium {
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
 
 /* Terapias hero: título más largo que el de index; reducir tamaño en pantallas estrechas para que "Acompañamiento" entre sin overflow */
 .terapias-hero .terapias-hero__title {
@@ -480,13 +478,16 @@ body.nav-menu-open .nav-icon-close {
 .video-carousel__btn:hover {
   background: var(--color-primary);
   color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 144, 147, 0.25);
+}
+.video-carousel__btn:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 .video-carousel__btn:focus {
   outline: none;
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(0, 144, 147, 0.75);
-}
-.video-carousel__btn:active {
-  transform: scale(0.97);
 }
 .video-carousel__dots {
   display: flex;
@@ -537,9 +538,8 @@ body.nav-menu-open .nav-icon-close {
   color: var(--color-violet-light);
 }
 
-.formacion-cta-premium:hover {
-  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
-  box-shadow: 0 20px 25px -5px rgba(0, 144, 147, 0.22), 0 8px 10px -6px rgba(0, 144, 147, 0.16);
+.formacion-cta-premium {
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .formacion-image-wrap {
@@ -1284,4 +1284,91 @@ button.workshop-mosaic__cell:focus-visible .workshop-mosaic__label {
   .workshop-lightbox__next {
     display: none;
   }
+}
+
+/* ========== Shared CTA / button hover lift ========== */
+.cta-primary:hover,
+.cta-accent:hover,
+.hero-cta--primary:hover {
+  background-color: var(--color-primary-hover) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 144, 147, 0.25);
+}
+
+.cta-primary:active,
+.cta-accent:active,
+.hero-cta--primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.formacion-cta-premium:hover {
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary)) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 144, 147, 0.25);
+}
+
+.formacion-cta-premium:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.cta-secondary-dark:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.12);
+}
+
+.hero-cta--secondary:hover {
+  background-color: var(--color-primary-pale);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 144, 147, 0.15);
+}
+
+.cta-secondary-dark:active,
+.hero-cta--secondary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.nav-cta {
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 144, 147, 0.2);
+}
+
+.nav-cta:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.reviews-slider-container .slider-btn {
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reviews-slider-container .slider-btn:hover {
+  transform: translateY(calc(-50% - 1px));
+  box-shadow: 0 6px 20px rgba(0, 144, 147, 0.25);
+}
+
+.reviews-slider-container .slider-btn:active {
+  transform: translateY(-50%);
+  box-shadow: none;
+}
+
+.filter-pill {
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.filter-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.filter-pill:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
