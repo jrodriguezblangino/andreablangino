@@ -555,11 +555,11 @@ body.nav-menu-open .nav-icon-close {
   max-width: min(100%, 280px);
   padding: 1.75rem 1.5rem;
   border-radius: 1rem;
-  background-color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  background-color: var(--color-neutral-light);
+  border: 1px solid var(--color-violet-light);
   box-shadow:
-    0 24px 48px -16px rgba(0, 0, 0, 0.28),
-    0 8px 16px -8px rgba(0, 99, 102, 0.2);
+    0 24px 48px -16px rgba(0, 51, 54, 0.28),
+    0 8px 16px -8px rgba(112, 91, 166, 0.18);
 }
 
 .formacion-image-wrap--logo .formacion-logo {
@@ -607,16 +607,16 @@ body.nav-menu-open .nav-icon-close {
   .formacion-image-wrap--logo:hover {
     transform: translateY(-4px);
     box-shadow:
-      0 32px 56px -16px rgba(0, 0, 0, 0.32),
-      0 12px 24px -10px rgba(0, 99, 102, 0.24);
+      0 32px 56px -16px rgba(0, 51, 54, 0.32),
+      0 12px 24px -10px rgba(112, 91, 166, 0.26);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .formacion-image-wrap--logo:hover {
     box-shadow:
-      0 28px 52px -16px rgba(0, 0, 0, 0.3),
-      0 10px 20px -10px rgba(0, 99, 102, 0.22);
+      0 28px 52px -16px rgba(0, 51, 54, 0.3),
+      0 10px 20px -10px rgba(112, 91, 166, 0.22);
   }
 }
 
