@@ -162,6 +162,20 @@ h3 { font-size: var(--text-h3); }
 }
 
 /* ========== CONTENEDOR Y SECCIONES ========== */
+.section-divider-top {
+    position: relative;
+}
+.section-divider-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 144, 147, 0.12) 30%, rgba(0, 144, 147, 0.12) 70%, transparent 100%);
+    pointer-events: none;
+}
+
 .container-custom {
     max-width: var(--container-max);
     margin-left: auto;
