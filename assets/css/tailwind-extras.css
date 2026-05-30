@@ -521,12 +521,12 @@ body.nav-menu-open .nav-icon-close {
 }
 
 .formacion-image-wrap {
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .formacion-image-wrap:hover {
   box-shadow: 0 25px 50px -12px rgba(0, 144, 147, 0.35);
 }
-.formacion-image-wrap:hover .formacion-image {
+.formacion-image-wrap:not(.formacion-image-wrap--logo):hover .formacion-image {
   transform: scale(1.05);
 }
 
@@ -546,19 +546,77 @@ body.nav-menu-open .nav-icon-close {
   }
 }
 
+/* index.html — logo card on teal hero */
+.formacion-image-wrap--logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: min(100%, 280px);
+  padding: 1.75rem 1.5rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  box-shadow:
+    0 24px 48px -16px rgba(0, 0, 0, 0.28),
+    0 8px 16px -8px rgba(0, 99, 102, 0.2);
+}
+
 .formacion-image-wrap--logo .formacion-logo {
-  max-width: min(100%, 220px);
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: min(100%, 240px);
+  object-fit: contain;
 }
 
 @media (min-width: 640px) {
+  .formacion-image-wrap--logo {
+    max-width: min(100%, 340px);
+    padding: 2rem 1.75rem;
+  }
+
   .formacion-image-wrap--logo .formacion-logo {
-    max-width: min(100%, 260px);
+    max-width: min(100%, 300px);
   }
 }
 
 @media (min-width: 768px) {
+  .formacion-image-wrap--logo {
+    max-width: min(100%, 420px);
+    padding: 2.25rem 2rem;
+  }
+
   .formacion-image-wrap--logo .formacion-logo {
-    max-width: min(100%, 300px);
+    max-width: min(100%, 360px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .formacion-image-wrap--logo {
+    max-width: min(100%, 460px);
+    padding: 2.5rem 2.25rem;
+  }
+
+  .formacion-image-wrap--logo .formacion-logo {
+    max-width: min(100%, 400px);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .formacion-image-wrap--logo:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 32px 56px -16px rgba(0, 0, 0, 0.32),
+      0 12px 24px -10px rgba(0, 99, 102, 0.24);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .formacion-image-wrap--logo:hover {
+    box-shadow:
+      0 28px 52px -16px rgba(0, 0, 0, 0.3),
+      0 10px 20px -10px rgba(0, 99, 102, 0.22);
   }
 }
 
