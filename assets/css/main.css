@@ -686,8 +686,9 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
     }
 }
 
-/* ========== FLOATING WHATSAPP CTA ========== */
+/* ========== FLOATING WHATSAPP CTA (desktop only, lg+) ========== */
 .wa-float {
+    display: none;
     position: fixed;
     bottom: 1.75rem;
     right: 1.75rem;
@@ -697,13 +698,18 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
     background: #25D366;
     color: #fff;
     border-radius: 50%;
-    display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.6rem;
     box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+    .wa-float {
+        display: flex;
+    }
 }
 .wa-float:hover {
     transform: scale(1.08) translateY(-2px);
