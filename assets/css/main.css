@@ -686,6 +686,19 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
     }
 }
 
+@keyframes gentleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .home-hero__photo-frame {
+        animation:
+            heroSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both,
+            gentleFloat 6s ease-in-out infinite;
+    }
+}
+
 /* ========== FLOATING WHATSAPP CTA (desktop only, lg+) ========== */
 .wa-float {
     display: none;
