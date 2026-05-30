@@ -434,8 +434,51 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
 
 /* ========== QUOTE BANNER (franja oscura) ========== */
 .quote-banner {
+    position: relative;
+    overflow: hidden;
     background-color: var(--color-separator-bg);
     color: var(--color-white);
+}
+.quote-banner > * {
+    position: relative;
+    z-index: 1;
+}
+.quote-banner::before {
+    content: '\201C';
+    position: absolute;
+    left: 50%;
+    top: clamp(3.5rem, 18%, 6.5rem);
+    transform: translateX(-50%);
+    font-family: var(--font-heading);
+    font-size: clamp(6.5rem, 18vw, 12rem);
+    font-weight: 500;
+    line-height: 0.9;
+    color: rgba(255, 255, 255, 0.12);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    -webkit-mask-image: radial-gradient(
+        ellipse 72% 68% at 50% 48%,
+        #000 0%,
+        rgba(0, 0, 0, 0.55) 45%,
+        transparent 72%
+    );
+    mask-image: radial-gradient(
+        ellipse 72% 68% at 50% 48%,
+        #000 0%,
+        rgba(0, 0, 0, 0.55) 45%,
+        transparent 72%
+    );
+}
+@media (min-width: 768px) {
+    .quote-banner::before {
+        top: clamp(4rem, 20%, 7rem);
+        font-size: clamp(7.5rem, 16vw, 13rem);
+        color: rgba(255, 255, 255, 0.14);
+    }
+}
+.quote-banner__headline {
+    position: relative;
 }
 .quote-banner .font-accent {
     font-family: var(--font-accent);
