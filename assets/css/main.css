@@ -585,7 +585,7 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
 .sobre-filosofia-icon--empoderamiento { color: var(--color-success) !important; }
 
 /* ========== TERAPIAS — Testimonials background (GLOBAL) ========== */
-#testimonios-heading {
+#testimonios-section {
     background-color: var(--color-neutral-light);
 }
 

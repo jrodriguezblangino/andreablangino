@@ -779,8 +779,65 @@ body.nav-menu-open .nav-icon-close {
 }
 
 /* ========== Slider de reseñas Google ========== */
+.reviews-verified-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.5rem;
+  position: relative;
+  z-index: 5;
+  margin-bottom: 3rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: var(--font-body, 'Montserrat', sans-serif);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-neutral-mid, #6b7280);
+}
+
+.reviews-verified-text {
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.reviews-google-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  min-width: 3.25rem;
+  min-height: 1.5rem;
+  padding: 0.15rem 0.25rem;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 6;
+  text-decoration: none;
+  line-height: 0;
+  vertical-align: middle;
+}
+
+.reviews-google-link:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.reviews-google-logo {
+  display: block;
+  height: 1.05em;
+  width: auto;
+  max-height: 1.2rem;
+  transform: translateY(0.14em);
+}
+
 .reviews-slider-container {
   padding: 0 4rem;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 767px) {
   .reviews-slider-container {
@@ -888,13 +945,6 @@ body.nav-menu-open .nav-icon-close {
   display: block;
   font-size: 0.75rem;
   color: var(--text-muted);
-}
-
-.review-card .google-logo {
-  width: 48px;
-  height: auto;
-  flex-shrink: 0;
-  opacity: 0.85;
 }
 
 .review-stars {

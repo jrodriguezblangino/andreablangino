@@ -359,7 +359,7 @@
     }
 
     function initReviewsSlider() {
-        var container = document.getElementById('testimonios-heading');
+        var container = document.getElementById('testimonios-section');
         var inner = document.getElementById('reviews-slider-inner');
         var dotsContainer = container ? container.querySelector('.slider-dots') : null;
         var prevBtn = container ? container.querySelector('.slider-btn--prev') : null;
@@ -392,7 +392,6 @@
                     '      <span class="review-author">' + r.author + '</span>' +
                     '      <span class="review-date">' + r.date + '</span>' +
                     '    </div>' +
-                    '    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="google-logo" width="48">' +
                     '  </div>' +
                     '  <div class="review-stars" aria-label="' + r.rating + ' de 5 estrellas">' + starString(r.rating) + '</div>' +
                     '  <p class="review-text">"' + r.text + '"</p>' +
