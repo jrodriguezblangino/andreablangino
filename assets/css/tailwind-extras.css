@@ -242,7 +242,7 @@ body.nav-menu-open .nav-icon-close {
   box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(0, 144, 147, 0.75);
 }
 .faq-item .faq-trigger[aria-expanded="true"] .faq-icon {
-  transform: rotate(45deg);
+  transform: rotate(180deg);
 }
 .faq-icon {
   color: var(--color-primary);

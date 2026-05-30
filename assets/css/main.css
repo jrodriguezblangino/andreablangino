@@ -500,7 +500,7 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
     outline-offset: 2px;
 }
 .faq-trigger[aria-expanded="true"] .faq-icon {
-    transform: rotate(45deg);
+    transform: rotate(180deg);
 }
 .faq-content {
     max-height: 0;
