@@ -58,25 +58,25 @@
   <link rel="preload" as="image" href="assets/images/escuela-800w.webp" imagesrcset="assets/images/escuela-480w.webp 480w,
                        assets/images/escuela-800w.webp 800w" imagesizes="(max-width: 768px) 100vw, 80vw">
 </head>
-<body class="antialiased font-body text-neutral-dark bg-white overflow-x-hidden">
+<body class="page-escuela antialiased font-body text-neutral-dark bg-white overflow-x-hidden">
 
   <nav id="nav-bar" class="nav-bar z-50 sticky top-0 lg:static bg-neutral-light border-b border-neutral-200/80 transition-shadow duration-300 shadow-sm" role="navigation" aria-label="Navegación principal">
-    <div class="nav-bar-inner max-w-container mx-auto px-4 sm:px-5 lg:px-20 py-3 md:py-4">
+    <div class="nav-bar-inner max-w-container mx-auto px-3 sm:px-4 lg:px-6 py-3 md:py-4">
       <a href="/" class="nav-logo flex items-center gap-3 shrink-0 no-underline focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded font-nav">
-        <img src="assets/images/logo.svg" alt="" class="nav-logo-img h-28 sm:h-24 md:h-40 w-auto object-contain" width="320" height="32" aria-hidden="true">
+        <img src="assets/images/logo.svg" alt="" class="nav-logo-img h-20 sm:h-20 md:h-28 w-auto object-contain" width="320" height="32" aria-hidden="true">
         <div class="hidden sm:flex flex-col">
           <span class="hidden font-nav text-lg md:text-2xl font-semibold text-primary tracking-tight leading-tight">Andrea Blangino</span>
           <!-- <span class="text-[10px] uppercase tracking-[0.15em] text-neutral-mid mx-auto">Terapeuta Holística</span> -->
         </div>
       </a>
-      <div class="nav-right hidden xl:flex items-center gap-6 xl:gap-8">
+      <nav class="nav-links hidden xl:flex items-center gap-6 xl:gap-8" aria-label="Enlaces principales">
         <a href="index.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">INICIO</a>
         <a href="terapias.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">TERAPIAS</a>
         <a href="talleres.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">TALLERES</a>
         <a href="escuela-de-formacion.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">FORMACIÓN</a>
         <a href="sobre-mi.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">SOBRE MÍ</a>
-        <a href="/#contacto" class="nav-cta inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-semibold rounded hover:bg-primary-hover transition-colors shadow-sm no-underline whitespace-nowrap uppercase">CONTACTO</a>
-      </div>
+      </nav>
+      <a href="/#contacto" class="nav-cta hidden xl:inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-semibold rounded hover:bg-primary-hover transition-colors shadow-sm no-underline whitespace-nowrap uppercase shrink-0">CONTACTO</a>
       <button type="button" id="nav-trigger" class="nav-trigger xl:hidden flex items-center justify-center w-12 h-12 sm:w-11 sm:h-11 rounded-lg text-primary hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-active shrink-0" aria-expanded="false" aria-controls="nav-menu-mobile" aria-label="Abrir menú de navegación">
         <span class="nav-trigger-icons" aria-hidden="true">
           <i class="nav-icon-menu fas fa-bars" aria-hidden="true"></i>
@@ -99,22 +99,22 @@
     </div>
   </nav>
 
-  <section class="relative overflow-hidden bg-gradient-to-b from-neutral-light via-white to-primary-pale/50 py-10 sm:py-12 md:py-14 lg:py-16" aria-labelledby="escuela-hero-heading">
-    <div class="max-w-container mx-auto px-5 lg:px-20">
-      <div class="escuela-hero-grid mx-auto grid max-w-none items-center gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-12">
-        <div class="escuela-hero-logo-wrap flex min-w-0 justify-center lg:justify-end">
+  <section class="escuela-hero relative overflow-hidden bg-gradient-to-b from-neutral-light via-white to-primary-pale/50 py-10 sm:py-12 md:py-14 lg:py-16" aria-labelledby="escuela-hero-heading">
+    <div class="escuela-hero-inner max-w-container mx-auto px-5 lg:px-12">
+      <div class="escuela-hero-grid items-center gap-8 lg:gap-6 xl:gap-8">
+        <div class="escuela-hero-logo-wrap flex min-w-0 justify-center lg:justify-start">
           <img src="assets/images/LogoFormacion.png" alt="Escuela de Formación Práctica en Biodecodificación" class="escuela-hero-logo h-auto object-contain" width="580" height="580" loading="eager">
         </div>
-        <div class="escuela-hero-content flex min-w-0 flex-col items-center text-center lg:items-start lg:text-left lg:justify-center">
+        <div class="escuela-hero-content flex min-w-0 flex-col items-center text-center justify-center mx-auto">
           <p class="mb-4 font-nav text-xs font-semibold uppercase tracking-[0.2em] text-primary">Aprender, experimentar y acompañar.</p>
-          <h1 id="escuela-hero-heading" class="font-serif text-4xl font-semibold leading-tight text-neutral-dark sm:text-5xl md:text-[2.75rem] lg:text-[3rem] xl:text-[3.5rem]">
-            <span class="block lg:whitespace-nowrap">Escuela de Formación Práctica</span>
+          <h1 id="escuela-hero-heading" class="font-serif text-4xl font-semibold leading-tight text-neutral-dark sm:text-5xl md:text-[2.75rem] lg:text-[3rem] xl:text-[3.25rem]">
+            <span class="block">Escuela de Formación Práctica</span>
             <span class="block">en Biodecodificación</span>
           </h1>
-          <p class="mt-5 max-w-3xl font-nav text-base leading-relaxed text-neutral-mid sm:text-lg lg:text-xl">
+          <p class="mt-5 max-w-xl font-nav text-base leading-relaxed text-neutral-mid sm:text-lg">
             Una propuesta de aprendizaje, práctica y acompañamiento para quienes desean comprender la biología desde una mirada humana e integradora.
           </p>
-          <div class="escuela-hero-actions mt-8 flex w-full max-w-md flex-col gap-2 lg:max-w-none lg:flex-row lg:gap-4 lg:justify-start">
+          <div class="escuela-hero-actions mt-8 flex w-full max-w-md flex-col gap-2 sm:flex-row sm:gap-4 sm:justify-center">
             <a href="formacion-presencial.html" class="hero-cta hero-cta--primary inline-flex items-center justify-center w-full min-h-12 px-8 py-3.5 bg-primary text-white font-nav text-sm font-semibold rounded hover:bg-primary-hover transition-colors shadow-md no-underline uppercase tracking-wide lg:w-auto lg:min-h-0">
               Modalidad Presencial
             </a>

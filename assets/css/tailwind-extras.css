@@ -1415,6 +1415,87 @@ button.workshop-mosaic__cell:focus-visible .workshop-mosaic__label {
 }
 
 /* ========== ESCUELA DE FORMACIÓN — landing ========== */
+@media (min-width: 1280px) {
+  .page-escuela .nav-bar-inner {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: 1.5rem;
+  }
+
+  .page-escuela .nav-logo {
+    justify-self: start;
+  }
+
+  .page-escuela .nav-links {
+    justify-self: center;
+    margin-left: 0;
+  }
+
+  .page-escuela .nav-cta {
+    justify-self: end;
+  }
+}
+
+/* Hero: logo a la izquierda, texto centrado en la página */
+.page-escuela .escuela-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+@media (min-width: 1024px) {
+  .page-escuela .escuela-hero-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 38rem) minmax(0, 1fr);
+    align-items: center;
+    justify-items: stretch;
+  }
+
+  .page-escuela .escuela-hero-logo-wrap {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    align-self: center;
+  }
+
+  .page-escuela .escuela-hero-content {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: center;
+    width: 100%;
+    max-width: 38rem;
+    margin-inline: auto;
+  }
+}
+
+.page-escuela .escuela-hero-logo {
+  max-width: min(100%, 240px);
+}
+
+@media (min-width: 640px) {
+  .page-escuela .escuela-hero-logo {
+    max-width: min(100%, 280px);
+  }
+}
+
+@media (min-width: 768px) {
+  .page-escuela .escuela-hero-logo {
+    max-width: min(100%, 320px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page-escuela .escuela-hero-logo {
+    max-width: min(100%, 340px);
+  }
+}
+
+@media (min-width: 1280px) {
+  .page-escuela .escuela-hero-logo {
+    max-width: min(100%, 380px);
+  }
+}
+
 .escuela-hero-logo {
   display: block;
   width: auto;
