@@ -1396,6 +1396,7 @@ button.workshop-mosaic__cell:focus-visible .workshop-mosaic__label {
 /* ========== ESCUELA DE FORMACIÓN — landing ========== */
 .escuela-hero-logo {
   display: block;
+  width: auto;
   max-width: min(100%, 280px);
 }
 
@@ -1407,13 +1408,20 @@ button.workshop-mosaic__cell:focus-visible .workshop-mosaic__label {
 
 @media (min-width: 768px) {
   .escuela-hero-logo {
-    max-width: min(100%, 520px);
+    max-width: min(100%, 380px);
   }
 }
 
 @media (min-width: 1024px) {
   .escuela-hero-logo {
-    max-width: min(100%, 760px);
+    width: 100%;
+    max-width: 460px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .escuela-hero-logo {
+    max-width: 500px;
   }
 }
 
