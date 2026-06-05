@@ -256,19 +256,20 @@
         }
     }
 
-    // ----- Fade-in al scroll (elementos con .fade-in-scroll) -----
+    // ----- Fade-in al scroll (.fade-in-scroll, .reveal-stagger) -----
     function initFadeInScroll() {
-        var elements = document.querySelectorAll('.fade-in-scroll');
+        var elements = document.querySelectorAll('.fade-in-scroll, .reveal-stagger');
         if (!elements.length) return;
         var observer = new IntersectionObserver(
             function (entries) {
                 for (var i = 0; i < entries.length; i++) {
                     if (entries[i].isIntersecting) {
                         entries[i].target.classList.add('visible');
+                        observer.unobserve(entries[i].target);
                     }
                 }
             },
-            { threshold: 0.15 }
+            { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
         );
         for (var j = 0; j < elements.length; j++) {
             observer.observe(elements[j]);

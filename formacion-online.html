@@ -97,50 +97,56 @@
   </nav>
 
   <main>
-    <section class="relative overflow-hidden bg-gradient-to-b from-neutral-light via-white to-primary-pale/50 py-14 md:py-20" aria-labelledby="online-hero-heading">
+    <section class="modalidad-page-hero relative overflow-hidden bg-gradient-to-b from-neutral-light via-white to-primary-pale/50 py-14 md:py-20 lg:py-24" aria-labelledby="online-hero-heading">
       <div class="max-w-container mx-auto px-5 lg:px-20">
-        <div class="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+        <nav class="modalidad-breadcrumb mb-6 lg:mb-8" aria-label="Navegación secundaria">
+          <a href="escuela-de-formacion.html"><i class="fas fa-arrow-left text-xs" aria-hidden="true"></i> Escuela de Formación</a>
+        </nav>
+        <div class="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
           <div class="text-center lg:text-left">
-            <p class="mb-4 font-nav text-xs font-semibold uppercase tracking-[0.2em] text-primary">Modalidad Online Intensiva</p>
-            <h1 id="online-hero-heading" class="font-serif text-4xl font-semibold leading-tight text-neutral-dark sm:text-5xl lg:text-6xl">
+            <p class="modalidad-hero__eyebrow mb-4 font-nav text-xs font-semibold uppercase tracking-[0.2em] text-primary">Modalidad Online Intensiva</p>
+            <h1 id="online-hero-heading" class="modalidad-hero__title font-serif text-4xl font-semibold leading-tight text-neutral-dark sm:text-5xl lg:text-6xl">
               Escuela de Formación Práctica en Biodecodificación
               <span class="block text-primary">Modalidad Online Intensiva</span>
             </h1>
-            <p class="mt-6 font-serif text-2xl text-accent-dark">La misma profundidad, con otra organización.</p>
-            <p class="mt-5 max-w-2xl font-nav text-base leading-relaxed text-neutral-mid sm:text-lg lg:mx-0 mx-auto">
+            <p class="modalidad-hero__lead mt-6 font-serif text-2xl text-accent-dark">La misma profundidad, con otra organización.</p>
+            <p class="modalidad-hero__text mt-5 max-w-2xl font-nav text-base leading-relaxed text-neutral-mid sm:text-lg lg:mx-0 mx-auto">
               Una propuesta de aprendizaje, práctica y acompañamiento para quienes desean formarse desde cualquier lugar, con encuentros en vivo, clases asincrónicas y acceso a materiales digitales.
             </p>
-            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
-              <a href="https://wa.me/5493541574635?text=Hola%20Andrea%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20la%20Formaci%C3%B3n%20Online%20Intensiva%20en%20Biodecodificaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center rounded bg-primary px-8 py-3.5 font-nav text-[16px] font-normal uppercase leading-[22px] text-white no-underline shadow-md transition-colors hover:bg-primary-hover">
+            <div class="modalidad-hero__actions mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
+              <a href="https://wa.me/5493541574635?text=Hola%20Andrea%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20la%20Formaci%C3%B3n%20Online%20Intensiva%20en%20Biodecodificaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="hero-cta hero-cta--primary inline-flex items-center justify-center w-full min-h-12 px-8 py-3.5 bg-primary text-white font-nav text-sm font-semibold rounded shadow-md no-underline uppercase tracking-wide sm:w-auto lg:min-h-0">
                 Consultar por WhatsApp
               </a>
-              <a href="#programa" class="inline-flex items-center justify-center rounded border-2 border-primary px-8 py-3.5 font-nav text-[16px] font-normal uppercase leading-[22px] text-primary no-underline transition-colors hover:bg-primary hover:text-white">
+              <a href="#programa" class="hero-cta hero-cta--secondary inline-flex items-center justify-center w-full min-h-12 px-8 py-3.5 border-2 border-primary text-primary font-nav text-sm font-semibold rounded no-underline uppercase tracking-wide sm:w-auto lg:min-h-0">
                 Ver programa
               </a>
             </div>
           </div>
-          <div class="aspect-[4/3] overflow-hidden rounded-2xl shadow-lg">
-            <img src="assets/images/online-800w.webp" alt="Formación online intensiva en Biodecodificación" class="h-full w-full object-cover object-center" width="800" height="600" loading="eager">
+          <div class="modalidad-hero__media">
+            <div class="formacion-image-wrap relative aspect-[4/3] overflow-hidden rounded-2xl">
+              <img src="assets/images/online-800w.webp" alt="Formación online intensiva en Biodecodificación" class="formacion-image h-full w-full object-cover object-center" width="800" height="600" loading="eager">
+              <div class="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-separator/40 to-transparent pointer-events-none" aria-hidden="true"></div>
+            </div>
           </div>
         </div>
 
-        <div class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
-          <div class="rounded-2xl border border-neutral-100 bg-white p-5 shadow-sm"><span class="font-nav text-sm font-semibold text-primary">Inicio</span><p class="mt-1 font-serif text-xl text-neutral-dark">4 de agosto de 2026</p></div>
-          <div class="rounded-2xl border border-neutral-100 bg-white p-5 shadow-sm"><span class="font-nav text-sm font-semibold text-primary">Días y horario</span><p class="mt-1 font-serif text-xl text-neutral-dark">Martes y Jueves de 18:30 a 20:30 hs</p></div>
-          <div class="rounded-2xl border border-neutral-100 bg-white p-5 shadow-sm"><span class="font-nav text-sm font-semibold text-primary">Duración</span><p class="mt-1 font-serif text-xl text-neutral-dark">4 meses</p></div>
-          <div class="rounded-2xl border border-neutral-100 bg-white p-5 shadow-sm"><span class="font-nav text-sm font-semibold text-primary">En vivo</span><p class="mt-1 font-serif text-xl text-neutral-dark">34 encuentros</p></div>
-          <div class="rounded-2xl border border-neutral-100 bg-white p-5 shadow-sm"><span class="font-nav text-sm font-semibold text-primary">Asincrónico</span><p class="mt-1 font-serif text-xl text-neutral-dark">17 clases semanales</p></div>
-          <div class="rounded-2xl border border-neutral-100 bg-white p-5 shadow-sm"><span class="font-nav text-sm font-semibold text-primary">Grabaciones</span><p class="mt-1 font-serif text-xl text-neutral-dark">Durante la cursada y 6 meses posteriores</p></div>
+        <div class="modalidad-hero__highlights formacion-highlights mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="modalidad-stat-card"><span class="font-nav text-sm font-semibold text-primary">Inicio</span><p class="mt-1 font-serif text-xl text-neutral-dark">4 de agosto de 2026</p></div>
+          <div class="modalidad-stat-card"><span class="font-nav text-sm font-semibold text-primary">Días y horario</span><p class="mt-1 font-serif text-xl text-neutral-dark">Martes y Jueves de 18:30 a 20:30 hs</p></div>
+          <div class="modalidad-stat-card"><span class="font-nav text-sm font-semibold text-primary">Duración</span><p class="mt-1 font-serif text-xl text-neutral-dark">4 meses</p></div>
+          <div class="modalidad-stat-card"><span class="font-nav text-sm font-semibold text-primary">En vivo</span><p class="mt-1 font-serif text-xl text-neutral-dark">34 encuentros</p></div>
+          <div class="modalidad-stat-card"><span class="font-nav text-sm font-semibold text-primary">Asincrónico</span><p class="mt-1 font-serif text-xl text-neutral-dark">17 clases semanales</p></div>
+          <div class="modalidad-stat-card"><span class="font-nav text-sm font-semibold text-primary">Grabaciones</span><p class="mt-1 font-serif text-xl text-neutral-dark">Durante la cursada y 6 meses posteriores</p></div>
         </div>
       </div>
     </section>
 
-    <section class="py-12 md:py-16 bg-white" aria-labelledby="diferente-heading">
+    <section class="py-16 md:py-24 bg-white" aria-labelledby="diferente-heading">
       <div class="max-w-container mx-auto px-5 lg:px-20">
-        <div class="mx-auto mb-12 max-w-2xl text-center">
+        <div class="section-intro fade-in-scroll mx-auto mb-10 md:mb-14 max-w-2xl text-center">
           <h2 id="diferente-heading" class="font-serif text-3xl font-semibold leading-tight text-neutral-dark md:text-4xl">Qué hace diferente a esta modalidad</h2>
         </div>
-        <div class="grid gap-6 md:grid-cols-3">
+        <div class="grid gap-6 md:grid-cols-3 reveal-stagger">
           <article class="feature-card rounded-2xl border border-neutral-100 bg-neutral-light p-6 md:p-8 text-center shadow-sm">
             <div class="feature-card__icon w-14 h-14 mx-auto mb-5 rounded-xl bg-primary-pale/80 flex items-center justify-center text-primary">
               <i class="fas fa-video text-2xl" aria-hidden="true"></i>
@@ -166,59 +172,64 @@
       </div>
     </section>
 
-    <section class="py-12 md:py-16 bg-primary-pale/40" aria-labelledby="incluye-heading">
+    <section class="py-16 md:py-24 bg-primary-pale/40" aria-labelledby="incluye-heading">
       <div class="max-w-container mx-auto px-5 lg:px-20">
-        <h2 id="incluye-heading" class="font-serif text-3xl font-semibold text-neutral-dark text-center md:text-4xl">Qué incluye</h2>
-        <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          <div class="rounded-2xl bg-white p-5 shadow-sm"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">34 encuentros en vivo</span></div>
-          <div class="rounded-2xl bg-white p-5 shadow-sm"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">17 clases asincrónicas</span></div>
-          <div class="rounded-2xl bg-white p-5 shadow-sm"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">Grabaciones</span></div>
-          <div class="rounded-2xl bg-white p-5 shadow-sm"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">Classroom</span></div>
-          <div class="rounded-2xl bg-white p-5 shadow-sm"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">Manuales PDF</span></div>
-          <div class="rounded-2xl bg-white p-5 shadow-sm"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">Material complementario</span></div>
-          <div class="rounded-2xl bg-white p-5 shadow-sm"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">Grupo institucional de WhatsApp</span></div>
-          <div class="rounded-2xl bg-white p-5 shadow-sm"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">Certificación</span></div>
+        <div class="section-intro fade-in-scroll mx-auto mb-10 md:mb-14 max-w-2xl text-center">
+          <h2 id="incluye-heading" class="font-serif text-3xl font-semibold text-neutral-dark md:text-4xl">Qué incluye</h2>
+          <p class="section-intro__lead mt-3 md:mt-4 font-nav text-base leading-relaxed text-neutral-mid">Todo lo necesario para sostener un recorrido completo, flexible y acompañado.</p>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4 reveal-stagger">
+          <div class="modalidad-check-item"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">34 encuentros en vivo</span></div>
+          <div class="modalidad-check-item"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">17 clases asincrónicas</span></div>
+          <div class="modalidad-check-item"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">Grabaciones</span></div>
+          <div class="modalidad-check-item"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">Classroom</span></div>
+          <div class="modalidad-check-item"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">Manuales PDF</span></div>
+          <div class="modalidad-check-item"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">Material complementario</span></div>
+          <div class="modalidad-check-item"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">Grupo institucional de WhatsApp</span></div>
+          <div class="modalidad-check-item"><i class="fas fa-check-circle text-primary" aria-hidden="true"></i><span class="ml-3 font-nav text-neutral-dark">Certificación</span></div>
         </div>
       </div>
     </section>
 
-    <section class="py-12 md:py-16 bg-white" aria-labelledby="cursado-heading">
+    <section class="py-16 md:py-24 bg-white" aria-labelledby="cursado-heading">
       <div class="max-w-container mx-auto px-5 lg:px-20">
-        <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div>
+        <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-14">
+          <div class="fade-in-scroll">
             <h2 id="cursado-heading" class="font-serif text-3xl font-semibold text-neutral-dark md:text-4xl">Información del cursado</h2>
-            <p class="mt-5 font-nav text-base leading-relaxed text-neutral-mid">La modalidad online intensiva organiza el programa en cuatro meses, combinando encuentros en vivo y clases asincrónicas para sostener una experiencia completa de formación.</p>
+            <p class="mt-5 font-nav text-base leading-relaxed text-neutral-mid md:text-lg">La modalidad online intensiva organiza el programa en cuatro meses, combinando encuentros en vivo y clases asincrónicas para sostener una experiencia completa de formación.</p>
           </div>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div class="rounded-2xl border border-neutral-100 bg-neutral-light p-6"><span class="font-nav text-sm font-semibold uppercase text-primary">Inicio</span><p class="mt-2 font-serif text-2xl">4 de agosto de 2026</p></div>
-            <div class="rounded-2xl border border-neutral-100 bg-neutral-light p-6"><span class="font-nav text-sm font-semibold uppercase text-primary">Horario</span><p class="mt-2 font-serif text-2xl">18:30 a 20:30 hs</p></div>
-            <div class="rounded-2xl border border-neutral-100 bg-neutral-light p-6"><span class="font-nav text-sm font-semibold uppercase text-primary">Frecuencia</span><p class="mt-2 font-serif text-2xl">Martes y jueves</p></div>
-            <div class="rounded-2xl border border-neutral-100 bg-neutral-light p-6"><span class="font-nav text-sm font-semibold uppercase text-primary">Acceso</span><p class="mt-2 font-serif text-2xl">Cursada + 6 meses</p></div>
+          <div class="grid gap-4 sm:grid-cols-2 reveal-stagger">
+            <div class="modalidad-info-card"><span class="font-nav text-sm font-semibold uppercase text-primary">Inicio</span><p class="mt-2 font-serif text-2xl">4 de agosto de 2026</p></div>
+            <div class="modalidad-info-card"><span class="font-nav text-sm font-semibold uppercase text-primary">Horario</span><p class="mt-2 font-serif text-2xl">18:30 a 20:30 hs</p></div>
+            <div class="modalidad-info-card"><span class="font-nav text-sm font-semibold uppercase text-primary">Frecuencia</span><p class="mt-2 font-serif text-2xl">Martes y jueves</p></div>
+            <div class="modalidad-info-card"><span class="font-nav text-sm font-semibold uppercase text-primary">Acceso</span><p class="mt-2 font-serif text-2xl">Cursada + 6 meses</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-12 md:py-16 bg-neutral-light" aria-labelledby="para-quien-online-heading">
+    <section class="py-16 md:py-24 bg-neutral-light" aria-labelledby="para-quien-online-heading">
       <div class="max-w-container mx-auto px-5 lg:px-20">
-        <h2 id="para-quien-online-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Para quién es</h2>
-        <p class="text-center text-neutral-mid mb-12 max-w-xl mx-auto font-nav text-base">Una modalidad pensada para quienes necesitan una organización intensiva y flexible sin resignar profundidad.</p>
-        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
-          <article class="bg-white rounded-2xl p-6 md:p-8 text-center shadow-sm border border-neutral-100">
+        <div class="section-intro fade-in-scroll mx-auto mb-10 md:mb-14 max-w-2xl text-center">
+          <h2 id="para-quien-online-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark leading-tight">Para quién es</h2>
+          <p class="section-intro__lead mt-3 md:mt-4 font-nav text-base leading-relaxed text-neutral-mid">Una modalidad pensada para quienes necesitan una organización intensiva y flexible sin resignar profundidad.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8 reveal-stagger">
+          <article class="modalidad-audience-card bg-white rounded-2xl p-6 md:p-8 text-center shadow-sm border border-neutral-100">
             <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-primary-pale/80 flex items-center justify-center text-primary">
               <i class="fas fa-map-marker-alt text-2xl" aria-hidden="true"></i>
             </div>
             <h3 class="font-serif text-xl font-semibold text-neutral-dark mb-3">Quienes viven lejos</h3>
             <p class="text-neutral-mid text-sm leading-relaxed">Para formarte desde cualquier lugar, sin necesidad de trasladarte.</p>
           </article>
-          <article class="bg-white rounded-2xl p-6 md:p-8 text-center shadow-sm border border-neutral-100">
+          <article class="modalidad-audience-card bg-white rounded-2xl p-6 md:p-8 text-center shadow-sm border border-neutral-100">
             <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-primary-pale/80 flex items-center justify-center text-primary">
               <i class="fas fa-calendar-check text-2xl" aria-hidden="true"></i>
             </div>
             <h3 class="font-serif text-xl font-semibold text-neutral-dark mb-3">Quienes buscan intensidad</h3>
             <p class="text-neutral-mid text-sm leading-relaxed">Para integrar el recorrido en cuatro meses con un ritmo claro y sostenido.</p>
           </article>
-          <article class="bg-white rounded-2xl p-6 md:p-8 text-center shadow-sm border border-neutral-100">
+          <article class="modalidad-audience-card bg-white rounded-2xl p-6 md:p-8 text-center shadow-sm border border-neutral-100">
             <div class="w-14 h-14 mx-auto mb-5 rounded-xl bg-primary-pale/80 flex items-center justify-center text-primary">
               <i class="fas fa-hands-helping text-2xl" aria-hidden="true"></i>
             </div>
@@ -229,11 +240,13 @@
       </div>
     </section>
 
-    <section id="programa" class="py-12 md:py-16 bg-white" aria-labelledby="programa-heading">
+    <section id="programa" class="py-16 md:py-24 bg-white" aria-labelledby="programa-heading">
       <div class="max-w-container mx-auto px-5 lg:px-20">
-        <h2 id="programa-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Programa de formación</h2>
-        <p class="text-center text-neutral-mid mb-12 max-w-xl mx-auto font-nav text-base">Ocho unidades de estudio y aprendizaje para una formación integral.</p>
-        <div class="max-w-3xl mx-auto space-y-4">
+        <div class="section-intro fade-in-scroll mx-auto mb-10 md:mb-14 max-w-2xl text-center">
+          <h2 id="programa-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark leading-tight">Programa de formación</h2>
+          <p class="section-intro__lead mt-3 md:mt-4 font-nav text-base leading-relaxed text-neutral-mid">Ocho unidades de estudio y aprendizaje para una formación integral.</p>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-4 fade-in-scroll">
           <div class="faq-item">
             <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-prog-1" id="faq-btn-prog-1"><span>Unidad 1 — Fundamentos y orígenes</span><i class="faq-icon fas fa-chevron-down text-primary text-sm transition-transform duration-300" aria-hidden="true"></i></button>
             <div id="faq-prog-1" class="faq-content" role="region" aria-labelledby="faq-btn-prog-1" aria-hidden="true"><div class="faq-content-inner"><ul class="list-disc list-inside space-y-2 text-neutral-mid"><li>¿Qué es la Biodecodificación? Orígenes y aportes.</li><li>Inconsciente individual y colectivo. Cerebro automático / biológico. Epigenética (visión básica).</li><li>Lecturas obligatorias y criterios de evaluación.</li></ul></div></div>
@@ -270,29 +283,33 @@
       </div>
     </section>
 
-    <section class="py-12 md:py-16 bg-primary-pale/40" aria-labelledby="inversion-heading">
+    <section class="py-16 md:py-24 bg-primary-pale/40" aria-labelledby="inversion-heading">
       <div class="max-w-container mx-auto px-5 lg:px-20">
-        <h2 id="inversion-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Inversión</h2>
-        <div class="mx-auto mt-10 grid max-w-3xl gap-6 md:grid-cols-2">
-          <article class="rounded-2xl bg-white p-8 text-center shadow-sm border border-neutral-100">
+        <div class="section-intro fade-in-scroll mx-auto mb-10 md:mb-14 max-w-2xl text-center">
+          <h2 id="inversion-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark leading-tight">Inversión</h2>
+        </div>
+        <div class="mx-auto grid max-w-3xl gap-6 md:grid-cols-2 reveal-stagger">
+          <article class="modalidad-price-card rounded-2xl bg-white p-8 text-center shadow-sm border border-neutral-100">
             <h3 class="font-serif text-2xl text-neutral-dark">Matrícula de inscripción</h3>
             <p class="mt-5 font-serif text-4xl text-accent">$50.000</p>
           </article>
-          <article class="rounded-2xl bg-white p-8 text-center shadow-sm border border-neutral-100">
+          <article class="modalidad-price-card rounded-2xl bg-white p-8 text-center shadow-sm border border-neutral-100">
             <h3 class="font-serif text-2xl text-neutral-dark">Cuotas mensuales</h3>
             <p class="mt-5 font-serif text-4xl text-accent">4 x $230.000</p>
           </article>
         </div>
-        <p class="mt-6 text-center font-nav text-sm text-neutral-mid">* Todos los valores están expresados en pesos argentinos (ARS).</p>
+        <p class="mt-8 text-center font-nav text-sm text-neutral-mid fade-in-scroll">* Todos los valores están expresados en pesos argentinos (ARS).</p>
       </div>
     </section>
 
-    <section class="py-12 md:py-16 bg-white" aria-labelledby="video-formacion-online-heading">
+    <section class="video-formacion-section py-16 md:py-24 bg-white" aria-labelledby="video-formacion-online-heading">
       <div class="max-w-container mx-auto px-5 lg:px-20">
-        <h2 id="video-formacion-online-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Conocé la Formación Online por dentro</h2>
-        <p class="text-center text-neutral-mid mb-12 max-w-2xl mx-auto font-nav text-base">Descubrí cómo se desarrolla la cursada, qué contenidos vas a encontrar y de qué manera se integra la teoría, la práctica y el acompañamiento durante todo el recorrido.</p>
+        <div class="section-intro fade-in-scroll mx-auto mb-10 md:mb-14 max-w-2xl text-center">
+          <h2 id="video-formacion-online-heading" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark leading-tight">Conocé la Formación Online por dentro</h2>
+          <p class="section-intro__lead mt-3 md:mt-4 font-nav text-base leading-relaxed text-neutral-mid">Descubrí cómo se desarrolla la cursada, qué contenidos vas a encontrar y de qué manera se integra la teoría, la práctica y el acompañamiento durante todo el recorrido.</p>
+        </div>
 
-        <div id="formacion-online-video" class="aspect-video w-full max-w-4xl mx-auto rounded-2xl overflow-hidden bg-separator shadow-xl ring-1 ring-white/10">
+        <div id="formacion-online-video" class="modalidad-video-frame aspect-video w-full max-w-4xl mx-auto overflow-hidden bg-separator fade-in-scroll">
           <button type="button" class="group relative block h-full w-full cursor-pointer border-0 p-0" aria-label="Reproducir video de presentación de la Formación Online" data-video-id="leEKvy98Pn0">
             <img src="assets/images/caratula-formacion-online.png" alt="Miniatura del video de presentación de la Formación Online" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" width="1280" height="720" loading="lazy">
             <span class="absolute inset-0 bg-neutral-dark/20 transition-colors group-hover:bg-neutral-dark/30" aria-hidden="true"></span>
@@ -304,11 +321,13 @@
       </div>
     </section>
 
-    <section class="py-12 md:py-16 bg-white" aria-labelledby="faq-online-heading">
+    <section class="py-16 md:py-24 bg-neutral-light" aria-labelledby="faq-online-heading">
       <div class="max-w-container mx-auto px-5 lg:px-20">
-        <h2 id="faq-online-heading" class="font-serif text-3xl md:text-4xl font-semibold text-primary text-center mb-4 leading-tight">Preguntas frecuentes</h2>
-        <p class="text-neutral-mid text-center mb-14 max-w-xl mx-auto font-nav text-base">Dudas frecuentes sobre la modalidad online intensiva.</p>
-        <div class="max-w-3xl mx-auto space-y-4">
+        <div class="section-intro fade-in-scroll mx-auto mb-10 md:mb-14 max-w-2xl text-center">
+          <h2 id="faq-online-heading" class="font-serif text-3xl md:text-4xl font-semibold text-primary leading-tight">Preguntas frecuentes</h2>
+          <p class="section-intro__lead mt-3 md:mt-4 font-nav text-base leading-relaxed text-neutral-mid">Dudas frecuentes sobre la modalidad online intensiva.</p>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-4 fade-in-scroll">
           <div class="faq-item">
             <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-online-1" id="faq-btn-online-1"><span>¿Las clases en vivo quedan grabadas?</span><i class="faq-icon fas fa-chevron-down text-primary text-sm transition-transform duration-300" aria-hidden="true"></i></button>
             <div id="faq-online-1" class="faq-content" role="region" aria-labelledby="faq-btn-online-1" aria-hidden="true"><div class="faq-content-inner">Sí. Tendrás acceso a las grabaciones durante la cursada y durante 6 meses posteriores.</div></div>
@@ -329,11 +348,11 @@
       </div>
     </section>
 
-    <section class="py-14 md:py-16 bg-gradient-to-br from-primary-hover via-primary to-accent-dark text-white text-center" aria-labelledby="cta-final-heading">
-      <div class="max-w-container mx-auto px-5 lg:px-20">
+    <section class="modalidad-cta-section py-16 md:py-24 bg-gradient-to-br from-primary-hover via-primary to-accent-dark text-white text-center" aria-labelledby="cta-final-heading">
+      <div class="max-w-container mx-auto px-5 lg:px-20 fade-in-scroll">
         <h2 id="cta-final-heading" class="font-serif text-3xl md:text-4xl font-semibold mb-4 leading-tight">¿Querés recibir más información?</h2>
-        <p class="text-white/90 font-nav mb-8 max-w-xl mx-auto">Consultá por la Formación Online Intensiva en Biodecodificación.</p>
-        <a href="https://wa.me/5493541574635?text=Hola%20Andrea%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20la%20Formaci%C3%B3n%20Online%20Intensiva%20en%20Biodecodificaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center px-8 py-3.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded shadow-md no-underline uppercase hover:bg-primary-hover transition-colors">Escribir por WhatsApp</a>
+        <p class="text-white/90 font-nav mb-8 max-w-xl mx-auto text-base md:text-lg">Consultá por la Formación Online Intensiva en Biodecodificación.</p>
+        <a href="https://wa.me/5493541574635?text=Hola%20Andrea%2C%20quiero%20recibir%20informaci%C3%B3n%20sobre%20la%20Formaci%C3%B3n%20Online%20Intensiva%20en%20Biodecodificaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="cta-accent inline-flex items-center justify-center px-10 py-4 font-nav text-base font-semibold rounded-xl shadow-lg no-underline uppercase tracking-wide">Escribir por WhatsApp</a>
       </div>
     </section>
   </main>
