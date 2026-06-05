@@ -5,10 +5,11 @@
 
 /* ========== DESIGN TOKENS (Sistema Visual) ========== */
 :root {
-    /* Tipografía */
-    --font-heading: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'DM Sans', 'Inter', sans-serif;
-    --font-accent: 'Cormorant Garamond', Georgia, serif;
+    /* Tipografía (cargadas vía <link> en cada HTML) */
+    --font-heading: 'Gilda Display', Georgia, serif;
+    --font-body: 'Montserrat', 'Montserrat Fallback', system-ui, sans-serif;
+    --font-accent: 'Gilda Display', Georgia, serif;
+    --font-nav: 'Source Sans Pro', system-ui, sans-serif;
 
     /* Escala tipográfica */
     --text-h1: clamp(2.5rem, 5vw, 4rem);
@@ -31,9 +32,6 @@
 
     --nav-height: 4rem;
 }
-
-/* ========== FUENTES ========== */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 body {
     font-family: var(--font-body);
@@ -72,9 +70,12 @@ h3 { font-size: var(--text-h3); }
     background-color: var(--color-primary-hover);
     color: var(--color-white);
     transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 144, 147, 0.25);
 }
 .btn-primary:active {
     background-color: var(--color-primary-active);
+    transform: translateY(0);
+    box-shadow: none;
 }
 .btn-primary:focus {
     outline: none;
@@ -97,11 +98,17 @@ h3 { font-size: var(--text-h3); }
     font-size: 0.875rem;
     font-weight: 600;
     border-radius: var(--radius-btn);
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .btn-secondary:hover {
     background-color: var(--color-primary-pale);
     color: var(--color-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 144, 147, 0.15);
+}
+.btn-secondary:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
 
 .btn-accent {
@@ -114,12 +121,18 @@ h3 { font-size: var(--text-h3); }
     font-size: 0.875rem;
     font-weight: 600;
     border-radius: var(--radius-btn);
-    transition: opacity 0.2s ease, transform 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .btn-accent:hover {
     opacity: 0.95;
     transform: translateY(-1px);
     color: var(--color-white);
+    box-shadow: 0 6px 20px rgba(59, 110, 180, 0.25);
+}
+.btn-accent:active {
+    background-color: var(--color-accent-hover);
+    transform: translateY(0);
+    box-shadow: none;
 }
 
 /* Secundario sobre fondo oscuro (borde blanco) */
@@ -134,15 +147,35 @@ h3 { font-size: var(--text-h3); }
     font-size: 0.875rem;
     font-weight: 600;
     border-radius: var(--radius-btn);
-    transition: background-color 0.2s ease, color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     text-decoration: none;
 }
 .btn-secondary-dark:hover {
     background-color: rgba(255, 255, 255, 0.15);
     color: var(--color-white);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.12);
+}
+.btn-secondary-dark:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
 
 /* ========== CONTENEDOR Y SECCIONES ========== */
+.section-divider-top {
+    position: relative;
+}
+.section-divider-top::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(0, 144, 147, 0.12) 30%, rgba(0, 144, 147, 0.12) 70%, transparent 100%);
+    pointer-events: none;
+}
+
 .container-custom {
     max-width: var(--container-max);
     margin-left: auto;
@@ -318,10 +351,17 @@ h3 { font-size: var(--text-h3); }
 .nav-bar .nav-cta {
     background: var(--color-white) !important;
     color: var(--color-primary) !important;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
 }
 .nav-bar .nav-cta:hover {
     background: var(--color-primary-light) !important;
     color: var(--color-primary) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 144, 147, 0.2);
+}
+.nav-bar .nav-cta:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
 .nav-bar .nav-trigger {
     color: var(--color-white) !important;
@@ -409,11 +449,17 @@ body.nav-menu-open .nav-menu-panel {
     color: var(--color-primary);
     background-color: var(--color-white);
     border-radius: var(--radius-btn);
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 .nav-menu-cta:hover {
     background-color: var(--color-primary-light);
     color: var(--color-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 144, 147, 0.2);
+}
+.nav-menu-cta:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
 .nav-menu-cta:focus-visible {
     outline: 2px solid var(--color-white);
@@ -434,8 +480,51 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
 
 /* ========== QUOTE BANNER (franja oscura) ========== */
 .quote-banner {
+    position: relative;
+    overflow: hidden;
     background-color: var(--color-separator-bg);
     color: var(--color-white);
+}
+.quote-banner > * {
+    position: relative;
+    z-index: 1;
+}
+.quote-banner::before {
+    content: '\201C';
+    position: absolute;
+    left: 50%;
+    top: clamp(3.5rem, 18%, 6.5rem);
+    transform: translateX(-50%);
+    font-family: var(--font-heading);
+    font-size: clamp(6.5rem, 18vw, 12rem);
+    font-weight: 500;
+    line-height: 0.9;
+    color: rgba(255, 255, 255, 0.12);
+    pointer-events: none;
+    user-select: none;
+    z-index: 0;
+    -webkit-mask-image: radial-gradient(
+        ellipse 72% 68% at 50% 48%,
+        #000 0%,
+        rgba(0, 0, 0, 0.55) 45%,
+        transparent 72%
+    );
+    mask-image: radial-gradient(
+        ellipse 72% 68% at 50% 48%,
+        #000 0%,
+        rgba(0, 0, 0, 0.55) 45%,
+        transparent 72%
+    );
+}
+@media (min-width: 768px) {
+    .quote-banner::before {
+        top: clamp(4rem, 20%, 7rem);
+        font-size: clamp(7.5rem, 16vw, 13rem);
+        color: rgba(255, 255, 255, 0.14);
+    }
+}
+.quote-banner__headline {
+    position: relative;
 }
 .quote-banner .font-accent {
     font-family: var(--font-accent);
@@ -472,6 +561,13 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
     transform: translateY(-2px);
 }
 
+/* ========== FORMACIÓN HERO — film grain texture ========== */
+.formacion-hero__grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    background-repeat: repeat;
+}
+
 /* ========== FAQ ACCORDION ========== */
 .faq-item {
     border-radius: var(--radius-card);
@@ -500,7 +596,7 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
     outline-offset: 2px;
 }
 .faq-trigger[aria-expanded="true"] .faq-icon {
-    transform: rotate(45deg);
+    transform: rotate(180deg);
 }
 .faq-content {
     max-height: 0;
@@ -542,7 +638,7 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
 .sobre-filosofia-icon--empoderamiento { color: var(--color-success) !important; }
 
 /* ========== TERAPIAS — Testimonials background (GLOBAL) ========== */
-#testimonios-heading {
+#testimonios-section {
     background-color: var(--color-neutral-light);
 }
 
@@ -658,6 +754,79 @@ body.nav-menu-open .nav-hamburger .nav-hamburger-inner:nth-child(3) {
         justify-content: center;
         margin-top: 2.5rem !important;
     }
+}
+
+/* ========== HOME HERO — entrance animation ========== */
+@keyframes heroSlideUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.home-hero__eyebrow       { animation: heroSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
+.home-hero__title         { animation: heroSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both; }
+.home-hero__lead          { animation: heroSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.34s both; }
+.home-hero__text          { animation: heroSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.44s both; }
+.home-hero__actions       { animation: heroSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.52s both; }
+.home-hero__photo-frame   { animation: heroSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both; }
+.home-hero__social        { animation: heroSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.6s both; }
+
+@media (prefers-reduced-motion: reduce) {
+    .home-hero__eyebrow,
+    .home-hero__title,
+    .home-hero__lead,
+    .home-hero__text,
+    .home-hero__actions,
+    .home-hero__photo-frame,
+    .home-hero__social {
+        animation: none;
+    }
+}
+
+@keyframes gentleFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .home-hero__photo-frame {
+        animation:
+            heroSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both,
+            gentleFloat 6s ease-in-out infinite;
+    }
+}
+
+/* ========== FLOATING WHATSAPP CTA (desktop only, lg+) ========== */
+.wa-float {
+    display: none;
+    position: fixed;
+    bottom: 1.75rem;
+    right: 1.75rem;
+    z-index: 90;
+    width: 3.25rem;
+    height: 3.25rem;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+}
+
+@media (min-width: 1024px) {
+    .wa-float {
+        display: flex;
+    }
+}
+.wa-float:hover {
+    transform: scale(1.08) translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+.wa-float--hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* ========== HERO / SECTION BACKGROUNDS (WebP progressive enhancement) ========== */

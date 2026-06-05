@@ -313,6 +313,9 @@
             for (var d = 0; d < dots.length; d++) {
                 dots[d].setAttribute('aria-selected', d === current ? 'true' : 'false');
             }
+
+            var status = document.getElementById('video-carousel-status');
+            if (status) status.textContent = 'Video ' + (current + 1) + ' de ' + total;
         }
 
         iframe.referrerPolicy = 'strict-origin-when-cross-origin';
@@ -436,7 +439,7 @@
     }
 
     function initReviewsSlider() {
-        var container = document.getElementById('testimonios-heading');
+        var container = document.getElementById('testimonios-section');
         var inner = document.getElementById('reviews-slider-inner');
         var dotsContainer = container ? container.querySelector('.slider-dots') : null;
         var prevBtn = container ? container.querySelector('.slider-btn--prev') : null;
@@ -469,7 +472,6 @@
                     '      <span class="review-author">' + r.author + '</span>' +
                     '      <span class="review-date">' + r.date + '</span>' +
                     '    </div>' +
-                    '    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="google-logo" width="48">' +
                     '  </div>' +
                     '  <div class="review-stars" aria-label="' + r.rating + ' de 5 estrellas">' + starString(r.rating) + '</div>' +
                     '  <p class="review-text">"' + r.text + '"</p>' +
@@ -738,6 +740,31 @@
         });
     }
 
+    // ----- Active nav link for current page -----
+    function initActiveNavLink() {
+        var links = document.querySelectorAll('.nav-link');
+        var path = window.location.pathname.split('/').pop() || 'index.html';
+        links.forEach(function (link) {
+            var href = (link.getAttribute('href') || '').split('/').pop();
+            var isHome = path === 'index.html' || path === '';
+            var isHomeLink = href === 'index.html' || href === '#inicio';
+            if (href === path || (isHome && isHomeLink) || (path === '' && href === 'index.html')) {
+                link.classList.add('nav-link--active');
+            }
+        });
+    }
+
+    // ----- Floating WhatsApp: hide when footer #contacto is in view -----
+    function initWaFloat() {
+        var btn = document.querySelector('.wa-float');
+        var footer = document.getElementById('contacto');
+        if (!btn || !footer) return;
+        var io = new IntersectionObserver(function (entries) {
+            btn.classList.toggle('wa-float--hidden', entries[0].isIntersecting);
+        }, { threshold: 0.2 });
+        io.observe(footer);
+    }
+
     function init() {
         initNav();
         initNavScroll();
@@ -749,6 +776,8 @@
         initVideoCarousel();
         initReviewsSlider();
         initFormationReviewsSlider();
+        initActiveNavLink();
+        initWaFloat();
     }
 
     if (document.readyState === 'loading') {

@@ -76,7 +76,7 @@
         <a href="talleres.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">TALLERES</a>
         <a href="escuela-de-formacion.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">FORMACIÓN</a>
         <a href="sobre-mi.html" role="menuitem" class="nav-link-tailwind nav-link font-nav">SOBRE MÍ</a>
-        <a href="/#contacto" class="nav-cta inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-normal rounded hover:bg-primary-hover transition-colors shadow-sm hover:shadow no-underline whitespace-nowrap uppercase">CONTACTO</a>
+        <a href="/#contacto" class="nav-cta inline-flex items-center justify-center px-5 py-2.5 bg-primary text-white font-nav text-[16px] leading-[22px] font-semibold rounded hover:bg-primary-hover transition-colors shadow-sm no-underline whitespace-nowrap uppercase">CONTACTO</a>
       </div>
       <button type="button" id="nav-trigger" class="nav-trigger xl:hidden flex items-center justify-center w-12 h-12 sm:w-11 sm:h-11 rounded-lg text-primary hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-active shrink-0" aria-expanded="false" aria-controls="nav-menu-mobile" aria-label="Abrir menú de navegación">
         <span class="nav-trigger-icons" aria-hidden="true">
@@ -95,7 +95,7 @@
           <a href="escuela-de-formacion.html" role="menuitem" class="nav-menu-link font-nav">Formación</a>
           <a href="sobre-mi.html" role="menuitem" class="nav-menu-link font-nav">Sobre Mí</a>
         </nav>
-        <a href="/#contacto" class="nav-menu-cta font-nav text-[16px] leading-[22px] font-normal uppercase">Contacto</a>
+        <a href="/#contacto" class="nav-menu-cta font-nav text-[16px] leading-[22px] font-semibold uppercase">Contacto</a>
       </div>
     </div>
   </nav>
@@ -115,7 +115,7 @@
             Trabajamos sobre lo que hoy te está afectando: síntomas, emociones o situaciones que se repiten. Identificamos el origen del conflicto y avanzamos con herramientas concretas para que puedas empezar a transformarlo.
           </p>
           <div class="home-hero__actions flex flex-col gap-2 w-full md:flex-row md:gap-4 md:mt-8">
-            <a href="#online" class="hero-cta hero-cta--primary inline-flex items-center justify-center w-full min-h-12 px-8 py-3.5 bg-primary text-white font-nav text-sm font-semibold rounded hover:bg-primary-hover transition-colors shadow-md hover:shadow-lg no-underline uppercase tracking-wide md:w-auto md:min-h-0">Reservar Sesión Online</a>
+            <a href="#online" class="hero-cta hero-cta--primary inline-flex items-center justify-center w-full min-h-12 px-8 py-3.5 bg-primary text-white font-nav text-sm font-semibold rounded hover:bg-primary-hover transition-colors shadow-md no-underline uppercase tracking-wide md:w-auto md:min-h-0">Reservar Sesión Online</a>
             <a href="#presencial" class="hero-cta hero-cta--secondary inline-flex items-center justify-center gap-2 w-full min-h-12 px-8 py-3.5 border-2 border-primary text-primary font-nav text-sm font-semibold rounded hover:bg-primary-pale transition-colors no-underline uppercase tracking-wide md:w-auto md:min-h-0">
               Consulta Presencial <i class="fas fa-arrow-right text-xs" aria-hidden="true"></i>
             </a>
@@ -289,10 +289,15 @@
     </div>
   </section>
 
-  <section id="testimonios-heading" class="py-24 md:py-32 bg-neutral-light" aria-labelledby="testimonios-heading-title">
+  <section id="testimonios-section" class="py-24 md:py-32 bg-neutral-light" aria-labelledby="testimonios-heading-title">
     <div class="max-w-container mx-auto px-5 lg:px-20">
       <h2 id="testimonios-heading-title" class="font-serif text-3xl md:text-4xl font-semibold text-neutral-dark text-center mb-4 leading-tight">Lo que dicen quienes nos eligieron</h2>
-      <p class="text-center text-neutral-mid mb-12 max-w-xl mx-auto font-nav text-base">Reseñas verificadas en Google</p>
+      <p class="reviews-verified-line font-nav">
+        <span class="reviews-verified-text">Reseñas verificadas en</span>
+        <a href="https://www.google.com/search?q=andrea+blangino+biodecodificacion" target="_blank" rel="noopener noreferrer" class="reviews-google-link" aria-label="Ver reseñas de Andrea Blangino en Google">
+          <img src="assets/images/google-logo.svg" alt="" class="reviews-google-logo" width="60" height="20" decoding="async">
+        </a>
+      </p>
 
       <div class="reviews-slider-container relative">
         <button type="button" class="slider-btn slider-btn--prev absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-white border-2 border-primary text-primary flex items-center justify-center shadow-md hover:bg-primary hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2" aria-label="Reseña anterior">&#8249;</button>
@@ -315,7 +320,7 @@
         <div class="faq-item">
           <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-ter-1" id="faq-btn-ter-1">
             <span>¿Qué es la Biodecodificación Biológica?</span>
-            <span class="faq-icon">+</span>
+            <i class="faq-icon fas fa-chevron-down text-primary text-sm transition-transform duration-300" aria-hidden="true"></i>
           </button>
           <div id="faq-ter-1" class="faq-content" role="region" aria-labelledby="faq-btn-ter-1" aria-hidden="true">
             <div class="faq-content-inner">Es una metodología que busca comprender el síntoma o la enfermedad desde lo que la persona está viviendo.Permite identificar el origen del conflicto y acompañar un proceso de cambio más consciente. No se trata solo de aliviar el síntoma, sino de entender qué lo generó y poder abordarlo desde otro lugar.
@@ -325,7 +330,7 @@
         <div class="faq-item">
           <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-ter-2" id="faq-btn-ter-2">
             <span>¿Necesito diagnóstico médico previo para una sesión?</span>
-            <span class="faq-icon">+</span>
+            <i class="faq-icon fas fa-chevron-down text-primary text-sm transition-transform duration-300" aria-hidden="true"></i>
           </button>
           <div id="faq-ter-2" class="faq-content" role="region" aria-labelledby="faq-btn-ter-2" aria-hidden="true">
             <div class="faq-content-inner">No es obligatorio, pero es recomendable tener seguimiento médico. La biodecodificación no diagnostica ni reemplaza tratamientos; acompaña el proceso desde el sentido biológico y emocional.</div>
@@ -334,7 +339,7 @@
         <div class="faq-item">
           <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-ter-3" id="faq-btn-ter-3">
             <span>¿Cuántas sesiones se necesitan?</span>
-            <span class="faq-icon">+</span>
+            <i class="faq-icon fas fa-chevron-down text-primary text-sm transition-transform duration-300" aria-hidden="true"></i>
           </button>
           <div id="faq-ter-3" class="faq-content" role="region" aria-labelledby="faq-btn-ter-3" aria-hidden="true">
             <div class="faq-content-inner">Depende del síntoma y del proceso. En una primera sesión de 2 hs suele trabajarse un conflicto concreto. A veces una sesión basta para un tema puntual; otros procesos requieren seguimiento. Lo vemos en la primera consulta.</div>
@@ -343,7 +348,7 @@
         <div class="faq-item">
           <button type="button" class="faq-trigger font-nav" aria-expanded="false" aria-controls="faq-ter-4" id="faq-btn-ter-4">
             <span>¿Cómo son las sesiones online?</span>
-            <span class="faq-icon">+</span>
+            <i class="faq-icon fas fa-chevron-down text-primary text-sm transition-transform duration-300" aria-hidden="true"></i>
           </button>
           <div id="faq-ter-4" class="faq-content" role="region" aria-labelledby="faq-btn-ter-4" aria-hidden="true">
             <div class="faq-content-inner">Por Google Meet o videollamada de WhatsApp, con el mismo rigor que presencial. Necesitás cámara y micrófono y un espacio tranquilo. Se envía link y recordatorio.</div>
@@ -383,7 +388,7 @@
         </section>
         <section class="footer__section footer__section--social" aria-labelledby="footer-social-heading">
           <h3 id="footer-social-heading" class="footer__heading text-xs uppercase tracking-widest font-semibold mb-4 text-accent">Redes Sociales</h3>
-          <ul class="footer__social-list flex flex-wrap justify-center gap-4 text-lg" role="list">
+          <ul class="footer__social-list text-lg" role="list">
             <li><a href="https://instagram.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
             <li><a href="https://youtube.com/@andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
             <li><a href="https://facebook.com/andreablangino" target="_blank" rel="noopener noreferrer" class="text-white/70 hover:text-white transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -419,5 +424,10 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+
+  <a href="https://wa.me/5493541574635?text=Hola%21%20%F0%9F%91%8B%20Me%20comunico%20desde%20la%20pagina%20web."
+     class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
 </body>
 </html>
