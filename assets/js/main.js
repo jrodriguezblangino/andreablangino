@@ -314,10 +314,10 @@
         }
     }
 
-    // ----- Formación hero: animate on scroll -----
+    // ----- Formación hero: animate on scroll (index + escuela) -----
     function initFormacionHero() {
-        var section = document.getElementById('formacion');
-        if (!section || !section.classList.contains('formacion-hero')) return;
+        var sections = document.querySelectorAll('.formacion-hero');
+        if (!sections.length) return;
 
         var observer = new IntersectionObserver(
             function (entries) {
@@ -328,9 +328,77 @@
                     }
                 }
             },
-            { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+            { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
         );
-        observer.observe(section);
+
+        for (var j = 0; j < sections.length; j++) {
+            observer.observe(sections[j]);
+        }
+    }
+
+    // ----- Talleres: filtros de categoría -----
+    function initWorkshopFilters() {
+        var pills = document.querySelectorAll('.filter-pill[data-filter]');
+        if (!pills.length) return;
+
+        function applyFilter(filter) {
+            var cards = document.querySelectorAll('[data-tags]');
+            for (var i = 0; i < cards.length; i++) {
+                var tags = (cards[i].getAttribute('data-tags') || '').split(/\s+/).filter(Boolean);
+                cards[i].style.display = (filter === 'todos' || tags.indexOf(filter) !== -1) ? '' : 'none';
+            }
+        }
+
+        for (var p = 0; p < pills.length; p++) {
+            (function (btn) {
+                btn.addEventListener('click', function () {
+                    var filter = btn.getAttribute('data-filter') || 'todos';
+                    applyFilter(filter);
+                    for (var k = 0; k < pills.length; k++) {
+                        pills[k].classList.remove('bg-primary', 'text-white', 'is-active');
+                        pills[k].classList.add('bg-white/10', 'text-white/80');
+                    }
+                    btn.classList.remove('bg-white/10', 'text-white/80');
+                    btn.classList.add('bg-primary', 'text-white', 'is-active');
+                });
+            })(pills[p]);
+        }
+    }
+
+    // ----- Anclas internas: scroll suave con offset de nav -----
+    function initAnchorScroll() {
+        if (!window.matchMedia('(prefers-reduced-motion: no-preference)').matches) return;
+
+        function getNavOffset() {
+            return navInner ? Math.ceil(navInner.getBoundingClientRect().height) + 12 : 80;
+        }
+
+        function scrollToHash(hash, replaceHistory) {
+            if (!hash || hash === '#') return;
+            var target = document.querySelector(hash);
+            if (!target) return;
+            var top = target.getBoundingClientRect().top + window.scrollY - getNavOffset();
+            window.scrollTo({ top: top, behavior: 'smooth' });
+            if (replaceHistory) {
+                history.replaceState(null, '', hash);
+            }
+        }
+
+        document.addEventListener('click', function (e) {
+            var link = e.target.closest('a[href^="#"]');
+            if (!link || link.getAttribute('href') === '#') return;
+            var hash = link.getAttribute('href');
+            var target = document.querySelector(hash);
+            if (!target) return;
+            e.preventDefault();
+            scrollToHash(hash, true);
+        });
+
+        if (window.location.hash) {
+            requestAnimationFrame(function () {
+                scrollToHash(window.location.hash, false);
+            });
+        }
     }
 
     // ----- Video carousel (Recursos) -----
@@ -849,6 +917,8 @@
         initReviewsSlider();
         initFormationReviewsSlider();
         initFormacionOnlineVideo();
+        initWorkshopFilters();
+        initAnchorScroll();
         initActiveNavLink();
         initWaFloat();
     }

@@ -1638,33 +1638,6 @@ button.workshop-mosaic__cell:focus-visible .workshop-mosaic__label {
   transform: translateY(-2px);
 }
 
-.modalidad-cta-section {
-  position: relative;
-  overflow: hidden;
-}
-.modalidad-cta-section::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 55% 70% at 85% 15%, rgba(59, 110, 180, 0.18), transparent 65%),
-    radial-gradient(ellipse 40% 50% at 10% 90%, rgba(0, 144, 147, 0.12), transparent 60%);
-  pointer-events: none;
-}
-.modalidad-cta-section .max-w-container {
-  position: relative;
-  z-index: 1;
-}
-.modalidad-cta-section .cta-accent {
-  background-color: #fff !important;
-  color: var(--color-primary) !important;
-  font-weight: 600;
-}
-.modalidad-cta-section .cta-accent:hover {
-  background-color: var(--color-primary-light) !important;
-  color: var(--color-primary-hover) !important;
-}
-
 /* Hero entrance — modalidad detail pages */
 @media (prefers-reduced-motion: no-preference) {
   .modalidad-page-hero .modalidad-hero__eyebrow {
@@ -1738,4 +1711,155 @@ button.workshop-mosaic__cell:focus-visible .workshop-mosaic__label {
     opacity: 1;
     transform: none;
   }
+}
+
+/* ========== SITE-WIDE — shared cards, heroes, CTAs ========== */
+.content-card,
+.step-card,
+.service-card,
+.workshop-grid-card,
+.philosophy-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+.content-card:hover,
+.step-card:hover,
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px -10px rgba(0, 144, 147, 0.18);
+  border-color: rgba(0, 144, 147, 0.2);
+}
+.workshop-grid-card:hover {
+  transform: translateY(-3px);
+}
+.workshop-grid-card:hover .workshop-grid-card__img {
+  transform: scale(1.05);
+}
+.workshop-grid-card__img {
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.philosophy-card:hover {
+  transform: translateY(-3px);
+  background-color: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+.service-card:hover .service-card__icon {
+  transform: scale(1.06);
+  color: var(--color-primary);
+  background-color: rgba(0, 144, 147, 0.12);
+}
+.service-card__icon {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.25s ease, background-color 0.25s ease;
+}
+
+.mirror-section__media {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(0, 144, 147, 0.08),
+    0 16px 40px -14px rgba(0, 99, 102, 0.16);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+.mirror-section__media:hover {
+  box-shadow:
+    0 0 0 1px rgba(0, 144, 147, 0.12),
+    0 22px 48px -12px rgba(0, 99, 102, 0.22);
+  transform: translateY(-2px);
+}
+.mirror-section__media img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.mirror-section__media:hover img {
+  transform: scale(1.04);
+}
+
+.workshop-detail__media {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow:
+    0 0 0 1px rgba(0, 144, 147, 0.06),
+    0 16px 40px -14px rgba(0, 99, 102, 0.14);
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+.workshop-detail__media:hover {
+  box-shadow:
+    0 0 0 1px rgba(0, 144, 147, 0.1),
+    0 22px 48px -12px rgba(0, 99, 102, 0.2);
+  transform: translateY(-2px);
+}
+.workshop-detail__media img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.workshop-detail__media:hover img {
+  transform: scale(1.03);
+}
+
+.site-cta-section,
+.modalidad-cta-section {
+  position: relative;
+  overflow: hidden;
+}
+.site-cta-section::before,
+.modalidad-cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 55% 70% at 85% 15%, rgba(59, 110, 180, 0.18), transparent 65%),
+    radial-gradient(ellipse 40% 50% at 10% 90%, rgba(0, 144, 147, 0.12), transparent 60%);
+  pointer-events: none;
+}
+.site-cta-section > .max-w-container,
+.modalidad-cta-section > .max-w-container,
+.site-cta-section > .max-w-container.mx-auto,
+.modalidad-cta-section > .max-w-container.mx-auto {
+  position: relative;
+  z-index: 1;
+}
+.site-cta-section .cta-accent,
+.modalidad-cta-section .cta-accent {
+  background-color: #fff !important;
+  color: var(--color-primary) !important;
+  font-weight: 600;
+}
+.site-cta-section .cta-accent:hover,
+.modalidad-cta-section .cta-accent:hover {
+  background-color: var(--color-primary-light) !important;
+  color: var(--color-primary-hover) !important;
+}
+
+/* Terapias hero — entrance (mirrors index home-hero) */
+@media (prefers-reduced-motion: no-preference) {
+  .terapias-hero .home-hero__eyebrow { animation: heroSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both; }
+  .terapias-hero .home-hero__title { animation: heroSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both; }
+  .terapias-hero .home-hero__text { animation: heroSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both; }
+  .terapias-hero .home-hero__actions { animation: heroSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
+
+  .page-hero--dark .home-hero__eyebrow { animation: heroSlideUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.06s both; }
+  .page-hero--dark .page-hero__title { animation: heroSlideUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.14s both; }
+  .page-hero--dark .workshop-mosaic { animation: heroSlideUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both; }
+  .page-hero--dark .page-hero__lead { animation: heroSlideUp 0.55s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both; }
+  .page-hero--dark .page-hero__filters { animation: heroSlideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.4s both; }
+
+  .escuela-hero-grid .escuela-hero-logo-wrap { animation: heroSlideUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both; }
+  .escuela-hero-grid .escuela-hero-content { animation: heroSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .terapias-hero .home-hero__eyebrow,
+  .terapias-hero .home-hero__title,
+  .terapias-hero .home-hero__text,
+  .terapias-hero .home-hero__actions,
+  .page-hero--dark .home-hero__eyebrow,
+  .page-hero--dark .page-hero__title,
+  .page-hero--dark .workshop-mosaic,
+  .page-hero--dark .page-hero__lead,
+  .page-hero--dark .page-hero__filters,
+  .escuela-hero-grid .escuela-hero-logo-wrap,
+  .escuela-hero-grid .escuela-hero-content {
+    animation: none;
+  }
+}
+
+.filter-pill.is-active,
+.filter-pill.bg-primary {
+  box-shadow: 0 4px 14px rgba(0, 144, 147, 0.28);
 }
