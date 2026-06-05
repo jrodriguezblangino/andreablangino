@@ -300,15 +300,23 @@
         var current = 0;
         var total = VIDEO_EMBEDS.length;
 
+        function withEmbedOrigin(url) {
+            if (!window.location.origin || window.location.origin === 'null') return url;
+            return url + (url.indexOf('?') === -1 ? '?' : '&') + 'origin=' + encodeURIComponent(window.location.origin);
+        }
+
         function goTo(index) {
             current = (index + total) % total;
-            iframe.src = VIDEO_EMBEDS[current];
+            iframe.src = withEmbedOrigin(VIDEO_EMBEDS[current]);
             iframe.title = 'Video ' + (current + 1) + ' — Andrea Blangino';
 
             for (var d = 0; d < dots.length; d++) {
                 dots[d].setAttribute('aria-selected', d === current ? 'true' : 'false');
             }
         }
+
+        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+        iframe.src = withEmbedOrigin(VIDEO_EMBEDS[current]);
 
         prevBtn.addEventListener('click', function () {
             goTo(current - 1);
@@ -349,6 +357,75 @@
         { author: 'Veronica del Arca', date: 'Hace 1 mes', rating: 5, text: 'Andrea es una persona sumamente amorosa ! Y logra con sus palabras y su experiencia que podamos entender situaciones de nuestro clan y de nuestra vida que están íntimamente conectados, que de otra forma serían muy dolorosas comprender!' },
         { author: 'Silvia Oliver', date: 'Hace 2 meses', rating: 5, text: 'Mi experiencia con Andrea siempre ha sido altamente satisfactoria, no solo a nivel humano, sino a nivel profesional. La Sra Andrea está pendiente de sus pacientes , y busca alternativas posibles para ayudar y para que cada ser se sienta mejor cada día, y pueda lograr sanar el alma. Excelente experiencia.' },
         { author: 'Linnatte Castellanos', date: 'Hace 3 semanas', rating: 5, text: 'De corazón les digo que Andrea y su terapia es lo mejor que me a pasado, lo digo con honestidad. He hecho muchos tipos de terapia y si me habían ayudado, pero llegar a Andrea y hacer la biodecodificacion era lo que me faltaba y de verdad comprendí muchas cosas y esto ayudo a mi sanación y a aprender desde la conciencia y a tener herramientas. La recomiendo al 1000%.' }
+    ];
+
+    var FORMATION_REVIEWS_DATA = [
+        {
+            author: 'Laura Demo',
+            date: 'Junio 2026',
+            rating: 5,
+            text: 'La Escuela de Formación en Biodescodificación de Andrea Blangino es un lugar donde las expectativas se cumplen más de lo esperado. Un lugar donde se trabaja con profesionalismo y nos preparamos para abordar la Biodescodificación con responsabilidad para acompañar y comprender a cada persona en transitar su proceso. Es un lugar de transformación. Si te resuena, es el lugar indicado con Andrea.'
+        },
+        {
+            author: 'Adriana Garay “Petro”',
+            date: 'Junio 2026',
+            rating: 5,
+            text: 'Excelente formación. Muy recomendada. Es un cambio de paradigma de la manera de mirar a la enfermedad y síntoma. Andrea es muy profesional, tiene una esmerada pasión por lo que hace y lo transmite a sus alumnos y consultantes. Muy responsable junto a Pablo, que no deja pasar ningún detalle. Todo muy impecable. Agradezco que se me cruzaran en mi camino.'
+        },
+        {
+            author: 'Marisa',
+            date: 'Junio 2026',
+            rating: 5,
+            text: 'Excelente formación. El programa, la exposición de los temas y la progresión del aprendizaje están diseñados para que puedas acompañar al otro desde un lugar empático y profesional. El grupo humano detrás de la escuela es sumamente contenedor e incondicional. Gracias, gracias, gracias.'
+        },
+        {
+            author: 'Melisa Helmer',
+            date: 'Junio 2026',
+            rating: 5,
+            text: 'Mi primera consulta con Andrea fue un antes y un después en mi vida. Tuve resultados inmediatos, no lo podía creer. Este año comencé a formarme con ella en Biodecodificación. Me encanta esta formación. Amo esta herramienta y la forma de enseñarlo de Andrea, poniendo toda su experiencia en cada clase y haciéndolo tan práctico que podemos entender, relacionar y pasar por el cuerpo. Lo recomiendo 100%.'
+        },
+        {
+            author: 'Lorena Díaz Insua',
+            date: 'Junio 2026',
+            rating: 5,
+            text: 'Un antes y un después cuando conoces esta otra forma de razonar la vida, la salud y todo lo que fui aprendiendo hasta ahora. Soy médica y la verdad se me abrió un mundo totalmente nuevo. Eternamente agradecida.'
+        },
+        {
+            author: 'Marcela Palacio',
+            date: 'Junio 2026',
+            rating: 5,
+            text: 'Andrea, excelente profesional. Cada clase es un eterno placer. Su acompañamiento, su forma de enseñarnos, en cada detalle, nuestros manuales son clarísimos y muy detallados. Excelente. Se nota el gran amor y respeto por esta formación. Gracias, gracias, gracias.'
+        },
+        {
+            author: 'Paola Cuello',
+            date: 'Junio 2026',
+            rating: 5,
+            text: 'Hace mucho que esperaba poder estudiar esto y este año tuve la oportunidad. Más que nada con Andrea, que es una hermosa persona y nos brinda su sabiduría muy amorosamente y desde el corazón. Su nivel de enseñanza es excelente y con un grupo de trabajo y apoyo genial, espectacular. Gracias, gracias, gracias Andre y Flia. Vamos por esta Primer Formación de Estudio brillante.'
+        },
+        {
+            author: 'Valentina Sabena',
+            date: 'Junio 2026',
+            rating: 5,
+            text: 'Una experiencia hermosa. Estoy aprendiendo muchísimo y cada clase me aporta algo nuevo, tanto en lo personal como en lo emocional. Se nota la dedicación, el amor y la pasión con la que enseña. Muy recomendable para quienes quieran sanar, comprender y crecer desde otra mirada.'
+        },
+        {
+            author: 'Monica Arguello',
+            date: 'Junio 2026',
+            rating: 5,
+            text: 'Excelente formación, muy didáctica la enseñanza y bibliografía con texto e imágenes ilustrativas. Clarísimo lo teórico y práctico. Súper recomendable.'
+        },
+        {
+            author: 'Silvina Rodriguez',
+            date: 'Junio 2026',
+            rating: 5,
+            text: 'Soy alumna de la formación de Biodecodificación de Andrea. Estoy teniendo una experiencia que va modificando mi forma de ver las cosas. Estoy contenta y agradecida por los conocimientos que estoy recibiendo de su grupo de trabajo. Súper recomiendo esta formación.'
+        },
+        {
+            author: 'Eugenia Manzanelli',
+            date: 'Junio 2026',
+            rating: 5,
+            text: 'Mi experiencia en la formación de Biodecodificación es hermosa y maravilloso el camino que no sabía que existía. Andrea y su equipo son seres maravillosos que brindan todo su conocimiento para uno poder comprender esto mágico que nos brinda nuestra biología. Más que agradecida de ser parte de esta formación.'
+        }
     ];
 
     function getVisibleSlides() {
@@ -511,6 +588,156 @@
         });
     }
 
+    function initFormationReviewsSlider() {
+        var container = document.getElementById('formacion-testimonios');
+        var inner = document.getElementById('formation-reviews-slider-inner');
+        var dotsContainer = container ? container.querySelector('.slider-dots') : null;
+        var prevBtn = container ? container.querySelector('.slider-btn--prev') : null;
+        var nextBtn = container ? container.querySelector('.slider-btn--next') : null;
+
+        if (!container || !inner || !FORMATION_REVIEWS_DATA.length) return;
+
+        var total = FORMATION_REVIEWS_DATA.length;
+        var currentIndex = 0;
+        var autoTimer = null;
+
+        function starString(n) {
+            var s = '';
+            for (var i = 0; i < n; i++) s += '★';
+            return s;
+        }
+
+        function buildCards() {
+            inner.innerHTML = '';
+            for (var i = 0; i < FORMATION_REVIEWS_DATA.length; i++) {
+                var r = FORMATION_REVIEWS_DATA[i];
+                var initial = r.author.charAt(0).toUpperCase();
+                var card = document.createElement('div');
+                card.className = 'review-card';
+                card.innerHTML =
+                    '<a href="' + REVIEWS_GOOGLE_URL + '" target="_blank" rel="noopener noreferrer" role="article">' +
+                    '  <div class="review-header">' +
+                    '    <div class="review-avatar" aria-hidden="true">' + initial + '</div>' +
+                    '    <div class="review-meta">' +
+                    '      <span class="review-author">' + r.author + '</span>' +
+                    '      <span class="review-date">' + r.date + '</span>' +
+                    '    </div>' +
+                    '    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="google-logo" width="48">' +
+                    '  </div>' +
+                    '  <div class="review-stars" aria-label="' + r.rating + ' de 5 estrellas">' + starString(r.rating) + '</div>' +
+                    '  <p class="review-text">"' + r.text + '"</p>' +
+                    '</a>';
+                inner.appendChild(card);
+            }
+        }
+
+        function applyLayout() {
+            var visible = getVisibleSlides();
+            inner.style.width = ((total / visible) * 100) + '%';
+
+            var basis = (100 / total) + '%';
+            var cards = inner.querySelectorAll('.review-card');
+            for (var i = 0; i < cards.length; i++) {
+                cards[i].style.flex = '0 0 ' + basis;
+            }
+        }
+
+        function updatePosition() {
+            var visible = getVisibleSlides();
+            var pages = Math.max(1, Math.ceil(total / visible));
+            var maxPage = pages - 1;
+            var currentPage = currentIndex > maxPage ? maxPage : currentIndex;
+            currentPage = currentPage < 0 ? 0 : currentPage;
+            currentIndex = currentPage;
+
+            var firstCardIndex = Math.min(currentPage * visible, Math.max(0, total - visible));
+            var offset = (firstCardIndex / total) * 100;
+            inner.style.transform = 'translateX(-' + offset + '%)';
+
+            if (dotsContainer) {
+                var dots = dotsContainer.querySelectorAll('button');
+                for (var d = 0; d < dots.length; d++) {
+                    dots[d].setAttribute('aria-selected', d === currentPage ? 'true' : 'false');
+                }
+            }
+        }
+
+        function goTo(index) {
+            var visible = getVisibleSlides();
+            var pages = Math.max(1, Math.ceil(total / visible));
+            var maxPage = pages - 1;
+
+            currentIndex = index;
+            if (currentIndex < 0) currentIndex = 0;
+            if (currentIndex > maxPage) currentIndex = maxPage;
+            updatePosition();
+        }
+
+        function next() {
+            var visible = getVisibleSlides();
+            var pages = Math.max(1, Math.ceil(total / visible));
+            var maxPage = pages - 1;
+            var currentPage = currentIndex;
+            if (currentPage >= maxPage) goTo(0);
+            else goTo(currentIndex + 1);
+        }
+
+        function prev() {
+            var visible = getVisibleSlides();
+            var pages = Math.max(1, Math.ceil(total / visible));
+            var maxPage = pages - 1;
+            var currentPage = currentIndex;
+            if (currentPage <= 0) goTo(maxPage);
+            else goTo(currentIndex - 1);
+        }
+
+        function buildDots() {
+            if (!dotsContainer) return;
+            var visible = getVisibleSlides();
+            var pages = Math.max(1, Math.ceil(total / visible));
+            dotsContainer.innerHTML = '';
+            for (var i = 0; i < pages; i++) {
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.setAttribute('aria-label', 'Ir a página de reseñas ' + (i + 1));
+                btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+                btn.addEventListener('click', function (idx) {
+                    return function () { goTo(idx); };
+                }(i));
+                dotsContainer.appendChild(btn);
+            }
+        }
+
+        function startAuto() {
+            stopAuto();
+            autoTimer = setInterval(next, 5000);
+        }
+        function stopAuto() {
+            if (autoTimer) {
+                clearInterval(autoTimer);
+                autoTimer = null;
+            }
+        }
+
+        buildCards();
+        applyLayout();
+        buildDots();
+        updatePosition();
+
+        if (prevBtn) prevBtn.addEventListener('click', prev);
+        if (nextBtn) nextBtn.addEventListener('click', next);
+
+        container.addEventListener('mouseenter', stopAuto);
+        container.addEventListener('mouseleave', startAuto);
+        startAuto();
+
+        window.addEventListener('resize', function () {
+            applyLayout();
+            buildDots();
+            updatePosition();
+        });
+    }
+
     function init() {
         initNav();
         initNavScroll();
@@ -521,6 +748,7 @@
         initFormacionHero();
         initVideoCarousel();
         initReviewsSlider();
+        initFormationReviewsSlider();
     }
 
     if (document.readyState === 'loading') {
