@@ -1406,13 +1406,18 @@ button.workshop-mosaic__cell:focus-visible .workshop-mosaic__label {
   }
 }
 
+/* Tablet (~768–1023px): columna única, logo centrado y proporcionado */
 @media (min-width: 768px) {
   .escuela-hero-logo {
-    max-width: min(100%, 380px);
+    max-width: min(100%, 400px);
   }
 }
 
 @media (min-width: 1024px) {
+  .escuela-hero-grid {
+    align-items: center;
+  }
+
   .escuela-hero-logo {
     width: 100%;
     max-width: 460px;
@@ -1422,6 +1427,13 @@ button.workshop-mosaic__cell:focus-visible .workshop-mosaic__label {
 @media (min-width: 1280px) {
   .escuela-hero-logo {
     max-width: 500px;
+  }
+}
+
+/* Evita desborde de CTAs entre ~800px y el paso a 2 columnas */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .escuela-hero-actions {
+    margin-inline: auto;
   }
 }
 
