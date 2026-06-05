@@ -36,7 +36,21 @@ body.nav-menu-open {
   overflow-x: hidden;
 }
 
-/* Panel del menú móvil: overlay; contenido = continuación de la barra, ancho completo, altura justa */
+/* Al abrir: la barra no intercepta taps; solo el botón hamburger/X sigue activo */
+body.nav-menu-open .nav-bar-inner {
+  pointer-events: none;
+}
+body.nav-menu-open .nav-trigger {
+  pointer-events: auto;
+  position: relative;
+  z-index: 55;
+}
+
+/* Panel del menú móvil (portaled a body vía JS): overlay a nivel viewport */
+.nav-menu-mobile,
+.nav-menu-mobile-panel {
+  z-index: 45;
+}
 .nav-menu-mobile-panel {
   top: 0;
   left: 0;
@@ -59,6 +73,7 @@ body.nav-menu-open .nav-menu-mobile-panel {
 .nav-menu-backdrop {
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: rgba(0, 144, 147, 0.35);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -67,10 +82,11 @@ body.nav-menu-open .nav-menu-mobile-panel {
 /* Contenido: ancho completo, continuación visual de la nav bar; altura según contenido (no toda la pantalla) */
 .nav-menu-mobile-content {
   position: relative;
+  z-index: 1;
   flex: 0 0 auto;
   width: 100%;
   max-width: 100%;
-  max-height: calc(100vh - 5rem);
+  max-height: calc(100dvh - var(--nav-menu-top, 4.5rem));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -170,11 +186,8 @@ body.nav-menu-open .nav-menu-mobile-panel {
   transition: opacity 0.25s ease;
 }
 
-/* Mobile navbar re-balance: taller bar + room for larger logo */
+/* Mobile navbar re-balance: taller bar + room for larger logo (--nav-menu-top lo sincroniza JS) */
 @media (max-width: 767px) {
-  .nav-bar {
-    --nav-menu-top: 6rem;
-  }
   .nav-bar-inner {
     min-height: 5.75rem;
   }
@@ -268,10 +281,14 @@ body.nav-menu-open .nav-icon-close {
 }
 .nav-menu-link {
   display: block;
+  position: relative;
+  z-index: 1;
   padding: 0.875rem 1rem;
   font-weight: 500;
   color: var(--color-white);
   border-radius: 0.5rem;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition: background-color 0.2s, color 0.2s;
 }
 .nav-menu-mobile-links .nav-menu-link {
@@ -288,11 +305,15 @@ body.nav-menu-open .nav-icon-close {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 1;
   margin-top: 1.5rem;
   padding: 0.875rem 1.5rem;
   background-color: var(--color-primary);
   color: #fff;
   border-radius: 0.5rem;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   width: fit-content;
 }

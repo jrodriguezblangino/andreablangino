@@ -10,7 +10,9 @@
     'use strict';
 
     var body = document.body;
+    var root = document.documentElement;
     var nav = document.querySelector('.nav-bar');
+    var navInner = document.querySelector('.nav-bar-inner');
     var trigger = document.getElementById('nav-trigger') || document.querySelector('.nav-trigger');
     var menu = document.getElementById('nav-menu-mobile');
     var backdrop = menu ? menu.querySelector('.nav-menu-backdrop') : null;
@@ -18,14 +20,49 @@
     var openClass = 'nav-menu-open';
     var labelOpen = 'Cerrar menú de navegación';
     var labelClosed = 'Abrir menú de navegación';
+    var lockedScrollY = 0;
+    var desktopNavBreakpoint = 1280;
+
+    function isMobileNav() {
+        return window.innerWidth < desktopNavBreakpoint;
+    }
 
     function isMenuOpen() {
         return body.classList.contains(openClass);
     }
 
+    function syncNavMenuOffset() {
+        if (!navInner) return;
+        var height = Math.ceil(navInner.getBoundingClientRect().height);
+        root.style.setProperty('--nav-menu-top', height + 'px');
+    }
+
+    function lockBodyScroll() {
+        body.classList.add(openClass);
+        if (!isMobileNav()) return;
+        lockedScrollY = window.scrollY;
+        body.style.position = 'fixed';
+        body.style.top = '-' + lockedScrollY + 'px';
+        body.style.left = '0';
+        body.style.right = '0';
+        body.style.width = '100%';
+    }
+
+    function unlockBodyScroll() {
+        body.classList.remove(openClass);
+        if (body.style.position !== 'fixed') return;
+        body.style.position = '';
+        body.style.top = '';
+        body.style.left = '';
+        body.style.right = '';
+        body.style.width = '';
+        window.scrollTo(0, lockedScrollY);
+    }
+
     function openMenu() {
         if (!nav || !trigger || !menu) return;
-        body.classList.add(openClass);
+        syncNavMenuOffset();
+        lockBodyScroll();
         trigger.setAttribute('aria-expanded', 'true');
         trigger.setAttribute('aria-label', labelOpen);
         menu.setAttribute('aria-hidden', 'false');
@@ -36,7 +73,7 @@
 
     function closeMenu() {
         if (!nav || !trigger || !menu) return;
-        body.classList.remove(openClass);
+        unlockBodyScroll();
         trigger.setAttribute('aria-expanded', 'false');
         trigger.setAttribute('aria-label', labelClosed);
         menu.setAttribute('aria-hidden', 'true');
@@ -73,6 +110,20 @@
     function initNav() {
         if (!trigger || !menu) return;
 
+        // Portal: fixed overlay must not live inside sticky nav (iOS/Android hit-test bugs).
+        if (menu.parentElement !== body) {
+            body.appendChild(menu);
+        }
+
+        syncNavMenuOffset();
+        if (typeof ResizeObserver !== 'undefined' && navInner) {
+            var navResizeObserver = new ResizeObserver(syncNavMenuOffset);
+            navResizeObserver.observe(navInner);
+        } else {
+            window.addEventListener('resize', syncNavMenuOffset);
+        }
+        window.addEventListener('orientationchange', syncNavMenuOffset);
+
         trigger.addEventListener('click', handleTriggerClick);
         menu.setAttribute('aria-hidden', 'true');
 
@@ -87,9 +138,10 @@
         document.addEventListener('keydown', handleKeydown);
 
         window.addEventListener('resize', function () {
+            syncNavMenuOffset();
             // Close only when switching to desktop navbar (>=1280 / Tailwind xl),
             // otherwise opening the menu can trigger a "resize" (scrollbar) and immediately close it.
-            if (window.innerWidth >= 1280 && isMenuOpen()) closeMenu();
+            if (window.innerWidth >= desktopNavBreakpoint && isMenuOpen()) closeMenu();
         });
     }
 
