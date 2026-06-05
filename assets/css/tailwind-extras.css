@@ -1396,24 +1396,24 @@ button.workshop-mosaic__cell:focus-visible .workshop-mosaic__label {
 /* ========== ESCUELA DE FORMACIÓN — landing ========== */
 .escuela-hero-logo {
   display: block;
-  max-width: min(100%, 220px);
+  max-width: min(100%, 280px);
 }
 
 @media (min-width: 640px) {
-  .escuela-hero-logo {
-    max-width: min(100%, 260px);
-  }
-}
-
-@media (min-width: 768px) {
   .escuela-hero-logo {
     max-width: min(100%, 320px);
   }
 }
 
+@media (min-width: 768px) {
+  .escuela-hero-logo {
+    max-width: min(100%, 520px);
+  }
+}
+
 @media (min-width: 1024px) {
   .escuela-hero-logo {
-    max-width: min(100%, 380px);
+    max-width: min(100%, 760px);
   }
 }
 
