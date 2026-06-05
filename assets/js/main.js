@@ -364,12 +364,6 @@
 
     var FORMATION_REVIEWS_DATA = [
         {
-            author: 'Laura Demo',
-            date: 'Junio 2026',
-            rating: 5,
-            text: 'La Escuela de Formación en Biodescodificación de Andrea Blangino es un lugar donde las expectativas se cumplen más de lo esperado. Un lugar donde se trabaja con profesionalismo y nos preparamos para abordar la Biodescodificación con responsabilidad para acompañar y comprender a cada persona en transitar su proceso. Es un lugar de transformación. Si te resuena, es el lugar indicado con Andrea.'
-        },
-        {
             author: 'Adriana Garay “Petro”',
             date: 'Junio 2026',
             rating: 5,
@@ -591,13 +585,14 @@
     }
 
     function initFormationReviewsSlider() {
-        var container = document.getElementById('formacion-testimonios');
         var inner = document.getElementById('formation-reviews-slider-inner');
+        if (!inner || !FORMATION_REVIEWS_DATA.length) return;
+
+        var container = inner.closest('section');
         var dotsContainer = container ? container.querySelector('.slider-dots') : null;
         var prevBtn = container ? container.querySelector('.slider-btn--prev') : null;
         var nextBtn = container ? container.querySelector('.slider-btn--next') : null;
-
-        if (!container || !inner || !FORMATION_REVIEWS_DATA.length) return;
+        if (!container) return;
 
         var total = FORMATION_REVIEWS_DATA.length;
         var currentIndex = 0;
@@ -624,7 +619,6 @@
                     '      <span class="review-author">' + r.author + '</span>' +
                     '      <span class="review-date">' + r.date + '</span>' +
                     '    </div>' +
-                    '    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="google-logo" width="48">' +
                     '  </div>' +
                     '  <div class="review-stars" aria-label="' + r.rating + ' de 5 estrellas">' + starString(r.rating) + '</div>' +
                     '  <p class="review-text">"' + r.text + '"</p>' +
@@ -635,7 +629,8 @@
 
         function applyLayout() {
             var visible = getVisibleSlides();
-            inner.style.width = ((total / visible) * 100) + '%';
+            var pages = Math.max(1, Math.ceil(total / visible));
+            inner.style.width = (pages * 100) + '%';
 
             var basis = (100 / total) + '%';
             var cards = inner.querySelectorAll('.review-card');
@@ -648,12 +643,13 @@
             var visible = getVisibleSlides();
             var pages = Math.max(1, Math.ceil(total / visible));
             var maxPage = pages - 1;
-            var currentPage = currentIndex > maxPage ? maxPage : currentIndex;
-            currentPage = currentPage < 0 ? 0 : currentPage;
-            currentIndex = currentPage;
+            var maxIndex = maxPage * visible;
+            currentIndex = currentIndex > maxIndex ? maxIndex : currentIndex;
+            currentIndex = currentIndex < 0 ? 0 : currentIndex;
 
-            var firstCardIndex = Math.min(currentPage * visible, Math.max(0, total - visible));
-            var offset = (firstCardIndex / total) * 100;
+            var currentPage = Math.floor(currentIndex / visible);
+            if (currentPage > maxPage) currentPage = maxPage;
+            var offset = currentPage * (100 / pages);
             inner.style.transform = 'translateX(-' + offset + '%)';
 
             if (dotsContainer) {
@@ -668,10 +664,11 @@
             var visible = getVisibleSlides();
             var pages = Math.max(1, Math.ceil(total / visible));
             var maxPage = pages - 1;
+            var maxIndex = maxPage * visible;
 
-            currentIndex = index;
+            currentIndex = Math.round(index / visible) * visible;
             if (currentIndex < 0) currentIndex = 0;
-            if (currentIndex > maxPage) currentIndex = maxPage;
+            if (currentIndex > maxIndex) currentIndex = maxIndex;
             updatePosition();
         }
 
@@ -679,18 +676,18 @@
             var visible = getVisibleSlides();
             var pages = Math.max(1, Math.ceil(total / visible));
             var maxPage = pages - 1;
-            var currentPage = currentIndex;
+            var currentPage = Math.floor(currentIndex / visible);
             if (currentPage >= maxPage) goTo(0);
-            else goTo(currentIndex + 1);
+            else goTo(currentIndex + visible);
         }
 
         function prev() {
             var visible = getVisibleSlides();
             var pages = Math.max(1, Math.ceil(total / visible));
             var maxPage = pages - 1;
-            var currentPage = currentIndex;
-            if (currentPage <= 0) goTo(maxPage);
-            else goTo(currentIndex - 1);
+            var currentPage = Math.floor(currentIndex / visible);
+            if (currentPage <= 0) goTo(maxPage * visible);
+            else goTo(currentIndex - visible);
         }
 
         function buildDots() {
@@ -704,7 +701,7 @@
                 btn.setAttribute('aria-label', 'Ir a página de reseñas ' + (i + 1));
                 btn.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
                 btn.addEventListener('click', function (idx) {
-                    return function () { goTo(idx); };
+                    return function () { goTo(idx * getVisibleSlides()); };
                 }(i));
                 dotsContainer.appendChild(btn);
             }
@@ -737,6 +734,28 @@
             applyLayout();
             buildDots();
             updatePosition();
+        });
+    }
+
+    function initFormacionOnlineVideo() {
+        var video = document.getElementById('formacion-online-video');
+        var button = video ? video.querySelector('button[data-video-id]') : null;
+        if (!video || !button) return;
+
+        button.addEventListener('click', function () {
+            var videoId = button.getAttribute('data-video-id');
+            var origin = window.location.origin && window.location.origin !== 'null'
+                ? '&origin=' + encodeURIComponent(window.location.origin)
+                : '';
+            var iframe = document.createElement('iframe');
+            iframe.className = 'w-full h-full';
+            iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0' + origin;
+            iframe.title = 'Conocé la Formación Online por dentro';
+            iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            iframe.allowFullscreen = true;
+            iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+            video.innerHTML = '';
+            video.appendChild(iframe);
         });
     }
 
@@ -776,6 +795,7 @@
         initVideoCarousel();
         initReviewsSlider();
         initFormationReviewsSlider();
+        initFormacionOnlineVideo();
         initActiveNavLink();
         initWaFloat();
     }

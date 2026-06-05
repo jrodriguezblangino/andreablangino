@@ -1392,3 +1392,60 @@ button.workshop-mosaic__cell:focus-visible .workshop-mosaic__label {
   transform: translateY(0);
   box-shadow: none;
 }
+
+/* ========== ESCUELA DE FORMACIÓN — landing ========== */
+.escuela-hero-logo {
+  display: block;
+  max-width: min(100%, 220px);
+}
+
+@media (min-width: 640px) {
+  .escuela-hero-logo {
+    max-width: min(100%, 260px);
+  }
+}
+
+@media (min-width: 768px) {
+  .escuela-hero-logo {
+    max-width: min(100%, 320px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .escuela-hero-logo {
+    max-width: min(100%, 380px);
+  }
+}
+
+.section-intro__lead {
+  line-height: 1.65;
+}
+
+.modalidad-card__img {
+  object-position: center 35%;
+}
+
+.modalidad-card__img--online {
+  object-position: center center;
+}
+
+.modalidad-card:hover .modalidad-card__img {
+  transform: scale(1.05);
+}
+
+.feature-card__icon {
+  flex-shrink: 0;
+}
+
+.feature-card__icon i {
+  display: block;
+  line-height: 1;
+}
+
+.formacion-highlights {
+  width: 100%;
+}
+
+#formacion-reviews .reviews-slider-container {
+  overflow: visible;
+}
